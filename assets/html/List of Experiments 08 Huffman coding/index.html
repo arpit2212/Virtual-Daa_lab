@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Virtual Design and Analysis of Algorithms Lab</title>
+    </head> 
+    
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container nav ">
+
+
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+               </div>
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+                    
+                  <h3>  Department of Computational Intelligence</h3>
+                   
+               <h4>  Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+               <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                 </a>
+               </div>
+
+
+
+            </nav>
+            <nav class="nav container">
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="../../../index.html" class="nav__link">Home</a>
+                        </li>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="#Contact" class="nav__link ">Contact Us</a>
+                        </li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                       
+                        <li class="nav__item">
+                            <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target Audience</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Huffman Coding <br>
+                    </h1>
+
+                    <p class="about__description">
+                            The core of Huffman coding is the <strong>Huffman tree</strong>, which is a binary tree that represents the optimal prefix-free binary codes for data compression.<br>
+                            This technique is widely used in various digital storage formats, including <strong>JPEG</strong> and <strong>MPEG-2</strong>, as it effectively reduces the amount of storage required.</p><br>
+                        
+                            <h2>Problem</h2>
+                            <p>Given a set of characters along with their frequency or count, the goal is to use the Huffman tree, which employs a greedy approach, to generate a unique codeword for each character.<br>
+                            The process of converting the characters into their corresponding codewords is known as <strong>encoding</strong>.</p><br>
+                        
+                            <h3>Input</h3>
+                            <p>Given a set of characters along with their frequency or count values.</p><br>
+                        
+                            <h3>Output</h3>
+                            <p>The <strong>codeword</strong> for each character.</p><br>
+                        
+                            <h4>Example:</h4>
+                            <ul>
+                                <li><strong>A</strong> - 110</li><br>
+                                <li><strong>B</strong> - 111</li><br>
+                                <li><strong>C</strong> - 001</li><br>
+                            </ul><br>
+                        
+                            <h2>Types of Huffman Encoding</h2><br>
+                            <h3>1. Variable Length Encoding</h3><br>
+                            <p>In this type of encoding, each character is assigned a codeword of different lengths based on its frequency.</p><br>
+                        
+                            <h3>2. Fixed Length Encoding</h3><br>
+                            <p>In this type, each character is assigned a codeword of the same length.</p><br>
+                        
+                            <h2>Huffman Tree Construction and Min Heap</h2><br>
+                            <p>The <strong>Huffman tree</strong> is constructed in a bottom-up manner, where all given characters are stored in the leaves of the tree.<br>
+                            The tree is built using the following two steps:</p><br>
+                            <ol>
+                                <li><strong>Huffman Tree Construction:</strong> The tree is constructed using the frequency values of the characters.</li><br>
+                                <li><strong>Assigning Codewords:</strong> Once the tree is constructed, each character is assigned its corresponding codeword.</li><br>
+                            </ol><br>
+                        
+                            <p>To facilitate the construction of the Huffman tree, a <strong>Min Heap</strong> data structure is used.<br>
+                            The Min Heap acts as a priority queue, where the value of the parent node is always less than or equal to the values of its child nodes.<br>
+                            The value of a parent node in the Huffman tree is the sum of its children's values.</p><br>
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/L0MDzEhJvEo?si=35-a5O23jaLrfiz-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </h3>
+                </div>
+            </div>
+        </section>
+
+         <!--=============== Content ===============-->
+
+         <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Huffman Coding - Example<br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        
+                        <br>
+                        <br>
+                        <img src="/assets/html/List of Experiments 08 Huffman coding/assets/img/photo 1.png" alt="">
+                        <img src="/assets/html/List of Experiments 08 Huffman coding/assets/img/photo 2.png" alt="">
+                        <img src="/assets/html/List of Experiments 08 Huffman coding/assets/img/photo 3.png" alt="">
+                        <img src="/assets/html/List of Experiments 08 Huffman coding/assets/img/photo 4.png" alt="">
+                        <img src="/assets/html/List of Experiments 08 Huffman coding/assets/img/photo 5.png" alt="">
+                        <img src="/assets/html/List of Experiments 08 Huffman coding/assets/img/photo 6.png" alt="">
+                        
+                       
+                        
+               
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">
+                        Huffman Coding Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <p><strong>HuffmanCoding(A[0]..A[n-1])</strong></p><br>
+
+                        <p><strong>Input:</strong> Array <code>A</code> containing characters and their frequencies.</p><br>
+                
+                        <p><strong>Output:</strong> A prefix code for each character, minimizing the total encoded length.</p><br>
+                
+                        <p><strong>Step 1:</strong> Start.</p><br>
+                
+                        <p><strong>Step 2:</strong> Create a priority queue (min-heap) where each node represents a character and its frequency.</p><br>
+                
+                        <p><strong>Step 3:</strong> While there is more than one node in the priority queue, do the following:</p><br>
+                
+                        <p><strong>Step 4:</strong> Extract the two nodes with the lowest frequencies from the priority queue.</p><br>
+                
+                        <p><strong>Step 5:</strong> Create a new internal node with a frequency equal to the sum of the two nodes' frequencies. The new node becomes the parent of the two nodes.</p><br>
+                
+                        <p><strong>Step 6:</strong> Insert the new node back into the priority queue.</p><br>
+                
+                        <p><strong>Step 7:</strong> The remaining node in the priority queue is the root of the Huffman tree. Traverse the tree to assign codes to characters.</p><br>
+                
+                        <p><strong>Step 8:</strong> Stop.</p><br>
+                    </p>
+                </div>
+                
+                
+            </div>
+        </section>
+        
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                maximum and minimum in an array code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                        #include &lt;stdio.h&gt;
+
+                            #include &lt;stdlib.h>
+                            
+                            // Node of the MinHeap
+                            struct MinHNode {
+                                char character;
+                                unsigned freq;
+                                struct MinHNode *left, *right;
+                            };
+                            
+                            // MinHeap structure
+                            struct MinHeap {
+                                unsigned size;
+                                unsigned capacity;
+                                struct MinHNode **array;
+                            };
+                            
+                            // Function to create a new MinHNode
+                            struct MinHNode* newNode(char character, unsigned freq) {
+                                struct MinHNode* node = (struct MinHNode*)malloc(sizeof(struct MinHNode));
+                                node->left = node->right = NULL;
+                                node->character = character;
+                                node->freq = freq;
+                                return node;
+                            }
+                            
+                            // Function to create a MinHeap
+                            struct MinHeap* createMinH(unsigned capacity) {
+                                struct MinHeap* minHeap = (struct MinHeap*)malloc(sizeof(struct MinHeap));
+                                minHeap->size = 0;
+                                minHeap->capacity = capacity;
+                                minHeap->array = (struct MinHNode**)malloc(minHeap->capacity * sizeof(struct MinHNode*));
+                                return minHeap;
+                            }
+                            
+                            // Function to swap two MinHNode pointers
+                            void swapMinHNode(struct MinHNode** a, struct MinHNode** b) {
+                                struct MinHNode* t = *a;
+                                *a = *b;
+                                *b = t;
+                            }
+                            
+                            // Function to heapify a subtree rooted with node idx
+                            void minHeapify(struct MinHeap* minHeap, int idx) {
+                                int smallest = idx;
+                                int left = 2 * idx + 1;
+                                int right = 2 * idx + 2;
+                            
+                                if (left &lt; minHeap->size && minHeap->array[left]->freq &lt; minHeap->array[smallest]->freq)
+                                    smallest = left;
+                            
+                                if (right &lt; minHeap->size && minHeap->array[right]->freq &lt; minHeap->array[smallest]->freq)
+                                    smallest = right;
+                            
+                                if (smallest != idx) {
+                                    swapMinHNode(&minHeap->array[smallest], &minHeap->array[idx]);
+                                    minHeapify(minHeap, smallest);
+                                }
+                            }
+                            
+                            // Function to check if size of heap is 1
+                            int checkSizeOne(struct MinHeap* minHeap) {
+                                return minHeap->size == 1;
+                            }
+                            
+                            // Function to extract the minimum node from the heap
+                            struct MinHNode* extractMin(struct MinHeap* minHeap) {
+                                struct MinHNode* temp = minHeap->array[0];
+                                minHeap->array[0] = minHeap->array[minHeap->size - 1];
+                                --minHeap->size;
+                                minHeapify(minHeap, 0);
+                                return temp;
+                            }
+                            
+                            // Function to insert a new node into the MinHeap
+                            void insertMinHeap(struct MinHeap* minHeap, struct MinHNode* minHeapNode) {
+                                ++minHeap->size;
+                                int i = minHeap->size - 1;
+                            
+                                while (i && minHeapNode->freq &lt; minHeap->array[(i - 1) / 2]->freq) {
+                                    minHeap->array[i] = minHeap->array[(i - 1) / 2];
+                                    i = (i - 1) / 2;
+                                }
+                                minHeap->array[i] = minHeapNode;
+                            }
+                            
+                            // Function to build the MinHeap
+                            void buildMinHeap(struct MinHeap* minHeap) {
+                                int n = minHeap->size - 1;
+                                for (int i = (n - 1) / 2; i >= 0; --i)
+                                    minHeapify(minHeap, i);
+                            }
+                            
+                            // Function to check if a node is a leaf node
+                            int isLeaf(struct MinHNode* root) {
+                                return !root->left && !root->right;
+                            }
+                            
+                            // Function to create and build a MinHeap from characters and their frequencies
+                            struct MinHeap* createAndBuildMinHeap(char items[], int freq[], int size) {
+                                struct MinHeap* minHeap = createMinH(size);
+                            
+                                for (int i = 0; i &lt; size; ++i)
+                                    minHeap->array[i] = newNode(items[i], freq[i]);
+                            
+                                minHeap->size = size;
+                                buildMinHeap(minHeap);
+                            
+                                return minHeap;
+                            }
+                            
+                            // Function to build the Huffman Tree
+                            struct MinHNode* buildHuffmanTree(char characters[], int frequency[], int size) {
+                                struct MinHNode *left, *right, *top;
+                                struct MinHeap* minHeap = createAndBuildMinHeap(characters, frequency, size);
+                            
+                                while (!checkSizeOne(minHeap)) {
+                                    left = extractMin(minHeap);
+                                    right = extractMin(minHeap);
+                            
+                                    top = newNode('$', left->freq + right->freq);
+                                    top->left = left;
+                                    top->right = right;
+                            
+                                    insertMinHeap(minHeap, top);
+                                }
+                            
+                                return extractMin(minHeap);
+                            }
+                            
+                            // Function to print Huffman codes from the root of the Huffman Tree
+                            void printHuffmanCodes(struct MinHNode* root, int arr[], int top) {
+                                if (root->left) {
+                                    arr[top] = 0;
+                                    printHuffmanCodes(root->left, arr, top + 1);
+                                }
+                            
+                                if (root->right) {
+                                    arr[top] = 1;
+                                    printHuffmanCodes(root->right, arr, top + 1);
+                                }
+                            
+                                if (isLeaf(root)) {
+                                    printf("%c: ", root->character);
+                                    for (int i = 0; i &lt; top; ++i)
+                                        printf("%d", arr[i]);
+                                    printf("\n");
+                                }
+                            }
+                            
+                            // Driver code
+                            int main() {
+                                char items[] = {'a', 'b', 'c', 'd', 'e', 'f'};
+                                int freq[] = {5, 9, 12, 13, 16, 45};
+                                int size = sizeof(items) / sizeof(items[0]);
+                            
+                                struct MinHNode* root = buildHuffmanTree(items, freq, size);
+                            
+                                int arr[100];
+                                printHuffmanCodes(root, arr, 0);
+                            
+                                return 0;
+                            }
+                            
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        #include &lt;iostream>
+                       
+                            #include &lt;queue>
+                            #include &lt;unordered_map>
+                            #include &lt;vector>
+                            using namespace std;
+                            
+                            // A Huffman Tree node
+                            struct Node {
+                                char ch;
+                                int freq;
+                                Node *left, *right;
+                            
+                                Node(char ch, int freq) {
+                                    left = right = nullptr;
+                                    this->ch = ch;
+                                    this->freq = freq;
+                                }
+                            };
+                            
+                            // Comparison object to be used to order the heap
+                            struct compare {
+                                bool operator()(Node* left, Node* right) {
+                                    return left->freq > right->freq;
+                                }
+                            };
+                            
+                            // Print Huffman codes from the root of Huffman Tree.
+                            void printCodes(struct Node* root, string str) {
+                                if (!root)
+                                    return;
+                            
+                                if (root->ch != '$')
+                                    cout &lt;&lt; root->ch &lt;&lt; ": " &lt;&lt; str &lt;&lt; "\n";
+                            
+                                printCodes(root->left, str + "0");
+                                printCodes(root->right, str + "1");
+                            }
+                            
+                            // The main function that builds a Huffman Tree and print codes
+                            void HuffmanCodes(char data[], int freq[], int size) {
+                                struct Node *left, *right, *top;
+                            
+                                // Create a min heap & inserts all characters of data[]
+                                priority_queue&lt;Node*, vector&lt;Node*>, compare> minHeap;
+                            
+                                for (int i = 0; i &lt; size; ++i)
+                                    minHeap.push(new Node(data[i], freq[i]));
+                            
+                                // Iterate while size of heap doesn't become 1
+                                while (minHeap.size() != 1) {
+                                    // Extract the two minimum freq items from heap
+                                    left = minHeap.top();
+                                    minHeap.pop();
+                            
+                                    right = minHeap.top();
+                                    minHeap.pop();
+                            
+                                    // Create a new internal node with frequency equal to the sum of the two nodes frequencies.
+                                    top = new Node('$', left->freq + right->freq);
+                                    top->left = left;
+                                    top->right = right;
+                                    minHeap.push(top);
+                                }
+                            
+                                // Print Huffman codes using the Huffman tree built above
+                                printCodes(minHeap.top(), "");
+                            }
+                            
+                            int main() {
+                                char arr[] = { 'a', 'b', 'c', 'd', 'e', 'f' };
+                                int freq[] = { 5, 9, 12, 13, 16, 45 };
+                            
+                                int size = sizeof(arr) / sizeof(arr[0]);
+                            
+                                HuffmanCodes(arr, freq, size);
+                            
+                                return 0;
+                            }
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        import java.util.PriorityQueue;
+                        import java.util.Comparator;
+                        
+                        class Node {
+                            char ch;
+                            int freq;
+                            Node left, right;
+                        
+                            Node(char ch, int freq) {
+                                this.ch = ch;
+                                this.freq = freq;
+                                left = right = null;
+                            }
+                        }
+                        
+                        class HuffmanCoding {
+                            public static void printCodes(Node root, String str) {
+                                if (root == null)
+                                    return;
+                        
+                                if (root.ch != '$')
+                                    System.out.println(root.ch + ": " + str);
+                        
+                                printCodes(root.left, str + "0");
+                                printCodes(root.right, str + "1");
+                            }
+                        
+                            public static void buildHuffmanTree(char[] data, int[] freq, int size) {
+                                PriorityQueue&lt;Node> minHeap = new PriorityQueue&lt;>(size, Comparator.comparingInt(node -> node.freq));
+                        
+                                for (int i = 0; i &lt; size; i++) {
+                                    minHeap.add(new Node(data[i], freq[i]));
+                                }
+                        
+                                while (minHeap.size() > 1) {
+                                    Node left = minHeap.poll();
+                                    Node right = minHeap.poll();
+                        
+                                    Node top = new Node('$', left.freq + right.freq);
+                                    top.left = left;
+                                    top.right = right;
+                                    minHeap.add(top);
+                                }
+                        
+                                printCodes(minHeap.peek(), "");
+                            }
+                        
+                            public static void main(String[] args) {
+                                char[] arr = { 'a', 'b', 'c', 'd', 'e', 'f' };
+                                int[] freq = { 5, 9, 12, 13, 16, 45 };
+                        
+                                int size = arr.length;
+                                buildHuffmanTree(arr, freq, size);
+                            }
+                        }
+                        
+                         
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        import heapq
+                        from collections import defaultdict, namedtuple
+                        
+                        class Node(namedtuple("Node", ["char", "freq"])):
+                            def __lt__(self, other):
+                                return self.freq &lt; other.freq
+                        
+                        def build_huffman_tree(data, freq):
+                            heap = [Node(ch, freq[ch]) for ch in data]
+                            heapq.heapify(heap)
+                        
+                            while len(heap) > 1:
+                                left = heapq.heappop(heap)
+                                right = heapq.heappop(heap)
+                                node = Node('$', left.freq + right.freq)
+                                node.left = left
+                                node.right = right
+                                heapq.heappush(heap, node)
+                        
+                            return heap[0]
+                        
+                        def print_codes(root, code=""):
+                            if root is None:
+                                return
+                        
+                            if root.char != '$':
+                                print(f"{root.char}: {code}")
+                        
+                            print_codes(getattr(root, 'left', None), code + "0")
+                            print_codes(getattr(root, 'right', None), code + "1")
+                        
+                        def huffman_coding(data, freq):
+                            root = build_huffman_tree(data, freq)
+                            print_codes(root)
+                        
+                        # Example usage
+                        data = ['a', 'b', 'c', 'd', 'e', 'f']
+                        freq = {'a': 5, 'b': 9, 'c': 12, 'd': 13, 'e': 16, 'f': 45}
+                        
+                        huffman_coding(data, freq)
+                        
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+         <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Time Complexity of Huffman Code  <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <strong>Time Complexity</strong>
+
+                        <strong>Basic Operation: Insertion and Selection</strong>
+                        
+                        <p>
+                            <strong>Analysis</strong>
+                        </p>
+                        
+                        <p>
+                            The time complexity of the Huffman algorithm is <code>O(n \log n)</code>. Using a heap to store the weight of each tree, each iteration requires <code>O(\log n)</code> time to determine the smallest weight and insert the new weight. There are <code>O(n)</code> iterations, one for each item. Therefore, the overall time complexity of the algorithm is:
+                        </p>
+                        
+                        <pre>
+                            <code>T(n) = O(n) * O(log n) = O(n log n)</code>
+                        </pre>
+                             <br>
+                            <br>
+                            <br>
+                        
+
+                        
+                                            </p>
+                    
+                </div>
+
+               
+
+
+                </div>
+</section>
+
+        
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                     </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+                        
+                     
+                    </ul>
+                </div>
+               
+
+              
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>    
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+       <!--=============== MAIN JS ===============-->
+       <script src="assets/js/main.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

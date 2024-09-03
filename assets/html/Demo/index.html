@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .jdoodle-iframe {
+            width: 100%;
+            max-width: 2500px;
+            height: 1000px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            display: block;
+        }
+        canvas {
+            border: 1px solid black;
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+        }
+        #runButton,#runBubbleSortButton,#runLinearSearchButton,#runMergeSortButton,#runQuickSortButton,#runBinarySearchButton {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+        #runButton,#runBubbleSortButton,#runLinearSearchButton,#runMergeSortButton,#runQuickSortButton,#runBinarySearchButton:hover {
+            background-color: #45a049;
+        }
+        
+
+    </style>
+
+    <title>Virtual Design and Analysis of Algorithms Lab</title>
+</head> 
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container nav ">
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>SRM Institute of Science and Technology</h1>
+                <h3>Department of Computational Intelligence</h3>
+                <h4>Virtual Lab - Design and Analysis of Algorithms</h4>
+            </div>
+            <div>
+                <a href="#" class="nav__logo"></a>
+            </div>
+        </nav>
+        <nav class="nav container">
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+            <li style="list-style: none;" class="nav__item">
+                <a href="../../../index.html" class="nav__link">Home</a>
+            </li>
+            <li style="list-style: none;" class="nav__item">
+                <a href="#Contact" class="nav__link">Contact Us</a>
+            </li>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target Audience</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                       Demo Code <br>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== Content ===============-->
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="insertion-sort">Insertion Sort</button>
+                <button class="code-btn" data-lang="bubble-sort">Bubble Sort</button>
+                <button class="code-btn" data-lang="linear-search">Linear Search</button>
+                <button class="code-btn" data-lang="binary-search">Binary Search</button>
+                <button class="code-btn" data-lang="merge-sort">Merge Sort</button>
+                <button class="code-btn" data-lang="quick-sort">Quick Sort</button>
+                <button class="code-btn" data-lang="strassen">Strassen’s Matrix Multiplication</button>
+                <button class="code-btn" data-lang="sub-array-sum">Largest Sub Array Sum</button>
+                <button class="code-btn" data-lang="max-min">Finding Maximum and Minimum</button>
+                <button class="code-btn" data-lang="huffman-tree">Huffman Tree</button>
+            </div>
+
+            <div class="code-container active" id="insertion-sort">
+                <button id="runButton">Run Insertion Sort</button>
+                <canvas id="sortCanvas" width="800" height="400"></canvas>
+            
+                <script>
+                    const canvas = document.getElementById('sortCanvas');
+                    const ctx = canvas.getContext('2d');
+            
+                    function drawArray(arr, colorArray) {
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+                        const barWidth = canvas.width / arr.length;
+                        for (let i = 0; i < arr.length; i++) {
+                            const height = arr[i] * 3; // Scale height for better visibility
+                            ctx.fillStyle = colorArray[i];
+                            ctx.fillRect(i * barWidth, canvas.height - height, barWidth, height);
+            
+                            ctx.fillStyle = 'black';
+                            ctx.fillText(arr[i], i * barWidth + barWidth / 2, canvas.height - height - 10);
+                        }
+                    }
+            
+                    async function insertionSortVisual(arr) {
+                        const n = arr.length;
+            
+                        for (let i = 1; i < n; i++) {
+                            let key = arr[i];
+                            let j = i - 1;
+                            const colorArray = Array(n).fill('blue');
+                            colorArray[i] = 'red';  // Highlight the key being compared
+            
+                            while (j >= 0 && arr[j] > key) {
+                                [arr[j + 1], arr[j]] = [arr[j], arr[j + 1]]; // Swap the elements
+                                colorArray[j + 1] = 'green';  // Highlight the swapped elements
+                                drawArray(arr, colorArray);
+                                await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
+                                j -= 1;
+                            }
+            
+                            drawArray(arr, Array(n).fill('blue'));
+                            await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
+                        }
+            
+                        drawArray(arr, Array(n).fill('blue'));
+                    }
+            
+                    function randomArray(length, max) {
+                        return Array.from({ length }, () => Math.floor(Math.random() * max) + 1);
+                    }
+            
+                    const arr = randomArray(20, 100);
+                    console.log("Original array:", arr);
+            
+                    ctx.font = '16px Arial';
+                    ctx.textAlign = 'center';
+            
+                    // Run the insertion sort visualization when the button is clicked
+                    document.getElementById('runButton').addEventListener('click', () => {
+                        insertionSortVisual([...arr]); // Pass a copy of the array to avoid re-sorting
+                    });
+                </script>
+            </div>
+
+            <div class="code-container" id="bubble-sort">
+                <button id="runBubbleSortButton">Run Bubble Sort</button>
+                <canvas id="sortCanvasBubble" width="800" height="400"></canvas>
+            
+                <script>
+                    const canvasBubble = document.getElementById('sortCanvasBubble');
+                    const ctxBubble = canvasBubble.getContext('2d');
+                    
+                    function drawBubbleArray(arr, colorArray) {
+                        ctxBubble.clearRect(0, 0, canvasBubble.width, canvasBubble.height);
+                    
+                        const barWidth = canvasBubble.width / arr.length;
+                        for (let i = 0; i < arr.length; i++) {
+                            const height = arr[i] * 3; // Scale height for better visibility
+                            ctxBubble.fillStyle = colorArray[i];
+                            ctxBubble.fillRect(i * barWidth, canvasBubble.height - height, barWidth, height);
+                    
+                            ctxBubble.fillStyle = 'black';
+                            ctxBubble.fillText(arr[i], i * barWidth + barWidth / 2, canvasBubble.height - height - 10);
+                        }
+                    }
+                    
+                    async function bubbleSortVisual(arr) {
+                        const n = arr.length;
+                        for (let i = 0; i < n; i++) {
+                            for (let j = 0; j < n - i - 1; j++) {
+                                const colorArray = Array(n).fill('blue');
+                                colorArray[j] = 'red';  // Highlight the current element
+                                colorArray[j + 1] = 'red';  // Highlight the element being compared
+                                
+                                if (arr[j] > arr[j + 1]) {
+                                    [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];  // Swap the elements
+                                    colorArray[j] = 'green';  // Highlight the swapped elements
+                                    colorArray[j + 1] = 'green';
+                                }
+            
+                                drawBubbleArray(arr, colorArray);
+                                await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
+                            }
+                        }
+            
+                        drawBubbleArray(arr, Array(n).fill('blue'));
+                    }
+                    
+                    function randomBubbleArray(length, max) {
+                        return Array.from({ length }, () => Math.floor(Math.random() * max) + 1);
+                    }
+                    
+                    const bubbleArr = randomBubbleArray(20, 100);
+                    console.log("Original Bubble Sort array:", bubbleArr);
+                    
+                    ctxBubble.font = '16px Arial';
+                    ctxBubble.textAlign = 'center';
+                    
+                    // Run the bubble sort visualization when the button is clicked
+                    document.getElementById('runBubbleSortButton').addEventListener('click', () => {
+                        bubbleSortVisual([...bubbleArr]); // Pass a copy of the array to avoid re-sorting
+                    });
+                </script>
+            </div>
+
+            <div class="code-container" id="linear-search">
+                <button id="runLinearSearchButton">Run Linear Search</button>
+                <canvas id="searchCanvas" width="800" height="400"></canvas>
+            
+                <script>
+                    const canvasLinearSearch = document.getElementById('searchCanvas');
+                    const ctxLinearSearch = canvasLinearSearch.getContext('2d');
+            
+                    function drawLinearSearchArray(arr, colorArray) {
+                        ctxLinearSearch.clearRect(0, 0, canvasLinearSearch.width, canvasLinearSearch.height);
+            
+                        const barWidth = canvasLinearSearch.width / arr.length;
+                        for (let i = 0; i < arr.length; i++) {
+                            const height = arr[i] * 3; // Scale height for better visibility
+                            ctxLinearSearch.fillStyle = colorArray[i];
+                            ctxLinearSearch.fillRect(i * barWidth, canvasLinearSearch.height - height, barWidth, height);
+            
+                            ctxLinearSearch.fillStyle = 'black';
+                            ctxLinearSearch.fillText(arr[i], i * barWidth + barWidth / 2, canvasLinearSearch.height - height - 10);
+                        }
+                    }
+            
+                    async function linearSearchVisual(arr, target) {
+                        const n = arr.length;
+            
+                        for (let i = 0; i < n; i++) {
+                            const colorArray = Array(n).fill('blue');
+                            colorArray[i] = 'red'; // Highlight the current element
+            
+                            drawLinearSearchArray(arr, colorArray);
+                            await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
+            
+                            if (arr[i] === target) {
+                                colorArray[i] = 'green'; // Highlight the found element
+                                drawLinearSearchArray(arr, colorArray);
+                                break;
+                            }
+                        }
+                    }
+            
+                    function randomLinearSearchArray(length, max) {
+                        return Array.from({ length }, () => Math.floor(Math.random() * max) + 1);
+                    }
+            
+                    const searchArr = randomLinearSearchArray(20, 100);
+                    const target = searchArr[Math.floor(Math.random() * searchArr.length)]; // Random target from array
+                    console.log("Array:", searchArr, "Target:", target);
+            
+                    ctxLinearSearch.font = '16px Arial';
+                    ctxLinearSearch.textAlign = 'center';
+            
+                    // Run the linear search visualization when the button is clicked
+                    document.getElementById('runLinearSearchButton').addEventListener('click', () => {
+                        linearSearchVisual([...searchArr], target);
+                    });
+                </script>
+            </div>
+            
+            <div class="code-container" id="binary-search">
+                <button id="runBinarySearchButton">Run Binary Search</button>
+                <canvas id="binarySearchCanvas" width="800" height="400"></canvas>
+                <script>
+                    const canvasBinarySearch = document.getElementById('binarySearchCanvas');
+                    const ctxBinarySearch = canvasBinarySearch.getContext('2d');
+
+                    function drawBinarySearchArray(arr, colorArray) {
+                        ctxBinarySearch.clearRect(0, 0, canvasBinarySearch.width, canvasBinarySearch.height);
+
+                        const barWidth = canvasBinarySearch.width / arr.length;
+                        for (let i = 0; i < arr.length; i++) {
+                            const height = arr[i] * 3; // Scale height for better visibility
+                            ctxBinarySearch.fillStyle = colorArray[i];
+                            ctxBinarySearch.fillRect(i * barWidth, canvasBinarySearch.height - height, barWidth, height);
+
+                            ctxBinarySearch.fillStyle = 'black';
+                            ctxBinarySearch.fillText(arr[i], i * barWidth + barWidth / 2, canvasBinarySearch.height - height - 10);
+                        }
+                    }
+
+                    async function binarySearchVisual(arr, target) {
+                        let left = 0;
+                        let right = arr.length - 1;
+                        const colorArray = Array(arr.length).fill('blue');
+
+                        while (left <= right) {
+                            const mid = Math.floor((left + right) / 2);
+                            colorArray.fill('blue');
+                            colorArray[mid] = 'red'; // Highlight the middle element
+                            drawBinarySearchArray(arr, colorArray);
+                            await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
+
+                            if (arr[mid] === target) {
+                                colorArray[mid] = 'green'; // Highlight the found element
+                                drawBinarySearchArray(arr, colorArray);
+                                return;
+                            } else if (arr[mid] < target) {
+                                left = mid + 1;
+                            } else {
+                                right = mid - 1;
+                            }
+                        }
+                    }
+
+                    function randomBinarySearchArray(length, max) {
+                        return Array.from({ length }, () => Math.floor(Math.random() * max) + 1).sort((a, b) => a - b);
+                    }
+
+                    const binarySearchArr = randomBinarySearchArray(20, 100);
+                    const binarySearchTarget = binarySearchArr[Math.floor(Math.random() * binarySearchArr.length)]; // Random target from array
+                    console.log("Sorted Array:", binarySearchArr, "Target:", binarySearchTarget);
+
+                    ctxBinarySearch.font = '16px Arial';
+                    ctxBinarySearch.textAlign = 'center';
+
+                    // Run the binary search visualization when the button is clicked
+                    document.getElementById('runBinarySearchButton').addEventListener('click', () => {
+                        binarySearchVisual([...binarySearchArr], binarySearchTarget);
+                    });
+                </script>
+            </div>
+
+
+            <div class="code-container" id="merge-sort">
+                <button id="runMergeSortButton">Run Merge Sort</button>
+                <canvas id="mergeCanvas" width="800" height="400"></canvas>
+            
+                <script>
+                    const canvasMerge = document.getElementById('mergeCanvas');
+                    const ctxMerge = canvasMerge.getContext('2d');
+            
+                    function drawMergeArray(arr, start, mid, end) {
+                        ctxMerge.clearRect(0, 0, canvasMerge.width, canvasMerge.height);
+            
+                        const barWidth = canvasMerge.width / arr.length;
+                        for (let i = 0; i < arr.length; i++) {
+                            let color = 'blue';
+                            if (i >= start && i <= end) {
+                                if (i <= mid) color = 'orange';
+                                else color = 'green';
+                            }
+            
+                            const height = arr[i] * 3; // Scale height for better visibility
+                            ctxMerge.fillStyle = color;
+                            ctxMerge.fillRect(i * barWidth, canvasMerge.height - height, barWidth, height);
+            
+                            ctxMerge.fillStyle = 'black';
+                            ctxMerge.fillText(arr[i], i * barWidth + barWidth / 2, canvasMerge.height - height - 10);
+                        }
+                    }
+            
+                    async function mergeSortVisual(arr, start = 0, end = arr.length - 1) {
+                        if (start >= end) return;
+            
+                        const mid = Math.floor((start + end) / 2);
+                        await mergeSortVisual(arr, start, mid);
+                        await mergeSortVisual(arr, mid + 1, end);
+                        await merge(arr, start, mid, end);
+                    }
+            
+                    async function merge(arr, start, mid, end) {
+                        const left = arr.slice(start, mid + 1);
+                        const right = arr.slice(mid + 1, end + 1);
+                        let i = 0, j = 0, k = start;
+            
+                        while (i < left.length && j < right.length) {
+                            if (left[i] <= right[j]) {
+                                arr[k] = left[i];
+                                i++;
+                            } else {
+                                arr[k] = right[j];
+                                j++;
+                            }
+                            drawMergeArray(arr, start, mid, end);
+                            await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
+                            k++;
+                        }
+            
+                        while (i < left.length) {
+                            arr[k] = left[i];
+                            i++;
+                            drawMergeArray(arr, start, mid, end);
+                            await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
+                            k++;
+                        }
+            
+                        while (j < right.length) {
+                            arr[k] = right[j];
+                            j++;
+                            drawMergeArray(arr, start, mid, end);
+                            await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
+                            k++;
+                        }
+                    }
+            
+                    function randomMergeArray(length, max) {
+                        return Array.from({ length }, () => Math.floor(Math.random() * max) + 1);
+                    }
+            
+                    const mergeArr = randomMergeArray(20, 100);
+                    console.log("Merge Sort array:", mergeArr);
+            
+                    ctxMerge.font = '16px Arial';
+                    ctxMerge.textAlign = 'center';
+            
+                    // Run the merge sort visualization when the button is clicked
+                    document.getElementById('runMergeSortButton').addEventListener('click', () => {
+                        mergeSortVisual(mergeArr);
+                    });
+                </script>
+            </div>
+            
+
+            <div class="code-container" id="quick-sort">
+                <button id="runQuickSortButton">Run Quick Sort</button>
+                <canvas id="quickCanvas" width="800" height="400"></canvas>
+            
+                <script>
+                    const canvasQuick = document.getElementById('quickCanvas');
+                    const ctxQuick = canvasQuick.getContext('2d');
+            
+                    function drawQuickArray(arr, low, high, pivotIndex) {
+                        ctxQuick.clearRect(0, 0, canvasQuick.width, canvasQuick.height);
+            
+                        const barWidth = canvasQuick.width / arr.length;
+                        for (let i = 0; i < arr.length; i++) {
+                            let color = 'blue';
+                            if (i >= low && i <= high) {
+                                if (i === pivotIndex) color = 'red';
+                                else color = 'green';
+                            }
+            
+                            const height = arr[i] * 3; // Scale height for better visibility
+                            ctxQuick.fillStyle = color;
+                            ctxQuick.fillRect(i * barWidth, canvasQuick.height - height, barWidth, height);
+            
+                            ctxQuick.fillStyle = 'black';
+                            ctxQuick.fillText(arr[i], i * barWidth + barWidth / 2, canvasQuick.height - height - 10);
+                        }
+                    }
+            
+                    async function quickSortVisual(arr, low = 0, high = arr.length - 1) {
+                        if (low < high) {
+                            const pivotIndex = await partition(arr, low, high);
+                            await quickSortVisual(arr, low, pivotIndex - 1);
+                            await quickSortVisual(arr, pivotIndex + 1, high);
+                        }
+                    }
+            
+                    async function partition(arr, low, high) {
+                        const pivot = arr[high];
+                        let i = low - 1;
+            
+                        for (let j = low; j < high; j++) {
+                            if (arr[j] < pivot) {
+                                i++;
+                                [arr[i], arr[j]] = [arr[j], arr[i]];
+                                drawQuickArray(arr, low, high, high);
+                                await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
+                            }
+                        }
+            
+                        [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+                        drawQuickArray(arr, low, high, high);
+                        await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
+            
+                        return i + 1;
+                    }
+            
+                    function randomQuickArray(length, max) {
+                        return Array.from({ length }, () => Math.floor(Math.random() * max) + 1);
+                    }
+            
+                    const quickArr = randomQuickArray(20, 100);
+                    console.log("Quick Sort array:", quickArr);
+            
+                    ctxQuick.font = '16px Arial';
+                    ctxQuick.textAlign = 'center';
+            
+                    // Run the quick sort visualization when the button is clicked
+                    document.getElementById('runQuickSortButton').addEventListener('click', () => {
+                        quickSortVisual(quickArr);
+                    });
+                </script>
+            </div>
+            
+
+            <div class="code-container" id="strassen">
+                <button id="runStrassenButton">Run Strassen's Matrix Multiplication</button>
+                <div class="canvas-container">
+                    <canvas id="matrixACanvas" width="400" height="400"></canvas>
+                    <canvas id="matrixBCanvas" width="400" height="400"></canvas>
+                    <canvas id="resultMatrixCanvas" width="400" height="400"></canvas>
+                </div>
+            
+                <script>
+                    const canvasA = document.getElementById('matrixACanvas');
+                    const ctxA = canvasA.getContext('2d');
+            
+                    const canvasB = document.getElementById('matrixBCanvas');
+                    const ctxB = canvasB.getContext('2d');
+            
+                    const canvasResult = document.getElementById('resultMatrixCanvas');
+                    const ctxResult = canvasResult.getContext('2d');
+            
+                    const matrixSize = 2; // 2x2 matrices for simplicity
+            
+                    function drawMatrix(ctx, matrix, xOffset, yOffset) {
+                        const cellSize = 100;
+                        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+                        ctx.strokeRect(xOffset, yOffset, cellSize * matrix.length, cellSize * matrix.length);
+                        
+                        matrix.forEach((row, i) => {
+                            row.forEach((value, j) => {
+                                ctx.strokeRect(xOffset + j * cellSize, yOffset + i * cellSize, cellSize, cellSize);
+                                ctx.fillText(value, xOffset + j * cellSize + cellSize / 2, yOffset + i * cellSize + cellSize / 2);
+                            });
+                        });
+                    }
+            
+                    function strassenMultiply(A, B) {
+                        // Assumes A and B are 2x2 matrices for simplicity
+                        const [a11, a12, a21, a22] = A.flat();
+                        const [b11, b12, b21, b22] = B.flat();
+            
+                        const m1 = (a11 + a22) * (b11 + b22);
+                        const m2 = (a21 + a22) * b11;
+                        const m3 = a11 * (b12 - b22);
+                        const m4 = a22 * (b21 - b11);
+                        const m5 = (a11 + a12) * b22;
+                        const m6 = (a21 - a11) * (b11 + b12);
+                        const m7 = (a12 - a22) * (b21 + b22);
+            
+                        const c11 = m1 + m4 - m5 + m7;
+                        const c12 = m3 + m5;
+                        const c21 = m2 + m4;
+                        const c22 = m1 - m2 + m3 + m6;
+            
+                        return [
+                            [c11, c12],
+                            [c21, c22]
+                        ];
+                    }
+            
+                    function randomMatrix(size) {
+                        return Array.from({ length: size }, () => Array.from({ length: size }, () => Math.floor(Math.random() * 10)));
+                    }
+            
+                    function drawResultMatrix(A, B, C) {
+                        drawMatrix(ctxA, A, 10, 10);
+                        drawMatrix(ctxB, B, 420, 10);
+                        drawMatrix(ctxResult, C, 830, 10);
+                    }
+            
+                    document.getElementById('runStrassenButton').addEventListener('click', () => {
+                        const A = randomMatrix(matrixSize);
+                        const B = randomMatrix(matrixSize);
+                        const C = strassenMultiply(A, B);
+            
+                        console.log('Matrix A:', A);
+                        console.log('Matrix B:', B);
+                        console.log('Result Matrix C:', C);
+            
+                        ctxA.font = '20px Arial';
+                        ctxB.font = '20px Arial';
+                        ctxResult.font = '20px Arial';
+            
+                        ctxA.textAlign = 'center';
+                        ctxB.textAlign = 'center';
+                        ctxResult.textAlign = 'center';
+            
+                        drawResultMatrix(A, B, C);
+                    });
+                </script>
+            </div>
+            
+            <div class="code-container" id="sub-array-sum">
+                <!-- Largest Sub Array Sum code will be here -->
+            </div>
+
+            <div class="code-container" id="max-min">
+                <!-- Finding Maximum and Minimum code will be here -->
+            </div>
+
+            <div class="code-container" id="huffman-tree">
+                <!-- Huffman Tree code will be here -->
+            </div>
+        </div>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section" id="Contact">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="index.html" class="nav__logo">
+                    <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                </a>
+
+                <h3 class="footer__title">
+                    Subscribe to our Youtube Channel <br> to stay updated
+                </h3>
+
+                <div class="footer__subscribe">
+                    <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                        <button class="button button--flex footer__button">
+                            Subscribe
+                            <i class="ri-arrow-right-up-line button__icon"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Our Address</h3>
+
+                <ul class="footer__data">
+                    <li class="footer__information">SRM University KTR</li>
+                    <li class="footer__information">Chennai</li>
+                    <li class="footer__information">Tamil Nadu</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Contact Us</h3>
+
+                <ul class="footer__data">
+                    <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                    <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer__copy">&#169; All rights reserved</p>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup__icon"></i>
+    </a>    
+
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+    <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        // JavaScript to toggle between code views
+        const buttons = document.querySelectorAll('.code-btn');
+        const containers = document.querySelectorAll('.code-container');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Hide all code containers
+                containers.forEach(container => container.classList.remove('active'));
+                // Show the selected language container
+                const lang = button.getAttribute('data-lang');
+                document.getElementById(lang).classList.add('active');
+            });
+        });
+    </script>
+    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
+</body>
+</html>

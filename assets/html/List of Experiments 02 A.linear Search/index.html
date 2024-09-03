@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Virtual Design and Analysis of Algorithms Lab</title>
+    </head> 
+    
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container nav ">
+
+
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+               </div>
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+                    
+                  <h3>  Department of Computational Intelligence</h3>
+                   
+               <h4>  Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+               <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                 </a>
+               </div>
+
+
+
+            </nav>
+            <nav class="nav container">
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="../../../index.html" class="nav__link">Home</a>
+                        </li>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="#Contact" class="nav__link ">Contact Us</a>
+                        </li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                       
+                        <li class="nav__item">
+                            <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target Audience</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Linear Search <br>
+                    </h1>
+
+                    <p class="about__description">
+                        <ul>
+                            <li><strong>Searching</strong> is the process of finding a particular value or key value in a set of values.</li>
+                            <li>There are two types of searching:</li>
+                            <ul>
+                                <li><strong>Linear Search</strong></li>
+                                <li><strong>Binary Search</strong></li>
+                            </ul>
+                            <li><strong>Linear Search</strong> is a sequential search algorithm that searches for the key value linearly from one end to the other end of the list.</li>
+                            <li>The searching process starts at the <strong>first place</strong> and traverses all the elements one after another until the key is found. Otherwise, the searching process continues until the <strong>last element</strong>.</li>
+                            <li>Algorithm outcomes – Two results:
+                                <ul>
+                                    <li><strong>Search key present</strong></li>
+                                    <li><strong>Search key not present</strong></li>
+                                </ul>
+                            </li>
+                        </ul>                     
+                                            </p>
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/OCfDaT_GyfM" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        
+                        
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+         <!--=============== Content ===============-->
+
+         <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Linear Search Operation <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <li>Basic Operation is Comparison. Compare Search key value with array value A[i], where i varies from 0 to n-1. </li><br> 
+<li> n is array size that is number of elements in the array. </li>
+
+
+                        <img src="/assets/html/List of Experiments 02 A.linear Search/assets/img/photo1.png" alt="">
+                        
+               
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">
+                        Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <strong>LinearSearch(A[0]..A[n-1], K)</strong>
+
+                        <br><br>
+                        
+                        <strong>Input:</strong> Array <code>A</code> contains <code>n</code> elements and Search Key <code>K</code>.
+                        <br><br>
+                        <strong>Output:</strong> If search key <code>K</code> is present, return the index; if not present, return <code>-1</code>.
+                        <br><br>
+                        
+                        <strong>Step 1:</strong> Start.
+                        <br><br>
+                        <strong>Step 2:</strong> Input array <code>A</code> and Search Key <code>K</code>.
+                        <br><br>
+                        <strong>Step 3:</strong> For <code>i = 0</code> to <code>n-1</code>
+                        <br><br>
+                        <strong>Step 4:</strong> If <code>A[i] == K</code>, then output the index <code>i</code> and go to Step 7.
+                        <br><br>
+                        <strong>Step 5:</strong> Else, go to Step 3.
+                        <br><br>
+                        <strong>Step 6:</strong> Output <code>-1</code>.
+                        <br><br>
+                        <strong>Step 7:</strong> Stop.
+                        
+                                            </p>
+                    
+                </div>
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Working of Linear Search Algorithm - Example <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <img src="/assets/html/List of Experiments 02 A.linear Search/assets/img/photo2.png" alt="">
+                        
+                        
+                                            </p>
+                    
+                </div>
+                
+            </div>
+        </section>
+        
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                Linear Search Code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                        #include &lt;stdio.h&gt;
+                        int LinearSearch(int A[], int n, int key) 
+                        {
+                            for (int i = 0; i &lt; n; i++) 
+                                if (A[i] == key) 
+                                    return i; 
+                            return -1; 
+                        } 
+                        void InputArray(int A[], int n) 
+                        { 
+                            int i; 
+                            printf("Enter the %d Elements\n",n);
+                            for (i = 0; i &lt; n; i++) 
+                            {
+                              scanf("%d",&A[i]); 
+                            }
+                        } 
+                          
+                        int main(void) 
+                        { 
+                           int A[100],n, key,i;
+                           printf("Enter the size of the array \n");
+                           scanf("%d",&n);
+                           InputArray(A,n);
+                           printf("\n Enter Search key value\n");
+                           scanf("%d",&key);
+                           // Function call to input array
+                           int result = LinearSearch(A, n, key);
+                           if(result == -1) 
+                                printf("Element is not present in array");
+                            else
+                                printf("Element is present at index %d", result);
+                            return 0; 
+                        }
+                        
+                        
+                        
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        #include <iostream>
+                            using namespace std;
+                            
+                            int linearSearch(int arr[], int size, int target) {
+                                for (int i = 0; i &lt; size; i++) {
+                                    if (arr[i] == target) {
+                                        return i; // Target found, return the index
+                                    }
+                                }
+                                return -1; // Target not found
+                            }
+                            
+                            int main() {
+                                int arr[] = {1, 2, 3, 4, 5};
+                                int size = sizeof(arr) / sizeof(arr[0]);
+                                int target = 3;
+                                int result = linearSearch(arr, size, target);
+                                
+                                if (result != -1) {
+                                    cout &lt;&lt; "Element found at index: " &lt;&lt; result &lt;&lt; endl;
+                                } else {
+                                    cout &lt;&lt; "Element not found" &lt;&lt; endl;
+                                }
+                                
+                                return 0;
+                            }
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        public class LinearSearch {
+                            public static int linearSearch(int[] arr, int target) {
+                                for (int i = 0; i &lt; arr.length; i++) {
+                                    if (arr[i] == target) {
+                                        return i; // Target found, return the index
+                                    }
+                                }
+                                return -1; // Target not found
+                            }
+                        
+                            public static void main(String[] args) {
+                                int[] arr = {1, 2, 3, 4, 5};
+                                int target = 3;
+                                int result = linearSearch(arr, target);
+                                
+                                if (result != -1) {
+                                    System.out.println("Element found at index: " + result);
+                                } else {
+                                    System.out.println("Element not found");
+                                }
+                            }
+                        }
+                        
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        def linear_search(arr, target):
+                        for index, value in enumerate(arr):
+                            if value == target:
+                                return index  # Target found, return the index
+                        return -1  # Target not found
+                    
+                    # Example usage
+                    arr = [1, 2, 3, 4, 5]
+                    target = 3
+                    result = linear_search(arr, target)
+                    
+                    if result != -1:
+                        print(f"Element found at index: {result}")
+                    else:
+                        print("Element not found")
+                    
+                    
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+         <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Analysis of Linear Search <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <strong>Time Complexity</strong><br><br>
+                        The algorithm's basic operation is comparison. The basic operation comparison decides the time complexity of the linear search algorithm. Time complexity of the linear search algorithm is based on how many times the comparison operation is performed.<br><br>
+                        <strong>Best Case:</strong> If the search key is present in <code>A[0]</code>, the linear search algorithm performs only one comparison. Thus, Best(n) = 1, Best(n) = <strong>O(1)</strong>; the order of growth is constant.<br><br>
+                        <strong>Worst Case:</strong> If the search key is present in <code>A[n-1]</code> or not present at all, the linear search algorithm performs a maximum of <code>n</code> comparisons. Thus, Worst(n) = n, Worst(n) = <strong>O(n)</strong>; the order of growth is linear. The average case complexity of linear search is <strong>O(n)</strong>.<br><br>
+                        <strong>Space Complexity</strong><br><br>
+                        The linear search algorithm requires memory for the array <code>A</code> and the search key. No extra memory is required. The space complexity of linear search is <strong>O(1)</strong>.<br><br>
+                        <strong>Comparison of Insertion Sort and Bubble Sort</strong>
+
+                        <img src="/assets/html/List of Experiments 02 A.linear Search/assets/img/photo3.png" alt="">
+
+                        
+                                            </p>
+                    
+                </div>
+
+               
+
+
+                </div>
+</section>
+
+        
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                     </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+                        
+                     
+                    </ul>
+                </div>
+               
+
+              
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>    
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+       <!--=============== MAIN JS ===============-->
+       <script src="assets/js/main.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Virtual Design and Analysis of Algorithms Lab</title>
+    </head> 
+    
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container nav ">
+
+
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+               </div>
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+                    
+                  <h3>  Department of Computational Intelligence</h3>
+                   
+               <h4>  Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+               <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                 </a>
+               </div>
+
+
+
+            </nav>
+            <nav class="nav container">
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="../../../index.html" class="nav__link">Home</a>
+                        </li>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="#Contact" class="nav__link ">Contact Us</a>
+                        </li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                       
+                        <li class="nav__item">
+                            <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target Audience</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Insertion Sort <br>
+                    </h1>
+
+                    <p class="about__description">
+                     <li>  Insertion sort is an algorithm to sort elements in ascending or descending order. <br> </li> 
+                     <li>  This approach virtually splits the array into two parts: an sorted array and a unsorted array. <br> </li> 
+                     <li>  Sorted array contains the element in sorted order. Unsorted array contains the element to be sorted. <br></li> 
+                        <li>  The element from an unsorted array is taken one by one and placed or inserted at the correct position in the sorted array. This process is called as insertion sort. <br></li> 
+                                            </p>
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/hcfsrhh2zRc" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+         <!--=============== Content ===============-->
+
+         <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Insertion Operation <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <img src="/assets/html/List of Experiments 01 A. Insertion Sort/assets/img/photo1.png" alt="">
+                        
+                                            </p>
+                    
+                </div>
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <strong>InsertionSort(arr[1]..arr[n])</strong> <br><br><br>
+                        <strong>Input:</strong> Array arr contains n elements in unsorted order. <br><br>
+                        <strong>Output:</strong> Array arr contains n elements in sorted order. <br><br>
+    
+                        <strong>Step 1:</strong> Initially assume arr[1] as sorted array and remaining elements arr[2..n] as unsorted array.  <br><br>
+                        <strong>Step 2:</strong> Take arr[1] as sorted array.  <br><br>
+                        <strong>Step 3:</strong> Take value one by one from arr[2] to arr[n] and assign to current value, where i varies from 2 to n.  <br><br>
+                        <strong>Step 4:</strong> Consider arr[i] as current value & assign current value = arr[i].  <br><br>
+                        <strong>Step 5:</strong> Compare current value with its predecessor.  <br><br>
+                        <strong>Step 6:</strong> If the predecessor is greater than the current value, move predecessor to next location in forward direction.  <br><br>
+                        <strong>Step 7:</strong> If the predecessor is lesser than the current value, insert the current value in the empty location.  <br><br>
+                        <strong>Step 8:</strong> Repeat steps 3 to 7.  <br><br>
+                        <strong>Step 9:</strong> Output sorted array.  <br><br>
+
+                        
+                                            </p>
+                    
+                </div>
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Working of insertion algorithm - Example <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <img src="/assets/html/List of Experiments 01 A. Insertion Sort/assets/img/photo 2.png" alt="">
+                        
+                                            </p>
+                    
+                </div>
+                
+            </div>
+        </section>
+        
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                Insertion Sort Code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+#include &lt;stdio.h&gt;
+
+
+    /* Function to sort an array using insertion sort */
+    void InsertionSort(int arr[], int n) {
+        int i, key, j;
+        for (i = 1; i &lt; n; i++) {
+            key = arr[i];
+            j = i - 1;
+    
+            // Move elements of arr[0..i-1] that are greater than key
+            // to one position ahead of their current position
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
+            }
+            arr[j + 1] = key;
+        }
+    }
+    
+    /* Function to print the array */
+    void printArray(int arr[], int n) {
+        for (int i = 0; i &lt; n; i++)
+            printf("%d ", arr[i]);
+        printf("\n");
+    }
+    
+    int main() {
+        int n;
+    
+        // Get the size of the array from the user
+        printf("Enter the number of elements: ");
+        scanf("%d", &n);
+    
+        // Define the array with a size determined by the user
+        int arr[n];
+    
+        // Get the elements of the array from the user
+        printf("Enter the elements of the array:\n");
+        for (int i = 0; i &lt; n; i++) {
+            scanf("%d", &arr[i]);
+        }
+    
+        // Sorting the array using InsertionSort
+        InsertionSort(arr, n);
+    
+        // Printing the sorted array
+        printf("Sorted array: ");
+        printArray(arr, n);
+    
+        return 0;
+    }
+    
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+#include &lt;iostream&gt;
+using namespace std;
+
+void insertionSort(int arr[], int n) {
+    for (int i = 1; i &lt; n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+
+        // Move elements of arr[0..i-1], that are greater than key,
+        // to one position ahead of their current position
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+void printArray(int arr[], int n) {
+    for (int i = 0; i &lt; n; i++) {
+        cout &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    insertionSort(arr, n);
+    printArray(arr, n);
+
+    return 0;
+}
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+public class InsertionSort {
+
+    public static void insertionSort(int[] array) {
+        int n = array.length;
+
+        for (int i = 1; i &lt; n; i++) {
+            int key = array[i];
+            int j = i - 1;
+
+            // Move elements of array[0..i-1], that are greater than key,
+            // to one position ahead of their current position
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j = j - 1;
+            }
+            array[j + 1] = key;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] array = {12, 11, 13, 5, 6};
+
+        System.out.println("Original array:");
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+
+        insertionSort(array);
+
+        System.out.println("\n\nSorted array:");
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+    }
+}
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+
+        # Move elements of arr[0..i-1] that are greater than key
+        # to one position ahead of their current position
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+def print_array(arr):
+    for i in arr:
+        print(i, end=" ")
+    print()
+
+if __name__ == "__main__":
+    arr = [12, 11, 13, 5, 6]
+    insertion_sort(arr)
+    print("Sorted array:")
+    print_array(arr)
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+         <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Analysis of Insertion Sort <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <strong>The iterative approach is applied to implement the insertion sort algorithm.</strong><br><br>
+                        <strong>Iterative:</strong> The insertion sort algorithm uses a loop to iterate through the array and insert each element into its correct position in the sorted part of the array. <br><br>
+                        <strong>Characteristics of Insertion Sort:</strong><br><br>
+                        This algorithm is one of the simplest algorithms with a simple implementation.<br>
+                       <li>Basically, insertion sort is efficient for small data values.<br></li> 
+                       <li> Insertion sort is adaptive in nature, i.e., it is appropriate for data sets that are already partially sorted.<br></li> 
+                       <li>  Insertion sort is an in-place sorting algorithm.<br></li> 
+
+                        
+                                            </p>
+                    
+                </div>
+
+                <div class="about__data data1">
+                    <h2 class="section__title about__title">
+                        Time Complexity of Insertion Sort <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <strong>Complexity Analysis of Insertion Sort:</strong><br>
+        <li>Time Complexity : <strong>O(n^2)</strong><br><br></li>
+        <strong>Time Complexity of Insertion Sort:</strong><br><br>
+       <li> <strong>The worst-case time complexity</strong> of the Insertion sort is <strong>O(n^2).</strong><br><br></li>
+       <li> <strong>The average case time complexity</strong> of the Insertion sort is <strong>O(n^2).</strong><br><br></li>
+       <li> <strong>The time complexity</strong> of the best case is <strong>O(n).</strong><br><br></li>
+        <strong>Space Complexity of Insertion Sort:</strong><br><br>
+       <li> <strong>The auxiliary space complexity</strong> of Insertion Sort is <strong>O(1).</strong><br><br></li>
+
+                        
+                                            </p>
+                    
+                </div>
+
+
+
+                </div>
+</section>
+
+        
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                     </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+                        
+                     
+                    </ul>
+                </div>
+               
+
+              
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>    
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+       <!--=============== MAIN JS ===============-->
+       <script src="assets/js/main.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

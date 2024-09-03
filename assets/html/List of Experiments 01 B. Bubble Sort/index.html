@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Virtual Design and Analysis of Algorithms Lab</title>
+    </head> 
+    
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container nav ">
+
+
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+               </div>
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+                    
+                  <h3>  Department of Computational Intelligence</h3>
+                   
+               <h4>  Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+               <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                 </a>
+               </div>
+
+
+
+            </nav>
+            <nav class="nav container">
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="../../../index.html" class="nav__link">Home</a>
+                        </li>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="#Contact" class="nav__link ">Contact Us</a>
+                        </li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                       
+                        <li class="nav__item">
+                            <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target Audience</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Bubble Sort <br>
+                    </h1>
+
+                    <p class="about__description">
+                        <li> Bubble sort is the simplest algorithm to sort elements in ascending or descending order. <br> </li>
+                        <li> This approach works by repeatedly swapping the adjacent elements if they are not in order. <br> </li>
+                        <li> The smallest element moves to the front. The movement of array elements is just like the movement of an air bubble in water, which is why it is called bubble sort. <br> </li>
+                        <li> It is efficient only for smaller-sized data and is not suitable for large data sets. <br> </li>
+                        
+                                            </p>
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/6Vo5tGjfLqo?si=U3D6SrHhYCOK2IoW" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        
+                        
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+         <!--=============== Content ===============-->
+
+         <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Bubble Sort Operation <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <img src="/assets/html/List of Experiments 01 B. Bubble Sort/assets/img/photo1.png" alt="">
+                        
+                                            </p>
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Bubble Sort – Iteration/Passes  <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <li> n - number of elements in the array. <br> </li>
+<li> The number of iterations or passes is n-1; the bubble sort algorithm is executed for n-1 iterations. <br> </li>
+<li> In each iteration, the largest element is moved to the last location. <br> </li>
+<li> During the first iteration, the first largest element is moved to the last location and stored in the correct place. <br> </li>
+<li> During the second iteration, the second largest element is moved to the last location at the correct place. <br> </li>
+<li> This process is repeated for n-1 iterations for n elements. <br> </li>
+
+                        
+                                            </p>
+                    
+                </div>
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">
+                        Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <strong>BubbleSort(arr[0]..arr[n-1])</strong>
+
+                        <br><br>
+                        
+                        <strong>Input:</strong> Array <code>arr</code> contains <code>n</code> elements in unsorted order. 
+                        <br><br>
+                        <strong>Output:</strong> Array <code>arr</code> contains <code>n</code> elements in sorted order. 
+                        <br><br>
+                        
+                        <strong>Step 1:</strong> Initialize <code>i = 0</code>.
+                        <br><br>
+                        <strong>Step 2:</strong> The for loop variable <code>i</code> varies from <code>0</code> to <code>n-2</code>.
+                        <br><br>
+                        <strong>Step 3:</strong> The for loop variable <code>j</code> varies from <code>0</code> to <code>n-2-i</code>.
+                        <br><br>
+                        <strong>Step 4:</strong> If <code>arr[j] > arr[j+1]</code>, then swap <code>arr[j]</code> and <code>arr[j+1]</code>.
+                        <br><br>
+                        <strong>Step 5:</strong> Increment <code>j</code> and go to Step 3.
+                        <br><br>
+                        <strong>Step 6:</strong> Increment <code>i</code> and go to Step 2.
+                        <br><br>
+                        <strong>Step 7:</strong> Output the sorted array.
+                        
+
+                        
+                                            </p>
+                    
+                </div>
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Working of Bubble Sort algorithm - Example <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <img src="/assets/html/List of Experiments 01 B. Bubble Sort/assets/img/photo2.png" alt="">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="/assets/html/List of Experiments 01 B. Bubble Sort/assets/img/photo3.png" alt="">
+                        
+                                            </p>
+                    
+                </div>
+                
+            </div>
+        </section>
+        
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                Bubble Sort Code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                        #include &lt;stdio.h&gt;
+                        #include <stdio.h>
+
+                            // A function to implement Bubble Sort
+                            void bubbleSort(int arr[], int n) {
+                                int i, j, temp;
+                                for (i = 0; i &lt; n - 1; i++) {
+                                    // Last i elements are already sorted
+                                    for (j = 0; j &lt; n - i - 1; j++) {
+                                        // Swap if the element found is greater than the next element
+                                        if (arr[j] > arr[j + 1]) {
+                                            temp = arr[j];
+                                            arr[j] = arr[j + 1];
+                                            arr[j + 1] = temp;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            // Function to print an array
+                            void printArray(int arr[], int size) {
+                                for (int i = 0; i &lt; size; i++)
+                                    printf("%d ", arr[i]);
+                                printf("\n");
+                            }
+                            
+                            // Driver code
+                            int main() {
+                                int n;
+                            
+                                // Get the size of the array from the user
+                                printf("Enter the number of elements: ");
+                                scanf("%d", &n);
+                            
+                                // Declare an array with a size based on user input
+                                int arr[n];
+                            
+                                // Get the elements of the array from the user
+                                printf("Enter the elements of the array:\n");
+                                for (int i = 0; i &lt; n; i++) {
+                                    scanf("%d", &arr[i]);
+                                }
+                            
+                                // Sort the array using Bubble Sort
+                                bubbleSort(arr, n);
+                            
+                                // Print the sorted array
+                                printf("Sorted array: ");
+                                printArray(arr, n);
+                            
+                                return 0;
+                            }
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        #include &lt;iostream>
+                            using namespace std;
+                            
+                            void bubbleSort(int arr[], int n) {
+                                int i, j, temp;
+                                for (i = 0; i &lt; n-1; i++) {
+                                    for (j = 0; j &lt; n-i-1; j++) {
+                                        if (arr[j] > arr[j+1]) {
+                                            // Swap arr[j] and arr[j+1]
+                                            temp = arr[j];
+                                            arr[j] = arr[j+1];
+                                            arr[j+1] = temp;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            void printArray(int arr[], int size) {
+                                for (int i = 0; i &lt; size; i++)
+                                    cout &lt;&lt; arr[i] &lt;&lt; " ";
+                                cout &lt;&lt; endl;
+                            }
+                            
+                            int main() {
+                                int arr[] = {64, 34, 25, 12, 22, 11, 90};
+                                int n = sizeof(arr)/sizeof(arr[0]);
+                                bubbleSort(arr, n);
+                                cout &lt;&lt; "Sorted array: " &lt;&lt; endl;
+                                printArray(arr, n);
+                                return 0;
+                            }
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        public class BubbleSort {
+
+                            static void bubbleSort(int[] arr) {
+                                int n = arr.length;
+                                int temp;
+                                for (int i = 0; i &lt; n-1; i++) {
+                                    for (int j = 0; j &lt; n-i-1; j++) {
+                                        if (arr[j] > arr[j+1]) {
+                                            // Swap arr[j] and arr[j+1]
+                                            temp = arr[j];
+                                            arr[j] = arr[j+1];
+                                            arr[j+1] = temp;
+                                        }
+                                    }
+                                }
+                            }
+                        
+                            static void printArray(int[] arr) {
+                                for (int i : arr)
+                                    System.out.print(i + " ");
+                                System.out.println();
+                            }
+                        
+                            public static void main(String[] args) {
+                                int[] arr = {64, 34, 25, 12, 22, 11, 90};
+                                bubbleSort(arr);
+                                System.out.println("Sorted array:");
+                                printArray(arr);
+                            }
+                        }
+                        
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        def bubble_sort(arr):
+                        n = len(arr)
+                        for i in range(n-1):
+                            for j in range(0, n-i-1):
+                                if arr[j] > arr[j+1]:
+                                    # Swap arr[j] and arr[j+1]
+                                    arr[j], arr[j+1] = arr[j+1], arr[j]
+                    
+                    def print_array(arr):
+                        for i in arr:
+                            print(i, end=' ')
+                        print()
+                    
+                    if __name__ == "__main__":
+                        arr = [64, 34, 25, 12, 22, 11, 90]
+                        bubble_sort(arr)
+                        print("Sorted array:")
+                        print_array(arr)
+                    
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+         <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Analysis of Bubble Sort <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <strong>Time Complexity</strong><br><br>
+                        <strong>Best Case:</strong> In the best case, the input array is already in sorted order, and the algorithm performs a minimum of n-1 comparisons. The best case complexity is <strong>O(n).</strong><br><br>
+                        <strong>Worst Case:</strong> In the worst case, the input array is in descending order, and the algorithm performs a maximum of n(n-1) comparisons. The algorithm performs n-1 iterations, and each iteration involves a maximum of n-1 comparisons. The worst-case and average-case complexity is <strong>O(n²).</strong>
+                        <strong>Space Complexity</strong><br><br>
+No additional space is required. The space complexity of insertion sort is O(1).<br><br>
+<strong>Comparison of Insertion Sort and Bubble Sort</strong><br>
+
+                        <img src="/assets/html/List of Experiments 01 B. Bubble Sort/assets/img/photo4.png" alt="">
+
+                        
+                                            </p>
+                    
+                </div>
+
+               
+
+
+                </div>
+</section>
+
+        
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                     </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+                        
+                     
+                    </ul>
+                </div>
+               
+
+              
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>    
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+       <!--=============== MAIN JS ===============-->
+       <script src="assets/js/main.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Virtual Design and Analysis of Algorithms Lab</title>
+    </head> 
+    
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container nav ">
+
+
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+               </div>
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+                    
+                  <h3>  Department of Computational Intelligence</h3>
+                   
+               <h4>  Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+               <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                 </a>
+               </div>
+
+
+
+            </nav>
+            <nav class="nav container">
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="../../../index.html" class="nav__link">Home</a>
+                        </li>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="#Contact" class="nav__link ">Contact Us</a>
+                        </li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                       
+                        <li class="nav__item">
+                            <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target Audience</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Largest Sub-array Sum <br>
+                    </h1>
+
+                    <p class="about__description">
+                        <p><strong>Problem:</strong> To find the maximum sum of a contiguous sub-array within the given array. The sub-array should be contiguous.</p><br>
+
+                        <p><strong>Input:</strong> Given a one-dimensional array <strong>A</strong> of size <strong>n</strong>, where <strong>A</strong> contains <strong>n</strong> elements. The elements can have either positive or negative values.</p><br>
+                        
+                        <p><strong>Output:</strong> The maximum sum of a contiguous sub-array.</p><br>
+                        
+                                            </p>
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lCllz_e4GOQ?si=C_wx2w6xeEOT68i5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        
+                        
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+         <!--=============== Content ===============-->
+
+         <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Largest Sub-array Sum – Example<br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        
+                        <br>
+                        <br>
+                        <img src="/assets/html/List of Experiments 06  Largest Sub Array Sum/assets/img/photo1.png" alt="">
+                        <img src="/assets/html/List of Experiments 06  Largest Sub Array Sum/assets/img/photo2.png" alt="">
+                        <img src="/assets/html/List of Experiments 06  Largest Sub Array Sum/assets/img/photo3.png" alt="">
+                        
+                       
+                        
+               
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">
+                        Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <p><strong>LargestSubArraySum(A[0]..A[n-1])</strong></p><br>
+
+                        <p><strong>Input:</strong> Array <code>A</code> containing <code>n</code> elements.</p><br>
+                        
+                        <p><strong>Output:</strong> Largest sum of contiguous sub-array.</p><br>
+                        
+                        <p><strong>Step 1:</strong> Start.</p><br>
+                        
+                        <p><strong>Step 2:</strong> Input array <code>A</code>.</p><br>
+                        
+                        <p><strong>Step 3:</strong> Initialize <code>current_max</code> and <code>max_sofar</code> with <code>A[0]</code>.</p><br>
+                        
+                        <p><strong>Step 4:</strong> For <code>i = 1</code> to <code>n-1</code>, do the following:</p><br>
+                        
+                        <p><strong>Step 5:</strong> If <code>A[i] > current_max + A[i]</code>, then set <code>current_max = A[i]</code>; <br><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else set <code>current_max = current_max + A[i]</code>.</p><br>
+                        
+                        <p><strong>Step 6:</strong> If <code>current_max > max_sofar</code>, then set <code>max_sofar = current_max</code>.</p><br>
+                        
+                        <p><strong>Step 7:</strong> Repeat Step 4.</p><br>
+                        
+                        <p><strong>Step 8:</strong> Return <code>max_sofar</code>, then Stop.</p><br>
+                        
+                        <p><strong>Algorithm Analysis:</strong><br><br>
+                        Time Complexity <code>T(n) = O(n)</code>.
+                        </p>
+                        
+                    
+                </div>
+                
+                
+            </div>
+        </section>
+        
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                Largest Sub-array <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                        #include &lt;stdio.h&gt;
+                      
+                            int MaxMin(int A[], int n, int i,int max, int min) {
+                                while ( i&lt;= n) {
+                                if (A[i]&lt;min)
+                                  min=A[i];
+                                if (A[i]>min)
+                                  max=A[i];
+                                i++;
+                              }
+                               printf(" Maximum Value is = %d", max);
+                               printf(" Minimum Value is = %d", min);
+                            }
+                            void InputArray(int A[], int n) 
+                            { 
+                                int i; 
+                                printf("Enter the %d Elements\n",n);
+                                for (i = 0; i &lt; n; i++) 
+                                {
+                                  printf("i =%d \t", i);
+                                  scanf("%d",&A[i]); 
+                                }
+                            }
+                            
+                            // Driver Code
+                            int main(void) {
+                               int A[100],n,min, max;
+                               printf("Enter the size of the array \n");
+                               scanf("%d",&n);
+                               InputArray(A,n);
+                               MaxMin(A,n-1,1,A[0],A[0]);
+                              return 0;
+                            }
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        #include &lt;iostream>
+                            #include &lt;vector>
+                            #include &lt;climits>
+                            
+                            int maxSubArraySum(const std::vector&lt;int>& nums) {
+                                int maxSum = INT_MIN;
+                                int currentSum = 0;
+                            
+                                for (int num : nums) {
+                                    currentSum += num;
+                                    if (maxSum &lt; currentSum)
+                                        maxSum = currentSum;
+                                    if (currentSum &lt; 0)
+                                        currentSum = 0;
+                                }
+                            
+                                return maxSum;
+                            }
+                            
+                            int main() {
+                                std::vector&lt;int> nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+                                std::cout &lt;&lt; "Maximum Subarray Sum is " &lt;&lt; maxSubArraySum(nums) &lt;&lt; std::endl;
+                                return 0;
+                            }
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        public class LargestSumSubarray {
+                            public static int maxSubArraySum(int[] nums) {
+                                int maxSum = Integer.MIN_VALUE;
+                                int currentSum = 0;
+                        
+                                for (int num : nums) {
+                                    currentSum += num;
+                                    if (maxSum &lt; currentSum)
+                                        maxSum = currentSum;
+                                    if (currentSum &lt; 0)
+                                        currentSum = 0;
+                                }
+                        
+                                return maxSum;
+                            }
+                        
+                            public static void main(String[] args) {
+                                int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+                                System.out.println("Maximum Subarray Sum is " + maxSubArraySum(nums));
+                            }
+                        }
+                         
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        def max_subarray_sum(nums):
+    max_sum = float('-inf')
+    current_sum = 0
+
+    for num in nums:
+        current_sum += num
+        if max_sum &lt; current_sum:
+            max_sum = current_sum
+        if current_sum &lt; 0:
+            current_sum = 0
+
+    return max_sum
+
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+print("Maximum Subarray Sum is", max_subarray_sum(nums))
+
+                    
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+         <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Analysis of Largest Sub-array Sum  <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <strong>Time Complexity</strong>  
+<p>
+    The recursive algorithm is used to find <code>T(n)</code>, where <code>T(n)</code> represents the time taken to find the largest sum of a sub-array. The recurrence relation for Merge Sort is:
+</p>
+<pre>
+    <code>T(n) = 2T(n/2)</code><br>
+    <code>T(n/2) = 2T(n/4), &hellip;</code><br>
+</pre>
+<p>
+    According to the Master Theorem:
+</p>
+<pre>
+    <code>T(n) = n.logn</code><br>
+    <code>T(n) = n.logn</code><br>
+    <code>T(n) = O(n.logn)</code><br>
+</pre>
+
+                        
+                            <br>
+                            <br>
+                            <br>
+                        <img src="/assets/html/List of Experiments 06  Largest Sub Array Sum/assets/img/photo4.png" alt="">
+                        
+
+                        
+                                            </p>
+                    
+                </div>
+
+               
+
+
+                </div>
+</section>
+
+        
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                     </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+                        
+                     
+                    </ul>
+                </div>
+               
+
+              
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>    
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+       <!--=============== MAIN JS ===============-->
+       <script src="assets/js/main.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

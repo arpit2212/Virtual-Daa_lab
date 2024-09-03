@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Virtual Design and Analysis of Algorithms Lab</title>
+    </head> 
+    
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container nav ">
+
+
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+               </div>
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+                    
+                  <h3>  Department of Computational Intelligence</h3>
+                   
+               <h4>  Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+               <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                 </a>
+               </div>
+
+
+
+            </nav>
+            <nav class="nav container">
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="../../../index.html" class="nav__link">Home</a>
+                        </li>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="#Contact" class="nav__link ">Contact Us</a>
+                        </li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                       
+                        <li class="nav__item">
+                            <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target Audience</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Merge Sort <br>
+                    </h1>
+
+                    <p class="about__description">
+                        <ul>
+                        <p><strong>Merge sort</strong> uses the concept of the divide and conquer method. In this approach, the problem is divided into a number of smaller modules, and the modules are solved individually. Then the results are combined to get the solution to the main problem.</p>
+                        <p>There are three steps:
+                            <ol>
+                                <li><strong>Divide:</strong> Merge sort works by dividing the array into smaller subarrays.</li>
+                                <li><strong>Conquer/Sort:</strong> It sorts the subarrays individually.</li>
+                                <li><strong>Merge:</strong> Finally, merge the sorted subarrays to get the final sorted array.</li>
+                            </ol>               
+                                            </p>
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zWydudNfLJg?si=-g4bo5ermSoF5Q_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        </div>
+                        
+                        
+                        
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+         <!--=============== Content ===============-->
+
+         <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Merge Sort Operation <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        The input array <code>A[0 &hellip; n-1]</code> contains <code>n</code> elements, and the indices range from <code>0</code> to <code>n-1</code>.<br><br>
+                        The array is divided into two parts: <code>A[0 &hellip; (n/2) - 1]</code> and <code>A[n/2 &hellip; n-1]</code>. The algorithm recursively divides the given array <code>A</code> until each sub-array contains a single element. After partitioning, the sub-arrays are sorted and merged recursively until a single sorted array is achieved.<br><br>
+                        The root node represents the main problem, while other nodes in the tree represent sub-problems. If <code>n = 2<sup>k</sup></code>, where <code>k = log n</code>, the height of the tree is <code>log n</code>. Each level of the tree involves a maximum of <code>n</code> comparisons.<br>
+
+                        <br>
+                        <br>
+                        <img src="/assets/html/List of Experiments 03 merge Sort/assets/img/photo1.png" alt="">
+                        <img src="/assets/html/List of Experiments 03 merge Sort/assets/img/photo2.png" alt="">
+                        <img src="/assets/html/List of Experiments 03 merge Sort/assets/img/photo3.png" alt="">
+                       
+                        
+               
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">
+                        Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <p><strong>MergeSort(A[0]..A[n-1])</strong></p><br><br>
+
+                        <p><strong>Input:</strong> Unsorted Array <code>A</code> containing <code>n</code> elements.</p><br><br>
+                        
+                        <p><strong>Output:</strong> Sorted Array <code>A</code>.</p><br><br>
+                        
+                        <p><strong>Step 1:</strong> Start.</p><br><br>
+                        
+                        <p><strong>Step 2:</strong> If the array has one or zero elements (<code>n &lt;= 1</code>), it is already sorted. Return.</p><br><br>
+                        
+                        <p><strong>Step 3:</strong> Divide the array into two halves:</p><br><br>
+                        <ul>
+                            <li><code>Left Half:</code> <code>A[0]..A[mid]</code></li><br><br>
+                            <li><code>Right Half:</code> <code>A[mid+1]..A[n-1]</code></li><br><br>
+                        </ul>
+                        
+                        <p><strong>Step 4:</strong> Recursively apply MergeSort to the left half.</p><br><br>
+                        
+                        <p><strong>Step 5:</strong> Recursively apply MergeSort to the right half.</p><br><br>
+                        
+                        <p><strong>Step 6:</strong> Merge the two sorted halves:</p><br><br>
+                        <ul>
+                            <li>Create two pointers, one for each half.</li><br><br>
+                            <li>Compare elements from both halves and copy the smaller element into a temporary array.</li><br><br>
+                            <li>Continue until all elements from both halves are merged into the temporary array.</li><br><br>
+                        </ul>
+                        
+                        <p><strong>Step 7:</strong> Copy the merged elements back into the original array.</p><br><br>
+                        
+                        <p><strong>Step 8:</strong> Output the sorted array.</p><br><br>
+                        
+                        <p><strong>Step 9:</strong> Stop.</p><br>
+                    
+                </div>
+                
+                
+            </div>
+        </section>
+        
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                Binary Search Code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                        #include &lt;stdio.h&gt;
+                       
+                      
+  
+                            /* Function to merge the subarrays of a[] */  
+                            void merge(int a[], int beg, int mid, int end)    
+                            {    
+                                int i, j, k;  
+                                int n1 = mid - beg + 1;    
+                                int n2 = end - mid;    
+                                  
+                                int LeftArray[n1], RightArray[n2]; //temporary arrays  
+                                  
+                                /* copy data to temp arrays */  
+                                for (int i = 0; i &lt; n1; i++)    
+                                LeftArray[i] = a[beg + i];    
+                                for (int j = 0; j &lt; n2; j++)    
+                                RightArray[j] = a[mid + 1 + j];    
+                                  
+                                i = 0; /* initial index of first sub-array */  
+                                j = 0; /* initial index of second sub-array */   
+                                k = beg;  /* initial index of merged sub-array */  
+                                  
+                                while (i &lt; n1 && j &lt; n2)    
+                                {    
+                                    if(LeftArray[i] &lt;= RightArray[j])    
+                                    {    
+                                        a[k] = LeftArray[i];    
+                                        i++;    
+                                    }    
+                                    else    
+                                    {    
+                                        a[k] = RightArray[j];    
+                                        j++;    
+                                    }    
+                                    k++;    
+                                }    
+                                while (i&lt;n1)    
+                                {    
+                                    a[k] = LeftArray[i];    
+                                    i++;    
+                                    k++;    
+                                }    
+                                  
+                                while (j&lt;n2)    
+                                {    
+                                    a[k] = RightArray[j];    
+                                    j++;    
+                                    k++;    
+                                }    
+                            }    
+                              
+                            void mergeSort(int a[], int beg, int end)  
+                            {  
+                                if (beg &lt; end)   
+                                {  
+                                    int mid = (beg + end) / 2;  
+                                    mergeSort(a, beg, mid);  
+                                    mergeSort(a, mid + 1, end);  
+                                    merge(a, beg, mid, end);  
+                                }  
+                            }  
+                              
+                            /* Function to print the array */  
+                            void printArray(int a[], int n)  
+                            {  
+                                int i;  
+                                for (i = 0; i &lt; n; i++)  
+                                    printf("%d ", a[i]);  
+                                printf("\n");  
+                            }  
+                            /* Function to get elements for the array */  
+                            
+                              void InputArray(int a[], int n) 
+                            { 
+                                int i; 
+                                printf("Enter the %d Elements\n",n);
+                                for (i = 0; i &lt; n; i++) 
+                                     scanf("%d",&a[i]); 
+                            } 
+                            
+                            int main()  
+                            {  
+                               int a[100],n, key,i;
+                               printf("Enter the size of the array \n");
+                               scanf("%d",&n);
+                               InputArray(a,n);
+                                printf("Before sorting array elements are - \n");  
+                                printArray(a, n);  
+                                mergeSort(a, 0, n - 1);  
+                                printf("After sorting array elements are - \n");  
+                                printArray(a, n);  
+                                return 0;  
+                            }  
+                            
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        #include &lt;iostream>
+                            #include &lt;vector>
+                            
+                            void merge(std::vector&lt;int>& arr, int left, int mid, int right) {
+                                int n1 = mid - left + 1;
+                                int n2 = right - mid;
+                            
+                                std::vector&lt;int> L(n1);
+                                std::vector&lt;int> R(n2);
+                            
+                                for (int i = 0; i &lt; n1; ++i)
+                                    L[i] = arr[left + i];
+                                for (int j = 0; j &lt; n2; ++j)
+                                    R[j] = arr[mid + 1 + j];
+                            
+                                int i = 0, j = 0, k = left;
+                                while (i &lt; n1 && j &lt; n2) {
+                                    if (L[i] &lt;= R[j]) {
+                                        arr[k++] = L[i++];
+                                    } else {
+                                        arr[k++] = R[j++];
+                                    }
+                                }
+                            
+                                while (i &lt; n1) {
+                                    arr[k++] = L[i++];
+                                }
+                            
+                                while (j &lt; n2) {
+                                    arr[k++] = R[j++];
+                                }
+                            }
+                            
+                            void mergeSort(std::vector&lt;int>& arr, int left, int right) {
+                                if (left &lt; right) {
+                                    int mid = left + (right - left) / 2;
+                                    mergeSort(arr, left, mid);
+                                    mergeSort(arr, mid + 1, right);
+                                    merge(arr, left, mid, right);
+                                }
+                            }
+                            
+                            int main() {
+                                std::vector&lt;int> arr = {12, 11, 13, 5, 6, 7};
+                                mergeSort(arr, 0, arr.size() - 1);
+                                
+                                for (int num : arr)
+                                    std::cout &lt; num &lt; " ";
+                                std::cout &lt; std::endl;
+                            
+                                return 0;
+                            }
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        public class MergeSort {
+
+                            public static void merge(int[] arr, int left, int mid, int right) {
+                                int n1 = mid - left + 1;
+                                int n2 = right - mid;
+                        
+                                int[] L = new int[n1];
+                                int[] R = new int[n2];
+                        
+                                System.arraycopy(arr, left, L, 0, n1);
+                                System.arraycopy(arr, mid + 1, R, 0, n2);
+                        
+                                int i = 0, j = 0, k = left;
+                                while (i &lt; n1 && j &lt; n2) {
+                                    if (L[i] &lt;= R[j]) {
+                                        arr[k++] = L[i++];
+                                    } else {
+                                        arr[k++] = R[j++];
+                                    }
+                                }
+                        
+                                while (i &lt; n1) {
+                                    arr[k++] = L[i++];
+                                }
+                        
+                                while (j &lt; n2) {
+                                    arr[k++] = R[j++];
+                                }
+                            }
+                        
+                            public static void mergeSort(int[] arr, int left, int right) {
+                                if (left &lt; right) {
+                                    int mid = left + (right - left) / 2;
+                                    mergeSort(arr, left, mid);
+                                    mergeSort(arr, mid + 1, right);
+                                    merge(arr, left, mid, right);
+                                }
+                            }
+                        
+                            public static void main(String[] args) {
+                                int[] arr = {12, 11, 13, 5, 6, 7};
+                                mergeSort(arr, 0, arr.length - 1);
+                        
+                                for (int num : arr)
+                                    System.out.print(num + " ");
+                                System.out.println();
+                            }
+                        }
+                        
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        def merge(arr, left, mid, right):
+                        n1 = mid - left + 1
+                        n2 = right - mid
+                    
+                        L = arr[left:left + n1]
+                        R = arr[mid + 1:mid + 1 + n2]
+                    
+                        i = j = 0
+                        k = left
+                        while i &lt; n1 and j &lt; n2:
+                            if L[i] &lt;= R[j]:
+                                arr[k] = L[i]
+                                i += 1
+                            else:
+                                arr[k] = R[j]
+                                j += 1
+                            k += 1
+                    
+                        while i &lt; n1:
+                            arr[k] = L[i]
+                            i += 1
+                            k += 1
+                    
+                        while j &lt; n2:
+                            arr[k] = R[j]
+                            j += 1
+                            k += 1
+                    
+                    def merge_sort(arr, left, right):
+                        if left &lt; right:
+                            mid = (left + right) // 2
+                            merge_sort(arr, left, mid)
+                            merge_sort(arr, mid + 1, right)
+                            merge(arr, left, mid, right)
+                    
+                    arr = [12, 11, 13, 5, 6, 7]
+                    merge_sort(arr, 0, len(arr) - 1)
+                    print(arr)
+                    
+
+                    
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+         <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Analysis of Merge Sort <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <strong>Time Complexity</strong><br><br>
+                        In Merge Sort, the recursive process creates a tree of height <code>log n</code>, and there are <code>log n + 1</code> levels in this tree. At each level, the algorithm performs a maximum of <code>n</code> comparisons. The total number of comparisons across all levels is the sum of comparisons at each level, resulting in a total of <code>n.log n</code> comparisons. Therefore, the time complexity is <code>T(n) = n.log n = O(n.log n)</code>.<br><br>
+                        
+                        The basic operation of the Merge Sort algorithm is comparison. The time complexity is determined by how many times this comparison operation is performed. The running time <code>T(n)</code> for an input of size <code>n</code> is the sum of the time taken to divide the array into subarrays until we reach single elements and the time taken to sort and merge the sorted arrays.<br><br>
+                        
+                        <strong>Best Case:</strong> If the array is already sorted, the algorithm performs a minimum number of comparisons.<br><br>
+                        
+                        <strong>Worst Case:</strong> The worst-case scenario occurs during the sort and merge operations, particularly when elements are taken alternately from the two sorted input arrays. Merge Sort performs the maximum number of comparisons in this case.<br><br>
+                        
+                        Given that <code>T(n)</code> is the time taken to sort <code>n</code> elements using Merge Sort, the recurrence relation for Merge Sort is:<br><br>
+                        
+                        <code>T(n) = T(n/2) + T<sub>merge</sub>(n)</code><br><br>
+                        
+                        Where <code>T<sub>merge</sub>(n)</code> is the time taken for the merge operation. In the worst case, the merge operation takes <code>n-1</code> comparisons, so:<br><br>
+                        
+                        <code>T<sub>merge</sub>(n) = n-1</code><br><br>
+                        
+                        Thus, the worst-case time complexity for Merge Sort is:<br><br>
+                        
+                        <code>T<sub>worst</sub>(n) = T<sub>worst</sub>(n/2) + T<sub>merge</sub>(n)</code><br>
+                        <code>T<sub>worst</sub>(n) = T<sub>worst</sub>(n/2) + (n-1)</code><br><br>
+                        
+                        According to the Master Theorem, <code>T<sub>worst</sub>(n/2) = n.log n</code>, so:<br><br>
+                        
+                        <code>T<sub>worst</sub>(n) = n.log n + (n-1)</code><br>
+                        <code>T<sub>worst</sub>(n) = n.log n</code><br>
+                        <code>T<sub>worst</sub>(n) = O(n.log n)</code><br><br>
+                        
+                        <strong>Space Complexity</strong><br><br>
+                        In the merge phase, elements from the two subarrays are copied into a newly created array. During the final merge step, the extra array size equals the input array size. Since the Merge Sort algorithm requires an additional array of size <code>n</code> for storing the <code>n</code> elements, the space complexity of Merge Sort is <strong>O(n)</strong>.
+                        
+                        
+                            <br>
+                            <br>
+                            <br>
+                        <img src="/assets/html/List of Experiments 03 merge Sort/assets/img/photo4.png" alt="">
+
+                        
+                                            </p>
+                    
+                </div>
+
+               
+
+
+                </div>
+</section>
+
+        
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                     </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+                        
+                     
+                    </ul>
+                </div>
+               
+
+              
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>    
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+       <!--=============== MAIN JS ===============-->
+       <script src="assets/js/main.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

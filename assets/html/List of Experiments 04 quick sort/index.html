@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Virtual Design and Analysis of Algorithms Lab</title>
+    </head> 
+    
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container nav ">
+
+
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+               </div>
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+                    
+                  <h3>  Department of Computational Intelligence</h3>
+                   
+               <h4>  Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+               <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                 </a>
+               </div>
+
+
+
+            </nav>
+            <nav class="nav container">
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="../../../index.html" class="nav__link">Home</a>
+                        </li>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="#Contact" class="nav__link ">Contact Us</a>
+                        </li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                       
+                        <li class="nav__item">
+                            <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target Audience</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Quick Sort <br>
+                    </h1>
+
+                    <p class="about__description">
+                        <p><strong>Sorting</strong> is the process of arranging elements in either ascending or descending order. One common sorting algorithm is <strong>Quick Sort</strong>, which works on the Divide and Conquer strategy. Quick Sort recursively partitions the given array into right and left halves and sorts each partition using a pivot element. The array elements are rearranged such that elements smaller than the pivot are on the left, while elements greater than the pivot are on the right. This process is repeated for each partition until the entire array is sorted.</p>
+
+<p>Here are the key steps:</p>
+<ul>
+    <li><strong>Pivot Element:</strong> The first element is selected as the pivot. The Quick Sort algorithm places the pivot element in its final position within the sorted array.</li>
+    <li><strong>Partition:</strong> The pivot element divides the array into two parts, a process known as partitioning. After partitioning, the pivot is positioned correctly in the final sorted order.</li>
+</ul>
+
+                                            </p>
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZqiqJlG9rRI?si=3ShotqYyMGKt1CwH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        
+                        
+                        
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+         <!--=============== Content ===============-->
+
+         <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Quick Sort Operation<br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <p>Unlike merge sort, quick sort divides the array into two subarrays based on a pivot value. The sizes of the two subarrays need not be equal, they may be either equal or unequal.</p>
+
+                        <p><strong>Partition:</strong> The split point <code>S</code> represents the final location of the pivot element. It splits the array into two parts: all elements before the pivot element <code>A[S]</code> are less than or equal to the pivot element, and all elements after <code>A[S]</code> are greater than or equal to the pivot element.</p>
+                        
+                        <br>
+                        <br>
+                        <img src="/assets/html/List of Experiments 04 quick sort/assets/img/photo2 (2).png" alt="">
+                        <img src="/assets/html/List of Experiments 04 quick sort/assets/img/photo2 (1).png" alt="">
+                        <img src="/assets/html/List of Experiments 04 quick sort/assets/img/photo3 (1).png" alt="">
+                        <img src="/assets/html/List of Experiments 04 quick sort/assets/img/photo4.png" alt="">
+                        
+                       
+                        
+               
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">
+                        Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <p><strong>QuickSort(A[0]..A[n-1])</strong></p><br><br>
+
+                        <p><strong>Input:</strong> Unsorted Array <code>A</code> containing <code>n</code> elements.</p><br><br>
+                        
+                        <p><strong>Output:</strong> Sorted Array <code>A</code>.</p><br><br>
+                        
+                        <p><strong>Step 1:</strong> Start.</p><br><br>
+                        
+                        <p><strong>Step 2:</strong> If the array has one or zero elements (<code>n &lt;= 1</code>), it is already sorted. Return.</p><br><br>
+                        
+                        <p><strong>Step 3:</strong> Choose a pivot element from the array. (Typically, the first, last, or middle element)</p><br><br>
+                        
+                        <p><strong>Step 4:</strong> Partition the array into three parts:</p><br><br>
+                        <ul>
+                            <li><code>Left Partition:</code> Elements less than the pivot.</li><br><br>
+                            <li><code>Pivot:</code> The pivot element itself.</li><br><br>
+                            <li><code>Right Partition:</code> Elements greater than the pivot.</li><br><br>
+                        </ul>
+                        
+                        <p><strong>Step 5:</strong> Recursively apply QuickSort to the left partition.</p><br><br>
+                        
+                        <p><strong>Step 6:</strong> Recursively apply QuickSort to the right partition.</p><br><br>
+                        
+                        <p><strong>Step 7:</strong> Combine the sorted left partition, the pivot, and the sorted right partition into a single array.</p><br><br>
+                        
+                        <p><strong>Step 8:</strong> Output the sorted array.</p><br><br>
+                        
+                        <p><strong>Step 9:</strong> Stop.</p><br>
+                        
+                    
+                </div>
+                
+                
+            </div>
+        </section>
+        
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                Binary Search Code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                        #include &lt;stdio.h&gt;
+                       
+
+                            // Function prototypes
+                            void InputArray(int arr[], int n);
+                            void swap(int *a, int *b);
+                            int partition(int arr[], int low, int high);
+                            void quickSort(int arr[], int low, int high);
+                            
+                            int main() {
+                                int arr[100], n;
+                            
+                                printf("Enter the size of the array \n");
+                                scanf("%d", &n);
+                            
+                                InputArray(arr, n);
+                            
+                                // printing the original array
+                                printf("Original array: ");
+                                for (int i = 0; i &lt; n; i++) {
+                                    printf("%d ", arr[i]);
+                                }
+                            
+                                // calling quickSort() to sort the given array
+                                quickSort(arr, 0, n - 1);
+                            
+                                // printing the sorted array
+                                printf("\nSorted array: ");
+                                for (int i = 0; i &lt; n; i++) {
+                                    printf("%d ", arr[i]);
+                                }
+                            
+                                return 0;
+                            }
+                            
+                            // Function to input elements into the array
+                            void InputArray(int arr[], int n) {
+                                printf("Enter %d elements of the array:\n", n);
+                                for (int i = 0; i &lt; n; i++) {
+                                    scanf("%d", &arr[i]);
+                                }
+                            }
+                            
+                            // Function to swap two elements
+                            void swap(int *a, int *b) {
+                                int temp = *a;
+                                *a = *b;
+                                *b = temp;
+                            }
+                            
+                            // Function to partition the array
+                            int partition(int arr[], int low, int high) {
+                                int pivot = arr[low];
+                                int i = low;
+                                int j = high;
+                            
+                                while (i &lt; j) {
+                                    while (arr[i] &lt;= pivot && i &lt;= high - 1) {
+                                        i++;
+                                    }
+                                    while (arr[j] > pivot && j >= low + 1) {
+                                        j--;
+                                    }
+                                    if (i &lt; j) {
+                                        swap(&arr[i], &arr[j]);
+                                    }
+                                }
+                                swap(&arr[low], &arr[j]);
+                                return j;
+                            }
+                            
+                            // Function to perform quicksort on the array
+                            void quickSort(int arr[], int low, int high) {
+                                if (low &lt; high) {
+                                    int partitionIndex = partition(arr, low, high);
+                                    quickSort(arr, low, partitionIndex - 1);
+                                    quickSort(arr, partitionIndex + 1, high);
+                                }
+                            }
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        #include &lt;iostream>
+                            using namespace std;
+                            
+                            // Function to swap two elements
+                            void swap(int &a, int &b) {
+                                int temp = a;
+                                a = b;
+                                b = temp;
+                            }
+                            
+                            // Partition function for Quick Sort
+                            int partition(int arr[], int low, int high) {
+                                int pivot = arr[high];
+                                int i = (low - 1);
+                            
+                                for (int j = low; j &lt; high; j++) {
+                                    if (arr[j] &lt;= pivot) {
+                                        i++;
+                                        swap(arr[i], arr[j]);
+                                    }
+                                }
+                                swap(arr[i + 1], arr[high]);
+                                return (i + 1);
+                            }
+                            
+                            // Quick Sort function
+                            void quickSort(int arr[], int low, int high) {
+                                if (low &lt; high) {
+                                    int pi = partition(arr, low, high);
+                                    quickSort(arr, low, pi - 1);
+                                    quickSort(arr, pi + 1, high);
+                                }
+                            }
+                            
+                            // Function to print the array
+                            void printArray(int arr[], int size) {
+                                for (int i = 0; i &lt; size; i++)
+                                    cout &lt; arr[i] &lt; " ";
+                                cout &lt; endl;
+                            }
+                            
+                            int main() {
+                                int arr[] = {10, 7, 8, 9, 1, 5};
+                                int n = sizeof(arr) / sizeof(arr[0]);
+                                quickSort(arr, 0, n - 1);
+                                cout &lt; "Sorted array: ";
+                                printArray(arr, n);
+                                return 0;
+                            }
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        public class QuickSort {
+    
+                            // Function to swap two elements
+                            private static void swap(int[] arr, int i, int j) {
+                                int temp = arr[i];
+                                arr[i] = arr[j];
+                                arr[j] = temp;
+                            }
+                        
+                            // Partition function for Quick Sort
+                            private static int partition(int[] arr, int low, int high) {
+                                int pivot = arr[high];
+                                int i = (low - 1);
+                        
+                                for (int j = low; j &lt; high; j++) {
+                                    if (arr[j] &lt;= pivot) {
+                                        i++;
+                                        swap(arr, i, j);
+                                    }
+                                }
+                                swap(arr, i + 1, high);
+                                return (i + 1);
+                            }
+                        
+                            // Quick Sort function
+                            private static void quickSort(int[] arr, int low, int high) {
+                                if (low &lt; high) {
+                                    int pi = partition(arr, low, high);
+                                    quickSort(arr, low, pi - 1);
+                                    quickSort(arr, pi + 1, high);
+                                }
+                            }
+                        
+                            // Function to print the array
+                            private static void printArray(int[] arr) {
+                                for (int value : arr) {
+                                    System.out.print(value + " ");
+                                }
+                                System.out.println();
+                            }
+                        
+                            public static void main(String[] args) {
+                                int[] arr = {10, 7, 8, 9, 1, 5};
+                                quickSort(arr, 0, arr.length - 1);
+                                System.out.println("Sorted array:");
+                                printArray(arr);
+                            }
+                        }
+                        
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        def quick_sort(arr):
+    if len(arr) &lt;= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x &lt; pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quick_sort(left) + middle + quick_sort(right)
+
+# Example usage
+arr = [10, 7, 8, 9, 1, 5]
+sorted_arr = quick_sort(arr)
+print("Sorted array:", sorted_arr)
+
+                    
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+         <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Analysis of Quick Sort <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <strong>Time Complexity</strong><br><br>
+                        In Merge Sort, the recursive process creates a tree of height <code>log n</code>, and there are <code>log n + 1</code> levels in this tree. At each level, the algorithm performs a maximum of <code>n</code> comparisons. The total number of comparisons across all levels is the sum of comparisons at each level, resulting in a total of <code>n.log n</code> comparisons. Therefore, the time complexity is <code>T(n) = n.log n = O(n.log n)</code>.<br><br>
+                        
+                        The basic operation of the Merge Sort algorithm is comparison. The time complexity is determined by how many times this comparison operation is performed. The running time <code>T(n)</code> for an input of size <code>n</code> is the sum of the time taken to divide the array into subarrays until we reach single elements and the time taken to sort and merge the sorted arrays.<br><br>
+                        
+                        <strong>Best Case:</strong> If the array is already sorted, the algorithm performs a minimum number of comparisons.<br><br>
+                        
+                        <strong>Worst Case:</strong> The worst-case scenario occurs during the sort and merge operations, particularly when elements are taken alternately from the two sorted input arrays. Merge Sort performs the maximum number of comparisons in this case.<br><br>
+                        
+                        Given that <code>T(n)</code> is the time taken to sort <code>n</code> elements using Merge Sort, the recurrence relation for Merge Sort is:<br><br>
+                        
+                        <code>T(n) = T(n/2) + T<sub>merge</sub>(n)</code><br><br>
+                        
+                        Where <code>T<sub>merge</sub>(n)</code> is the time taken for the merge operation. In the worst case, the merge operation takes <code>n-1</code> comparisons, so:<br><br>
+                        
+                        <code>T<sub>merge</sub>(n) = n-1</code><br><br>
+                        
+                        Thus, the worst-case time complexity for Merge Sort is:<br><br>
+                        
+                        <code>T<sub>worst</sub>(n) = T<sub>worst</sub>(n/2) + T<sub>merge</sub>(n)</code><br>
+                        <code>T<sub>worst</sub>(n) = T<sub>worst</sub>(n/2) + (n-1)</code><br><br>
+                        
+                        According to the Master Theorem, <code>T<sub>worst</sub>(n/2) = n.log n</code>, so:<br><br>
+                        
+                        <code>T<sub>worst</sub>(n) = n.log n + (n-1)</code><br>
+                        <code>T<sub>worst</sub>(n) = n.log n</code><br>
+                        <code>T<sub>worst</sub>(n) = O(n.log n)</code><br><br>
+                        
+                        <strong>Space Complexity</strong><br><br>
+                        In the merge phase, elements from the two subarrays are copied into a newly created array. During the final merge step, the extra array size equals the input array size. Since the Merge Sort algorithm requires an additional array of size <code>n</code> for storing the <code>n</code> elements, the space complexity of Merge Sort is <strong>O(n)</strong>.
+                        
+                        
+                            <br>
+                            <br>
+                            <br>
+                        <img src="/assets/html/List of Experiments 04 quick sort/assets/img/photo5 (1).png" alt="">
+                        <img src="/assets/html/List of Experiments 04 quick sort/assets/img//photo6.png" alt="">
+                        <img src="/assets/html/List of Experiments 04 quick sort/assets/img/photo7.png" alt="">
+
+                        
+                                            </p>
+                    
+                </div>
+
+               
+
+
+                </div>
+</section>
+
+        
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                     </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+                        
+                     
+                    </ul>
+                </div>
+               
+
+              
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>    
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+       <!--=============== MAIN JS ===============-->
+       <script src="assets/js/main.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Virtual Design and Analysis of Algorithms Lab</title>
+    </head> 
+    
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container nav ">
+
+
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+               </div>
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+                    
+                  <h3>  Department of Computational Intelligence</h3>
+                   
+               <h4>  Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+               <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                 </a>
+               </div>
+
+
+
+            </nav>
+            <nav class="nav container">
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="../../../index.html" class="nav__link">Home</a>
+                        </li>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="#Contact" class="nav__link ">Contact Us</a>
+                        </li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                       
+                        <li class="nav__item">
+                            <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target Audience</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Strassen’s Matrix multiplication <br>
+                    </h1>
+
+                    <p class="about__description">
+                      <img src="/assets/html/List of Experiments 05 Strassen’s Matrix multiplication/assets/img/photo1.png" alt="">
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/QI0AiVP0hww?si=CnpWY_ZtK_fAd0Kz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        
+                        
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+         <!--=============== Content ===============-->
+
+         <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Brute Force Approach<br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        <br>
+                        <img src="/assets/html/List of Experiments 05 Strassen’s Matrix multiplication/assets/img/photo2.png" alt="">
+                      
+                        
+                       
+                        
+               
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">
+                        Brute Force Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <ol>
+                            <li><strong>Initialization:</strong> The function <strong><code>void multiply(int A[][N], int B[][N], int C[][N])</code></strong> takes three <strong><code>N x N</code></strong> matrices <strong><code>A</code></strong>, <strong><code>B</code></strong>, and <strong><code>C</code></strong>. The goal is to compute the product of matrices <strong><code>A</code></strong> and <strong><code>B</code></strong>, storing the result in matrix <strong><code>C</code></strong>.</li><br>
+                            <li><strong>Nested Loops:</strong> The algorithm uses three nested loops:<br>
+                                <ul>
+                                    <li><strong>Outer loop (<code>i</code>):</strong> Iterates over the rows of <strong><code>A</code></strong>.</li><br>
+                                    <li><strong>Middle loop (<code>j</code>):</strong> Iterates over the columns of <strong><code>B</code></strong>.</li><br>
+                                    <li><strong>Inner loop (<code>k</code>):</strong> Computes the dot product of the <strong><code>i</code></strong>-th row of <strong><code>A</code></strong> and the <strong><code>j</code></strong>-th column of <strong><code>B</code></strong>.</li><br>
+                                </ul>
+                            </li>
+                            <li><strong>Element Computation:</strong> For each element <strong><code>C[i][j]</code></strong>:<br>
+                                <ul>
+                                    <li>Initialize <strong><code>C[i][j]</code></strong> to 0.</li><br>
+                                    <li>Update it with the sum of products <strong><code>A[i][k] * B[k][j]</code></strong> for all <strong><code>k</code></strong> from 0 to <strong><code>N-1</code></strong>.</li><br>
+                                </ul>
+                            </li>
+                            <li><strong>Result:</strong> The final matrix <strong><code>C</code></strong> contains the product of matrices <strong><code>A</code></strong> and <strong><code>B</code></strong>.</li><br>
+                            <li><strong>Time Complexity:</strong> The time complexity of this brute force approach is <strong><code>O(N<sup>3</sup>)</code></strong>, involving <strong><code>N<sup>3</sup></code></strong> multiplications and <strong><code>N<sup>3</sup></code></strong> additions.</li><br>
+                        </ol>
+                        
+</p>
+                </div>
+                
+                
+            </div>
+        </section>
+         <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Divide and Conquer Approach<br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <p>
+                            <strong>Input:</strong> Matrices <strong><code>A</code></strong> and <strong><code>B</code></strong> are given square matrices with size <strong><code>n x n</code></strong>, where <strong><code>n</code></strong> is a power of 2 (e.g., <code>1x1</code>, <code>2x2</code>, <code>4x4</code>, <code>8x8</code>, <code>16x16</code>, <code>32x32</code>, etc.).<br>
+                            <strong>Output:</strong> The resultant matrix <strong><code>C = A * B</code></strong>, where <strong><code>C</code></strong> is a square matrix of size <strong><code>n x n</code></strong>.<br>
+                            <strong>Process:</strong><br>
+                            If <strong><code>n = 2</code></strong>, apply <strong>Strassen's Matrix Multiplication Algorithm</strong> to compute the elements of matrix <strong><code>C</code></strong>:<br>
+                            <strong><code>M1 = (A11 + A22) * (B11 + B22)</code></strong><br>
+                            <strong><code>M2 = (A21 + A22) * B11</code></strong><br>
+                            <strong><code>M3 = A11 * (B12 - B22)</code></strong><br>
+                            <strong><code>M4 = A22 * (B21 - B11)</code></strong><br>
+                            <strong><code>M5 = (A11 + A12) * B22</code></strong><br>
+                            <strong><code>M6 = (A21 - A11) * (B11 + B12)</code></strong><br>
+                            <strong><code>M7 = (A12 - A22) * (B21 + B22)</code></strong><br>
+                            Then, compute the submatrices of <strong><code>C</code></strong>:<br>
+                            <strong><code>C11 = M1 + M4 - M5 + M7</code></strong><br>
+                            <strong><code>C12 = M3 + M5</code></strong><br>
+                            <strong><code>C21 = M2 + M4</code></strong><br>
+                            <strong><code>C22 = M1 - M2 + M3 + M6</code></strong><br>
+                            If <strong><code>n > 2</code></strong>, apply the <strong>Divide and Conquer</strong> method:<br>
+                            Divide matrices <strong><code>A</code></strong> and <strong><code>B</code></strong> into 8 submatrices, each of size <strong><code>n/2 x n/2</code></strong>.<br>
+                            Recursively compute the submatrices of <strong><code>C</code></strong> by multiplying the corresponding submatrices of <strong><code>A</code></strong> and <strong><code>B</code></strong>.<br>
+                            <strong>Result:</strong> Combine the computed submatrices to form the final matrix <strong><code>C</code></strong>.<br>
+                            <strong>Performance:</strong> The <strong>Divide and Conquer</strong> approach is faster than the standard brute force matrix multiplication algorithm for large matrices, while the brute force approach is more efficient for small matrices.
+                            </p>
+                            
+                        </p>
+                        <br>
+                        <img src="/assets/html/List of Experiments 05 Strassen’s Matrix multiplication/assets/img/photo2.png" alt="">
+                      
+                        
+                       
+                        
+               
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">
+                        Strassen’s Matrix Multiplication Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <ol>
+                            <li><strong>Base Case (n = 1):</strong> <br>
+                                <ul>
+                                    <li>If <strong><code>n = 1</code></strong>, then the result matrix <strong><code>C11</code></strong> is calculated as <strong><code>C11 = A11 * B11</code></strong>.</li><br>
+                                </ul>
+                            </li>
+                            <li><strong>Case for n = 2:</strong><br>
+                                <ul>
+                                    <li>If <strong><code>n = 2</code></strong>, compute the elements of the result matrix as:<br>
+                                        <ul>
+                                            <li><strong><code>C11 = M1 + M4 − M5 + M7</code></strong></li><br>
+                                            <li><strong><code>C12 = M3 + M5</code></strong></li><br>
+                                            <li><strong><code>C21 = M2 + M4</code></strong></li><br>
+                                            <li><strong><code>C22 = M1 − M2 + M3 + M6</code></strong></li><br>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><strong>Recursive Case (n > 2):</strong> <br>
+                                <ul>
+                                    <li>If <strong><code>n > 2</code></strong>, divide the matrices into submatrices and recursively compute the submatrices as follows:<br>
+                                        <ul>
+                                            <li><strong><code>SMM(A11, B11, n/2) * SMM(A12, B21, n/2)</code></strong></li><br>
+                                            <li><strong><code>SMM(A11, B12, n/2) * SMM(A12, B22, n/2)</code></strong></li><br>
+                                            <li><strong><code>SMM(A21, B11, n/2) * SMM(A22, B21, n/2)</code></strong></li><br>
+                                            <li><strong><code>SMM(A21, B12, n/2) * SMM(A22, B22, n/2)</code></strong></li><br>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><strong>End:</strong> The result matrix is computed based on the above cases.</li><br>
+                        </ol>
+                        
+                        
+</p>
+                </div>
+                
+                
+            </div>
+        </section>
+        
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                Strassen's Matrix Multiplication Code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                        #include &lt;stdio.h&gt;
+                        #include&lt;stdio.h>
+
+                            int main() {
+                                int a[2][2], b[2][2], c[2][2], i, j;
+                                int m1, m2, m3, m4, m5, m6, m7;
+                            
+                                // Input first matrix
+                                printf("Enter the 4 elements of the first matrix: ");
+                                for (i = 0; i &lt; 2; i++) {
+                                    for (j = 0; j &lt; 2; j++) {
+                                        scanf("%d", &a[i][j]);
+                                    }
+                                }
+                            
+                                // Input second matrix
+                                printf("Enter the 4 elements of the second matrix: ");
+                                for (i = 0; i &lt; 2; i++) {
+                                    for (j = 0; j &lt; 2; j++) {
+                                        scanf("%d", &b[i][j]);
+                                    }
+                                }
+                            
+                                // Display first matrix
+                                printf("\nThe first matrix is\n");
+                                for (i = 0; i &lt; 2; i++) {
+                                    for (j = 0; j &lt; 2; j++) {
+                                        printf("%d\t", a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                            
+                                // Display second matrix
+                                printf("\nThe second matrix is\n");
+                                for (i = 0; i &lt; 2; i++) {
+                                    for (j = 0; j &lt; 2; j++) {
+                                        printf("%d\t", b[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                            
+                                // Strassen's formula calculations
+                                m1 = (a[0][0] + a[1][1]) * (b[0][0] + b[1][1]);
+                                m2 = (a[1][0] + a[1][1]) * b[0][0];
+                                m3 = a[0][0] * (b[0][1] - b[1][1]);
+                                m4 = a[1][1] * (b[1][0] - b[0][0]);
+                                m5 = (a[0][0] + a[0][1]) * b[1][1];
+                                m6 = (a[1][0] - a[0][0]) * (b[0][0] + b[0][1]);
+                                m7 = (a[0][1] - a[1][1]) * (b[1][0] + b[1][1]);
+                            
+                                // Calculating elements of result matrix c
+                                c[0][0] = m1 + m4 - m5 + m7;
+                                c[0][1] = m3 + m5;
+                                c[1][0] = m2 + m4;
+                                c[1][1] = m1 - m2 + m3 + m6;
+                            
+                                // Display result matrix
+                                printf("\nThe resultant matrix after multiplication is\n");
+                                for (i = 0; i &lt; 2; i++) {
+                                    for (j = 0; j &lt; 2; j++) {
+                                        printf("%d\t", c[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                            
+                                return 0;
+                            }
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        
+                        #include &lt;iostream>
+                            #include &lt;vector>
+                            
+                            using namespace std;
+                            
+                            typedef vector&lt;vector&lt;int>> Matrix;
+                            
+                            // Function to add two matrices
+                            Matrix add(const Matrix &A, const Matrix &B) {
+                                int n = A.size();
+                                Matrix C(n, vector&lt;int>(n));
+                                for (int i = 0; i &lt; n; i++) {
+                                    for (int j = 0; j &lt; n; j++) {
+                                        C[i][j] = A[i][j] + B[i][j];
+                                    }
+                                }
+                                return C;
+                            }
+                            
+                            // Function to subtract two matrices
+                            Matrix subtract(const Matrix &A, const Matrix &B) {
+                                int n = A.size();
+                                Matrix C(n, vector&lt;int>(n));
+                                for (int i = 0; i &lt; n; i++) {
+                                    for (int j = 0; j &lt; n; j++) {
+                                        C[i][j] = A[i][j] - B[i][j];
+                                    }
+                                }
+                                return C;
+                            }
+                            
+                            // Function to multiply two matrices using Strassen's algorithm
+                            Matrix strassen(const Matrix &A, const Matrix &B) {
+                                int n = A.size();
+                                if (n == 1) {
+                                    Matrix C(1, vector&lt;int>(1));
+                                    C[0][0] = A[0][0] * B[0][0];
+                                    return C;
+                                }
+                            
+                                int newSize = n / 2;
+                                Matrix A11(newSize, vector&lt;int>(newSize));
+                                Matrix A12(newSize, vector&lt;int>(newSize));
+                                Matrix A21(newSize, vector&lt;int>(newSize));
+                                Matrix A22(newSize, vector&lt;int>(newSize));
+                                Matrix B11(newSize, vector&lt;int>(newSize));
+                                Matrix B12(newSize, vector&lt;int>(newSize));
+                                Matrix B21(newSize, vector&lt;int>(newSize));
+                                Matrix B22(newSize, vector&lt;int>(newSize));
+                            
+                                // Dividing matrices into 4 sub-matrices
+                                for (int i = 0; i &lt; newSize; i++) {
+                                    for (int j = 0; j &lt; newSize; j++) {
+                                        A11[i][j] = A[i][j];
+                                        A12[i][j] = A[i][j + newSize];
+                                        A21[i][j] = A[i + newSize][j];
+                                        A22[i][j] = A[i + newSize][j + newSize];
+                                        B11[i][j] = B[i][j];
+                                        B12[i][j] = B[i][j + newSize];
+                                        B21[i][j] = B[i + newSize][j];
+                                        B22[i][j] = B[i + newSize][j + newSize];
+                                    }
+                                }
+                            
+                                Matrix M1 = strassen(add(A11, A22), add(B11, B22));
+                                Matrix M2 = strassen(add(A21, A22), B11);
+                                Matrix M3 = strassen(A11, subtract(B12, B22));
+                                Matrix M4 = strassen(A22, subtract(B21, B11));
+                                Matrix M5 = strassen(add(A11, A12), B22);
+                                Matrix M6 = strassen(subtract(A21, A11), add(B11, B12));
+                                Matrix M7 = strassen(subtract(A12, A22), add(B21, B22));
+                            
+                                Matrix C11 = add(subtract(add(M1, M4), M5), M7);
+                                Matrix C12 = add(M3, M5);
+                                Matrix C21 = add(M2, M4);
+                                Matrix C22 = add(subtract(add(M1, M3), M2), M6);
+                            
+                                Matrix C(n, vector&lt;int>(n));
+                                for (int i = 0; i &lt; newSize; i++) {
+                                    for (int j = 0; j &lt; newSize; j++) {
+                                        C[i][j] = C11[i][j];
+                                        C[i][j + newSize] = C12[i][j];
+                                        C[i + newSize][j] = C21[i][j];
+                                        C[i + newSize][j + newSize] = C22[i][j];
+                                    }
+                                }
+                            
+                                return C;
+                            }
+                            
+                            void printMatrix(const Matrix &M) {
+                                int n = M.size();
+                                for (int i = 0; i &lt; n; i++) {
+                                    for (int j = 0; j &lt; n; j++) {
+                                        cout &lt;&lt; M[i][j] &lt;&lt; " ";
+                                    }
+                                    cout &lt;&lt; endl;
+                                }
+                            }
+                            
+                            int main() {
+                                int n = 4; // Size of the matrix
+                                Matrix A(n, vector&lt;int>(n, 0));
+                                Matrix B(n, vector&lt;int>(n, 0));
+                                
+                                // Fill matrices A and B with some values here
+                                // Example:
+                                // A[0][0] = 1; B[0][0] = 1;
+                            
+                                Matrix C = strassen(A, B);
+                                cout &lt;&lt; "Product Matrix:" &lt;&lt; endl;
+                                printMatrix(C);
+                            
+                                return 0;
+                            }
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        public class StrassenMatrixMultiplication {
+
+                            // Function to add two matrices
+                            public static int[][] add(int[][] A, int[][] B) {
+                                int n = A.length;
+                                int[][] C = new int[n][n];
+                                for (int i = 0; i &lt; n; i++) {
+                                    for (int j = 0; j &lt; n; j++) {
+                                        C[i][j] = A[i][j] + B[i][j];
+                                    }
+                                }
+                                return C;
+                            }
+                        
+                            // Function to subtract two matrices
+                            public static int[][] subtract(int[][] A, int[][] B) {
+                                int n = A.length;
+                                int[][] C = new int[n][n];
+                                for (int i = 0; i &lt; n; i++) {
+                                    for (int j = 0; j &lt; n; j++) {
+                                        C[i][j] = A[i][j] - B[i][j];
+                                    }
+                                }
+                                return C;
+                            }
+                        
+                            // Function to multiply two matrices using Strassen's algorithm
+                            public static int[][] strassen(int[][] A, int[][] B) {
+                                int n = A.length;
+                                if (n == 1) {
+                                    int[][] C = new int[1][1];
+                                    C[0][0] = A[0][0] * B[0][0];
+                                    return C;
+                                }
+                        
+                                int newSize = n / 2;
+                                int[][] A11 = new int[newSize][newSize];
+                                int[][] A12 = new int[newSize][newSize];
+                                int[][] A21 = new int[newSize][newSize];
+                                int[][] A22 = new int[newSize][newSize];
+                                int[][] B11 = new int[newSize][newSize];
+                                int[][] B12 = new int[newSize][newSize];
+                                int[][] B21 = new int[newSize][newSize];
+                                int[][] B22 = new int[newSize][newSize];
+                        
+                                // Dividing matrices into 4 sub-matrices
+                                for (int i = 0; i &lt; newSize; i++) {
+                                    for (int j = 0; j &lt; newSize; j++) {
+                                        A11[i][j] = A[i][j];
+                                        A12[i][j] = A[i][j + newSize];
+                                        A21[i][j] = A[i + newSize][j];
+                                        A22[i][j] = A[i + newSize][j + newSize];
+                                        B11[i][j] = B[i][j];
+                                        B12[i][j] = B[i][j + newSize];
+                                        B21[i][j] = B[i + newSize][j];
+                                        B22[i][j] = B[i + newSize][j + newSize];
+                                    }
+                                }
+                        
+                                int[][] M1 = strassen(add(A11, A22), add(B11, B22));
+                                int[][] M2 = strassen(add(A21, A22), B11);
+                                int[][] M3 = strassen(A11, subtract(B12, B22));
+                                int[][] M4 = strassen(A22, subtract(B21, B11));
+                                int[][] M5 = strassen(add(A11, A12), B22);
+                                int[][] M6 = strassen(subtract(A21, A11), add(B11, B12));
+                                int[][] M7 = strassen(subtract(A12, A22), add(B21, B22));
+                        
+                                int[][] C11 = add(subtract(add(M1, M4), M5), M7);
+                                int[][] C12 = add(M3, M5);
+                                int[][] C21 = add(M2, M4);
+                                int[][] C22 = add(subtract(add(M1, M3), M2), M6);
+                        
+                                int[][] C = new int[n][n];
+                                for (int i = 0; i &lt; newSize; i++) {
+                                    for (int j = 0; j &lt; newSize; j++) {
+                                        C[i][j] = C11[i][j];
+                                        C[i][j + newSize] = C12[i][j];
+                                        C[i + newSize][j] = C21[i][j];
+                                        C[i + newSize][j + newSize] = C22[i][j];
+                                    }
+                                }
+                        
+                                return C;
+                            }
+                        
+                            // Function to print the matrix
+                            public static void printMatrix(int[][] matrix) {
+                                int n = matrix.length;
+                                for (int i = 0; i &lt; n; i++) {
+                                    for (int j = 0; j &lt; n; j++) {
+                                        System.out.print(matrix[i][j] + " ");
+                                    }
+                                    System.out.println();
+                                }
+                            }
+                        
+                            public static void main(String[] args) {
+                                int n = 4; // Size of the matrix
+                                int[][] A = new int[n][n];
+                                int[][] B = new int[n][n];
+                        
+                                // Fill matrices A and B with some values here
+                                // Example:
+                                // A[0][0] = 1; B[0][0] = 1;
+                        
+                                int[][] C = strassen(A, B);
+                                System.out.println("Product Matrix:");
+                                printMatrix(C);
+                            }
+                        }
+                        
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        import numpy as np
+
+                        def add(A, B):
+                            return np.add(A, B)
+                        
+                        def subtract(A, B):
+                            return np.subtract(A, B)
+                        
+                        def strassen(A, B):
+                            n = A.shape[0]
+                            if n == 1:
+                                return A * B
+                        
+                            new_size = n // 2
+                            A11 = A[:new_size, :new_size]
+                            A12 = A[:new_size, new_size:]
+                            A21 = A[new_size:, :new_size]
+                            A22 = A[new_size:, new_size:]
+                            B11 = B[:new_size, :new_size]
+                            B12 = B[:new_size, new_size:]
+                            B21 = B[new_size:, :new_size]
+                            B22 = B[new_size:, new_size:]
+                        
+                            M1 = strassen(add(A11, A22), add(B11, B22))
+                            M2 = strassen(add(A21, A22), B11)
+                            M3 = strassen(A11, subtract(B12, B22))
+                            M4 = strassen(A22, subtract(B21, B11))
+                            M5 = strassen(add(A11, A12), B22)
+                            M6 = strassen(subtract(A21, A11), add(B11, B12))
+                            M7 = strassen(subtract(A12, A22), add(B21, B22))
+                        
+                            C11 = add(subtract(add(M1, M4), M5), M7)
+                            C12 = add(M3, M5)
+                            C21 = add(M2, M4)
+                            C22 = add(subtract(add(M1, M3), M2), M6)
+                        
+                            C = np.zeros((n, n), dtype=A.dtype)
+                            C[:new_size, :new_size] = C11
+                            C[:new_size, new_size:] = C12
+                            C[new_size:, :new_size] = C21
+                            C[new_size:, new_size:] = C22
+                        
+                            return C
+                        
+                        # Example usage
+                        A = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]])
+                        B = np.array([[16, 15, 14, 13], [12, 11, 10, 9], [8, 7, 6, 5], [4, 3, 2, 1]])
+                        
+                        C = strassen(A, B)
+                        print("Product Matrix:")
+                        print(C)
+                        
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+         <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Analysis of Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <h1>Time Complexity of Divide and Conquer Approach</h1><br>
+
+                        <p>For <code>n × n</code> matrix multiplication using Strassen’s algorithm, the time complexity is derived based on the divide and conquer approach.</p><br>
+                    
+                        <h2>Key Points:</h2><br>
+                        <ul>
+                            <li><strong>Base Case:</strong> If <code>n = 1</code>, the algorithm performs 1 multiplication. So, <code>T(1) = 1</code>.</li><br>
+                            <li><strong>Recursive Case:</strong> For <code>n = 2<sup>k</sup></code>, where <code>k = log n</code>:<br>
+                                <ul>
+                                    <li>The algorithm makes 7 recursive calls, each operating on a subproblem of size <code>n/2</code>.</li><br>
+                                    <li>The recurrence relation is <code>T(n) = 7T(n/2) + cn<sup>2</sup></code>, where <code>cn<sup>2</sup></code> is the time complexity for matrix addition.</li><br>
+                                </ul>
+                            </li>
+                        </ul>
+                    
+                        <h2>Deriving the Time Complexity:</h2><br>
+                        <ol>
+                            <li>Start with the recurrence relation:
+                                <pre><code>T(n) = 7T(n/2)</code></pre><br>
+                            </li>
+                            <li>Expand it by substituting recursively:<br>
+                                <pre><code>
+                    T(n) = 7(7T(n/4)) = 7<sup>2</sup>T(n/4)<br>
+                    T(n) = 7<sup>k</sup>T(n/2<sup>k</sup>)<br>
+                                </code></pre>
+                            </li>
+                            <li>Since <code>n = 2<sup>k</sup></code> and <code>T(1) = 1</code>, the final expansion is:<br>
+                                <pre><code>T(n) = 7<sup>log n</sup> ⋅ T(1) = n<sup>log<sub>2</sub> 7</sup></code></pre><br>
+                                <p>Here, <code>log<sub>2</sub> 7 ≈ 2.808</code>.</p><br>
+                            </li>
+                        </ol>
+                    
+                        <h2>Conclusion:</h2><br>
+                        <p>The time complexity of Strassen’s algorithm is:</p><br>
+                        <pre><code>T(n) = O(n<sup>2.808</sup>)</code></pre><br>
+                        <p>This is an improvement over the standard matrix multiplication time complexity of <code>O(n<sup>3</sup>)</code>.</p><br>
+                    
+                        <h2>Time Complexity Analysis (Expanded)</h2><br>
+                        <ul>
+                            <li><strong>Recurrence Relation:</strong><br>
+                                <pre><code>T(n) = 7T(n/2) + cn<sup>2</sup></code></pre><br>
+                                <p>where <code>cn<sup>2</sup></code> accounts for the matrix addition operations.</p><br>
+                            </li>
+                            <li><strong>Master Theorem Application:</strong><br>
+                                <p>Using the Master Theorem, the time complexity derived is <code>O(n<sup>log<sub>2</sub> 7</sup>) = O(n<sup>2.808</sup>)</code>.</p><br>
+                            </li>
+                        </ul>
+                    
+                        <h2>Summary:</h2><br>
+                        <p>Strassen’s algorithm reduces the time complexity of matrix multiplication from <code>O(n<sup>3</sup>)</code> to <code>O(n<sup>2.808</sup>)</code>, making it more efficient for large matrices.</p><br>
+                    
+                        
+                            <br>
+                            <br>
+                            <br>
+                        <img src="/assets/html/List of Experiments 05 Strassen’s Matrix multiplication/assets/img/photo3.png" alt="">
+                        <img src="/assets/html/List of Experiments 05 Strassen’s Matrix multiplication/assets/img/photo4.png" alt="">
+                        <img src="/assets/html/List of Experiments 05 Strassen’s Matrix multiplication/assets/img/photo5.png" alt="">
+                       
+                        
+                                            </p>
+                    
+                </div>
+
+               
+
+
+                </div>
+</section>
+
+        
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                     </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+                        
+                     
+                    </ul>
+                </div>
+               
+
+              
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>    
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+       <!--=============== MAIN JS ===============-->
+       <script src="assets/js/main.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

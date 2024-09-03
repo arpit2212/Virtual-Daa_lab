@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Virtual Design and Analysis of Algorithms Lab</title>
+    </head> 
+    
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container nav ">
+
+
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+               </div>
+               <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+                    
+                  <h3>  Department of Computational Intelligence</h3>
+                   
+               <h4>  Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+               <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                 </a>
+               </div>
+
+
+
+            </nav>
+            <nav class="nav container">
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="../../../index.html" class="nav__link">Home</a>
+                        </li>
+                 <li style="list-style: none;" class="nav__item">
+                            <a href="#Contact" class="nav__link ">Contact Us</a>
+                        </li>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                       
+                        <li class="nav__item">
+                            <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target Audience</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        maximum and minimum in an array <br>
+                    </h1>
+
+                    <p class="about__description">
+                        <p><strong>Problem:</strong> To find the maximum and minimum values among the elements in a given array.</p><br>
+
+                        <p><strong>Input:</strong> Given a one-dimensional array <strong>A</strong> of size <strong>n</strong>, where <strong>A</strong> contains <strong>n</strong> elements.</p><br>
+                        
+                        <p><strong>Output:</strong> The maximum and minimum of the <strong>n</strong> values.</p><br>
+                        
+                                            </p>
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7hZLCzbbY30?si=R62ps7JrltuYxEop" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+         <!--=============== Content ===============-->
+
+         <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Finding Maximum and Minimum  Example<br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    
+                        
+                        <br>
+                        <br>
+                        <img src="/assets/html/List of Experiments 07maximum and minimum in an array/assets/img/photo1.png" alt="">
+                        <img src="/assets/html/List of Experiments 07maximum and minimum in an array/assets/img/photo2.png" alt="">
+                        
+                       
+                        
+               
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">
+                        Linear Approach Algorithm <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <p><strong>FindingMaxMin(A[0]..A[n-1])</strong></p><br>
+
+                        <p><strong>Input:</strong> Array <code>A</code> containing <code>n</code> elements.</p><br>
+                        
+                        <p><strong>Output:</strong> Maximum and Minimum of the <code>n</code> numbers.</p><br>
+                        
+                        <p><strong>Step 1:</strong> Start.</p><br>
+                        
+                        <p><strong>Step 2:</strong> Input array <code>A</code>.</p><br>
+                        
+                        <p><strong>Step 3:</strong> Initially, assign the first element of the array as both Max and Min: <code>Max = Min = A[0]</code>.</p><br>
+                        
+                        <p><strong>Step 4:</strong> For <code>i = 1</code> to <code>n-1</code>, do the following:</p><br>
+                        
+                        <p><strong>Step 5:</strong> If <code>A[i] &lt; Min</code>, then set <code>Min = A[i]</code>.</p><br>
+                        
+                        <p><strong>Step 6:</strong> If <code>A[i] &gt; Max</code>, then set <code>Max = A[i]</code>.</p><br>
+                        
+                        <p><strong>Step 7:</strong> Return <code>Max</code> and <code>Min</code>.</p><br>
+                        
+                        <p><strong>Step 8:</strong> Stop.</p><br>
+                         
+                    
+                </div>
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">
+                        Divide and Conquer Approach <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <p><strong>FindingMaxMin(A[0]..A[n-1])</strong></p><br>
+
+                        <p><strong>Input:</strong> Array <code>A</code> containing <code>n</code> elements.</p><br>
+                        
+                        <p><strong>Output:</strong> Maximum and Minimum of the <code>n</code> numbers.</p><br>
+                        
+                        <p><strong>Step 1:</strong> Start.</p><br>
+                        
+                        <p><strong>Step 2:</strong> Divide the given array recursively into two parts until we have a single element. This is a recursive algorithm.</p><br>
+                        
+                        <p><strong>Step 3:</strong> Find the maximum value and minimum value of the left sub-array recursively.</p><br>
+                        
+                        <p><strong>Step 4:</strong> Find the maximum value and minimum value of the right sub-array recursively.</p><br>
+                        
+                        <p><strong>Step 5:</strong> Compare the results of Step 3 and Step 4 (i.e., the left sub-array and right sub-array). Find the maximum and minimum of the combined array.</p><br>
+                        
+                        <p><strong>Step 6:</strong> Return the maximum value and minimum value.</p><br>
+                        
+                        <p><strong>Step 7:</strong> Stop.</p><br>
+                        
+                         
+                    
+                </div>
+                
+                
+            </div>
+        </section>
+        
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                maximum and minimum in an array code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                        #include &lt;stdio.h&gt;
+                      
+
+                            int main() {
+                                int arr[] = {3, 5, 1, 8, 2};
+                                int n = sizeof(arr) / sizeof(arr[0]);
+                            
+                                int maxVal = arr[0];
+                                int minVal = arr[0];
+                            
+                                for (int i = 1; i &lt; n; i++) {
+                                    if (arr[i] > maxVal) {
+                                        maxVal = arr[i];
+                                    }
+                                    if (arr[i] &lt; minVal) {
+                                        minVal = arr[i];
+                                    }
+                                }
+                            
+                                printf("Maximum: %d\n", maxVal);
+                                printf("Minimum: %d\n", minVal);
+                            
+                                return 0;
+                            }
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        #include &lt;iostream>
+                            using namespace std;
+                            
+                            int main() {
+                                int arr[] = {3, 5, 1, 8, 2};
+                                int n = sizeof(arr) / sizeof(arr[0]);
+                            
+                                int maxVal = arr[0];
+                                int minVal = arr[0];
+                            
+                                for (int i = 1; i &lt; n; i++) {
+                                    if (arr[i] > maxVal) {
+                                        maxVal = arr[i];
+                                    }
+                                    if (arr[i] &lt; minVal) {
+                                        minVal = arr[i];
+                                    }
+                                }
+                            
+                                cout &lt;&lt; "Maximum: " &lt;&lt; maxVal &lt;&lt; endl;
+                                cout &lt;&lt; "Minimum: " &lt;&lt; minVal &lt;&lt; endl;
+                            
+                                return 0;
+                            }
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        public class Main {
+                            public static void main(String[] args) {
+                                int[] arr = {3, 5, 1, 8, 2};
+                        
+                                int maxVal = arr[0];
+                                int minVal = arr[0];
+                        
+                                for (int i = 1; i &lt; arr.length; i++) {
+                                    if (arr[i] > maxVal) {
+                                        maxVal = arr[i];
+                                    }
+                                    if (arr[i] &lt; minVal) {
+                                        minVal = arr[i];
+                                    }
+                                }
+                        
+                                System.out.println("Maximum: " + maxVal);
+                                System.out.println("Minimum: " + minVal);
+                            }
+                        }
+                         
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        arr = [3, 5, 1, 8, 2]
+
+                        max_val = arr[0]
+                        min_val = arr[0]
+                        
+                        for num in arr[1:]:
+                            if num > max_val:
+                                max_val = num
+                            if num &lt; min_val:
+                                min_val = num
+                        
+                        print("Maximum:", max_val)
+                        print("Minimum:", min_val)
+                        
+                    
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+         <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Analysis of Largest Sub-array Sum  <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                        <strong>Time Complexity</strong>  <br>
+                        <strong>Basic Operation: Comparison</strong>
+                        <p>
+                            <strong>Analysis</strong>
+                        </p>
+                        <p>
+                            There are <code>n-1</code> iterations. Initially, the array's first element <code>A[0]</code> is assigned as both the minimum and maximum. The loop variable ranges from 1 to <code>n-1</code>. For every iteration, there are 2 comparisons: one for the maximum value and one for the minimum value. The comparison operation is performed <code>n</code> times. To find the maximum and minimum using a linear approach, the algorithm performs:
+                        </p>
+                        <pre>
+                            <code>T(n) = 2 * (n-1) = O(n)</code>
+                        </pre>
+                        
+                        
+                            <br>
+                            <br>
+                            <br>
+                        <img src="/assets/html/List of Experiments 07maximum and minimum in an array/assets/img/photo3.png" alt="">
+                        <img src="/assets/html/List of Experiments 07maximum and minimum in an array/assets/img/photo4.png" alt="">
+                        <img src="/assets/html/List of Experiments 07maximum and minimum in an array/assets/img/photo5.png" alt="">
+                        
+
+                        
+                                            </p>
+                    
+                </div>
+
+               
+
+
+                </div>
+</section>
+
+        
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                     </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+                        
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+                        
+                     
+                    </ul>
+                </div>
+               
+
+              
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>    
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+       <!--=============== MAIN JS ===============-->
+       <script src="assets/js/main.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+       <script src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+       <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>
