@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.min.css">
+    <title>Virtual Design and Analysis of Algorithms Lab</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container nav ">
+
+
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+            </div>
+            <div
+                style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+
+                <h3> Department of Computational Intelligence</h3>
+
+                <h4> Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+            <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                </a>
+            </div>
+
+
+
+        </nav>
+        <nav class="nav container">
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+            <li style="list-style: none;" class="nav__item">
+                <a href="../../../index.html" class="nav__link">Home</a>
+            </li>
+            <li style="list-style: none;" class="nav__item">
+                <a href="#Contact" class="nav__link ">Contact Us</a>
+            </li>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item">
+                        <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target
+                            Audience</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Largest Common Subsequence using Dynamic Approach <br>
+                    </h1>
+
+                    <p class="about__description"> The core of the <b>Longest Common Subsequence (LCS) problem</b> is
+                        finding the longest sequence that appears in both of two given strings in the same order, but
+                        not necessarily consecutively.<br> The **dynamic programming** approach is commonly used to
+                        solve the LCS problem efficiently by breaking it down into smaller overlapping subproblems.<br>
+                        This method is widely applied in fields like <b>bioinformatics, text comparison, and
+                            version control systems</b> to measure similarity between sequences. </p>
+
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/_nWtZFRRCLE?si=-_zNkSs_HGqrfrT5"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </h3>
+                    <br>
+                    <br>
+                    <h2>Problem</h2>
+                    <p>Given two sequences, the goal is to find the longest subsequence that appears in both sequences
+                        in the same relative order.<br> This process is referred to as <b>finding the longest common
+                            subsequence</b> using a dynamic programming approach.</p><br>
+                    <h3>Input</h3>
+                    <p>Two sequences (strings or arrays).</p><br>
+                    <h3>Output</h3>
+                    <p>The <b>longest common subsequence</b> between the two sequences.</p><br>
+                    <h4>Example:</h4>
+                    <ul>
+                        <li><b>String 1:</b> ABCD</li><br>
+                        <li><b>String 2:</b> ACBGD</li><br>
+                        <li><b>LCS:</b> ACD</li><br>
+                    </ul><br>
+                    <h2>Types of LCS Approaches</h2><br>
+                    <h3>1. Recursive Approach</h3><br>
+                    <p>This approach solves the problem by trying all possible subsequences. It is straight forward but
+                        inefficient for large inputs due to overlapping subproblems.</p><br>
+                    <h3>2. Dynamic Programming Approach</h3><br>
+                    <p>This approach utilizes a table (2D array) to store solutions to subproblems, thus avoiding
+                        redundant computations and achieving better performance.</p><br>
+                    <h2>Steps for LCS using Dynamic Programming</h2><br>
+                    <p>In the dynamic programming approach, a 2D table is constructed, where each cell represents the
+                        length of the LCS for the substrings ending at that cell's indices.<br> The solution is built in
+                        a <b>bottom-up manner</b>, following these steps:</p><br>
+                    <ol>
+                        <li><strong>Table Initialization:</strong> Initialize a table where one string is along the rows
+                            and the other along the columns. The first row and column are initialized to 0.</li><br>
+                        <li><strong>Table Filling:</strong> For each character pair in the two strings, fill the table
+                            according to the following rules: <ul>
+                                <li>If the characters match, take the diagonal value and add 1.</li>
+                                <li>If the characters don't match, take the maximum value from the top or left cell.
+                                </li>
+                            </ul>
+                        </li><br>
+                        <li><strong>Traceback:</strong> After filling the table, trace back from the bottom-right corner
+                            to construct the LCS.</li><br>
+                    </ol><br>
+                    <p>By using dynamic programming, the <b>time complexity</b> is reduced to <b>O(m * n)</b>, where m
+                        and n
+                        are the lengths of the two input sequences.</p><br>
+
+                </div>
+            </div>
+        </section>
+
+        <!--=============== Content ===============-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title data1">
+                            Longest Common Subsequence Algorithm <br><br>
+                        </h2>
+                    
+                        <p class="about__description">
+                            <p><strong>LCS(X[1..m], Y[1..n])</strong></p><br>
+                    
+                            <p><strong>Input:</strong> Two sequences, <code>X</code> of length <code>m</code> and <code>Y</code> of length <code>n</code>.</p><br>
+                    
+                            <p><strong>Output:</strong> The length of the longest common subsequence and the LCS itself.</p><br>
+                    
+                            <p><strong>Step 1:</strong> Start.</p><br>
+                    
+                            <p><strong>Step 2:</strong> Initialize a 2D array <code>L[m+1][n+1]</code>, where <code>L[i][j]</code> will store the length of the LCS of <code>X[1..i]</code> and <code>Y[1..j]</code>.</p><br>
+                    
+                            <p><strong>Step 3:</strong> Set the first row and first column of the array to 0 (i.e., <code>L[i][0] = 0</code> for all <code>i</code>, and <code>L[0][j] = 0</code> for all <code>j</code>).</p><br>
+                    
+                            <p><strong>Step 4:</strong> For each character <code>X[i]</code> in <code>X</code> and <code>Y[j]</code> in <code>Y</code>, do the following:</p><br>
+                    
+                            <p><strong>Step 5:</strong> If <code>X[i] == Y[j]</code>, then set <code>L[i][j] = L[i-1][j-1] + 1</code>.</p><br>
+                    
+                            <p><strong>Step 6:</strong> If <code>X[i] != Y[j]</code>, then set <code>L[i][j] = max(L[i-1][j], L[i][j-1])</code>.</p><br>
+                    
+                            <p><strong>Step 7:</strong> After filling the table, <code>L[m][n]</code> contains the length of the LCS.</p><br>
+                    
+                            <p><strong>Step 8:</strong> Traceback from <code>L[m][n]</code> to construct the LCS string by comparing <code>X</code> and <code>Y</code> in reverse order.</p><br>
+                    
+                            <p><strong>Step 9:</strong> Stop.</p><br>
+                        </p>
+                    </div>
+                    
+
+
+                </div>
+        </section>
+
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                Largest Common Subsequence using Dynamic Approach code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                        #include &lt;stdio.h&gt;
+                            #include &lt;string.h>
+                            
+                            // Function to find the length of the Longest Common Subsequence
+                            int LCS(char* X, char* Y, int m, int n) {
+                                int L[m + 1][n + 1];
+                            
+                                // Build L[m+1][n+1] in bottom-up fashion
+                                for (int i = 0; i &lt;= m; i++) {
+                                    for (int j = 0; j &lt;= n; j++) {
+                                        if (i == 0 || j == 0) {
+                                            L[i][j] = 0;
+                                        } else if (X[i - 1] == Y[j - 1]) {
+                                            L[i][j] = L[i - 1][j - 1] + 1;
+                                        } else {
+                                            L[i][j] = (L[i - 1][j] > L[i][j - 1]) ? L[i - 1][j] : L[i][j - 1];
+                                        }
+                                    }
+                                }
+                            
+                                return L[m][n];  // The length of LCS is in L[m][n]
+                            }
+                            
+                            // Function to print the Longest Common Subsequence
+                            void printLCS(char* X, char* Y, int m, int n) {
+                                int L[m + 1][n + 1];
+                            
+                                // Build L[m+1][n+1] in bottom-up fashion
+                                for (int i = 0; i &lt;= m; i++) {
+                                    for (int j = 0; j &lt;= n; j++) {
+                                        if (i == 0 || j == 0) {
+                                            L[i][j] = 0;
+                                        } else if (X[i - 1] == Y[j - 1]) {
+                                            L[i][j] = L[i - 1][j - 1] + 1;
+                                        } else {
+                                            L[i][j] = (L[i - 1][j] > L[i][j - 1]) ? L[i - 1][j] : L[i][j - 1];
+                                        }
+                                    }
+                                }
+                            
+                                // Following code builds the LCS string
+                                int index = L[m][n]; // Length of LCS
+                                char lcs[index + 1]; // LCS string
+                                lcs[index] = '\0';   // Set the terminating character
+                            
+                                // Start from L[m][n] and work backward
+                                int i = m, j = n;
+                                while (i > 0 && j > 0) {
+                                    if (X[i - 1] == Y[j - 1]) {
+                                        lcs[index - 1] = X[i - 1];  // Add character to LCS
+                                        i--;
+                                        j--;
+                                        index--;
+                                    } else if (L[i - 1][j] > L[i][j - 1]) {
+                                        i--;
+                                    } else {
+                                        j--;
+                                    }
+                                }
+                            
+                                printf("The Longest Common Subsequence is: %s\n", lcs);
+                            }
+                            
+                            int main() {
+                                char X[100], Y[100];
+                            
+                                // Input two sequences
+                                printf("Enter the first sequence: ");
+                                scanf("%s", X);
+                                printf("Enter the second sequence: ");
+                                scanf("%s", Y);
+                            
+                                int m = strlen(X);
+                                int n = strlen(Y);
+                            
+                                printf("Length of Longest Common Subsequence: %d\n", LCS(X, Y, m, n));
+                                printLCS(X, Y, m, n);
+                            
+                                return 0;
+                            }
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        #include &lt;iostream>
+                            #include &lt;cstring>
+                            using namespace std;
+                            
+                            // Function to find the length of the Longest Common Subsequence
+                            int LCS(string X, string Y, int m, int n) {
+                                int L[m + 1][n + 1];
+                            
+                                // Build L[m+1][n+1] in bottom-up fashion
+                                for (int i = 0; i &lt;= m; i++) {
+                                    for (int j = 0; j &lt;= n; j++) {
+                                        if (i == 0 || j == 0) {
+                                            L[i][j] = 0;
+                                        } else if (X[i - 1] == Y[j - 1]) {
+                                            L[i][j] = L[i - 1][j - 1] + 1;
+                                        } else {
+                                            L[i][j] = max(L[i - 1][j], L[i][j - 1]);
+                                        }
+                                    }
+                                }
+                            
+                                return L[m][n];  // The length of LCS is in L[m][n]
+                            }
+                            
+                            // Function to print the Longest Common Subsequence
+                            void printLCS(string X, string Y, int m, int n) {
+                                int L[m + 1][n + 1];
+                            
+                                // Build L[m+1][n+1] in bottom-up fashion
+                                for (int i = 0; i &lt;= m; i++) {
+                                    for (int j = 0; j &lt;= n; j++) {
+                                        if (i == 0 || j == 0) {
+                                            L[i][j] = 0;
+                                        } else if (X[i - 1] == Y[j - 1]) {
+                                            L[i][j] = L[i - 1][j - 1] + 1;
+                                        } else {
+                                            L[i][j] = max(L[i - 1][j], L[i][j - 1]);
+                                        }
+                                    }
+                                }
+                            
+                                // Following code builds the LCS string
+                                int index = L[m][n]; // Length of LCS
+                                string lcs(index, '\0'); // LCS string
+                            
+                                // Start from L[m][n] and work backward
+                                int i = m, j = n;
+                                while (i > 0 && j > 0) {
+                                    if (X[i - 1] == Y[j - 1]) {
+                                        lcs[index - 1] = X[i - 1];  // Add character to LCS
+                                        i--;
+                                        j--;
+                                        index--;
+                                    } else if (L[i - 1][j] > L[i][j - 1]) {
+                                        i--;
+                                    } else {
+                                        j--;
+                                    }
+                                }
+                            
+                                cout &lt; "The Longest Common Subsequence is: " &lt; lcs &lt; endl;
+                            }
+                            
+                            int main() {
+                                string X, Y;
+                            
+                                // Input two sequences
+                                cout &lt; "Enter the first sequence: ";
+                                cin >> X;
+                                cout &lt; "Enter the second sequence: ";
+                                cin >> Y;
+                            
+                                int m = X.size();
+                                int n = Y.size();
+                            
+                                cout &lt; "Length of Longest Common Subsequence: " &lt; LCS(X, Y, m, n) &lt; endl;
+                                printLCS(X, Y, m, n);
+                            
+                                return 0;
+                            }
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        import java.util.Scanner;
+
+                        public class LCS {
+                        
+                            // Function to find the length of the Longest Common Subsequence
+                            public static int LCS(String X, String Y, int m, int n) {
+                                int[][] L = new int[m + 1][n + 1];
+                        
+                                // Build L[m+1][n+1] in bottom-up fashion
+                                for (int i = 0; i &lt;= m; i++) {
+                                    for (int j = 0; j &lt;= n; j++) {
+                                        if (i == 0 || j == 0) {
+                                            L[i][j] = 0;
+                                        } else if (X.charAt(i - 1) == Y.charAt(j - 1)) {
+                                            L[i][j] = L[i - 1][j - 1] + 1;
+                                        } else {
+                                            L[i][j] = Math.max(L[i - 1][j], L[i][j - 1]);
+                                        }
+                                    }
+                                }
+                        
+                                return L[m][n];  // The length of LCS is in L[m][n]
+                            }
+                        
+                            // Function to print the Longest Common Subsequence
+                            public static void printLCS(String X, String Y, int m, int n) {
+                                int[][] L = new int[m + 1][n + 1];
+                        
+                                // Build L[m+1][n+1] in bottom-up fashion
+                                for (int i = 0; i &lt;= m; i++) {
+                                    for (int j = 0; j &lt;= n; j++) {
+                                        if (i == 0 || j == 0) {
+                                            L[i][j] = 0;
+                                        } else if (X.charAt(i - 1) == Y.charAt(j - 1)) {
+                                            L[i][j] = L[i - 1][j - 1] + 1;
+                                        } else {
+                                            L[i][j] = Math.max(L[i - 1][j], L[i][j - 1]);
+                                        }
+                                    }
+                                }
+                        
+                                // Following code builds the LCS string
+                                int index = L[m][n]; // Length of LCS
+                                char[] lcs = new char[index]; // LCS string
+                        
+                                // Start from L[m][n] and work backward
+                                int i = m, j = n;
+                                while (i > 0 && j > 0) {
+                                    if (X.charAt(i - 1) == Y.charAt(j - 1)) {
+                                        lcs[index - 1] = X.charAt(i - 1);  // Add character to LCS
+                                        i--;
+                                        j--;
+                                        index--;
+                                    } else if (L[i - 1][j] > L[i][j - 1]) {
+                                        i--;
+                                    } else {
+                                        j--;
+                                    }
+                                }
+                        
+                                System.out.println("The Longest Common Subsequence is: " + new String(lcs));
+                            }
+                        
+                            public static void main(String[] args) {
+                                Scanner sc = new Scanner(System.in);
+                        
+                                // Input two sequences
+                                System.out.print("Enter the first sequence: ");
+                                String X = sc.next();
+                                System.out.print("Enter the second sequence: ");
+                                String Y = sc.next();
+                        
+                                int m = X.length();
+                                int n = Y.length();
+                        
+                                System.out.println("Length of Longest Common Subsequence: " + LCS(X, Y, m, n));
+                                printLCS(X, Y, m, n);
+                            }
+                        }
+                        
+                         
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        def LCS(X, Y):
+                        m = len(X)
+                        n = len(Y)
+                        L = [[0] * (n + 1) for i in range(m + 1)]
+                    
+                        # Build L[m+1][n+1] in bottom-up fashion
+                        for i in range(m + 1):
+                            for j in range(n + 1):
+                                if i == 0 or j == 0:
+                                    L[i][j] = 0
+                                elif X[i - 1] == Y[j - 1]:
+                                    L[i][j] = L[i - 1][j - 1] + 1
+                                else:
+                                    L[i][j] = max(L[i - 1][j], L[i][j - 1])
+                    
+                        return L[m][n]  # The length of LCS is in L[m][n]
+                    
+                    def printLCS(X, Y):
+                        m = len(X)
+                        n = len(Y)
+                        L = [[0] * (n + 1) for i in range(m + 1)]
+                    
+                        # Build L[m+1][n+1] in bottom-up fashion
+                        for i in range(m + 1):
+                            for j in range(n + 1):
+                                if i == 0 or j == 0:
+                                    L[i][j] = 0
+                                elif X[i - 1] == Y[j - 1]:
+                                    L[i][j] = L[i - 1][j - 1] + 1
+                                else:
+                                    L[i][j] = max(L[i - 1][j], L[i][j - 1])
+                    
+                        # Following code builds the LCS string
+                        index = L[m][n]  # Length of LCS
+                        lcs = [''] * (index)
+                    
+                        # Start from L[m][n] and work backward
+                        i, j = m, n
+                        while i > 0 and j > 0:
+                            if X[i - 1] == Y[j - 1]:
+                                lcs[index - 1] = X[i - 1]  # Add character to LCS
+                                i -= 1
+                                j -= 1
+                                index -= 1
+                            elif L[i - 1][j] > L[i][j - 1]:
+                                i -= 1
+                            else:
+                                j -= 1
+                    
+                        print("The Longest Common Subsequence is:", ''.join(lcs))
+                    
+                    # Input two sequences
+                    X = input("Enter the first sequence: ")
+                    Y = input("Enter the second sequence: ")
+
+# Calculate and display the results
+length = LCS(X, Y)[1]
+print("Length of Longest Common Subsequence:", length)
+printLCS(X, Y)
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Time Complexity of Longest Common Subsequence <br><br>
+                    </h2>
+                
+                    <p class="about__description">
+                        <strong>Time Complexity</strong>
+                
+                        <strong>Basic Operation: Table Filling</strong>
+                
+                        <p>
+                            <strong>Analysis</strong>
+                        </p>
+                
+                        <p>
+                            The time complexity of the Longest Common Subsequence (LCS) algorithm using dynamic programming is <code>O(m * n)</code>, where <code>m</code> and <code>n</code> are the lengths of the two input sequences. The algorithm uses a 2D table of size <code>(m + 1) × (n + 1)</code> to store the lengths of the LCS for all substring pairs.
+                        </p>
+                
+                        <p>
+                            Each cell in the table is filled in constant time <code>O(1)</code> by comparing characters from both sequences. Since we have <code>(m + 1)</code> rows and <code>(n + 1)</code> columns, the overall time complexity of the algorithm is:
+                        </p>
+                
+                        <pre>
+                            <code>T(m, n) = O(m) * O(n) = O(m * n)</code>
+                        </pre>
+                        <br>
+                        <br>
+                        <br>
+                    </p>
+                </div>
+                
+
+
+
+
+            </div>
+        </section>
+
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                    </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script
+            src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+        <script
+            src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+        <!-- and it's easy to individually load additional languages -->
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+        <script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.min.css">
+    <title>Virtual Design and Analysis of Algorithms Lab</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container nav ">
+
+
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+            </div>
+            <div
+                style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and Technolegy </h1>
+
+                <h3> Department of Computational Intelligence</h3>
+
+                <h4> Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+            <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                </a>
+            </div>
+
+
+
+        </nav>
+        <nav class="nav container">
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+            <li style="list-style: none;" class="nav__item">
+                <a href="../../../index.html" class="nav__link">Home</a>
+            </li>
+            <li style="list-style: none;" class="nav__item">
+                <a href="#Contact" class="nav__link ">Contact Us</a>
+            </li>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item">
+                        <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target
+                            Audience</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Fractional Knapsack Problem using Greedy Approach <br>
+                    </h1>
+
+                    <p class="about__description"> The core of the Fractional Knapsack problem lies in the concept of
+                        maximizing the total value by selecting items with varying weights and values, such that they
+                        fit within a given capacity constraint. Unlike the traditional Knapsack problem, the Fractional
+                        Knapsack problem allows us to take fractions of items.<br> This technique is commonly applied in
+                        resource allocation scenarios, where the goal is to optimize profit or efficiency under certain
+                        limits. </p>
+                    <h3 class="section__title about__title about section  container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/dEmlqSvchJs?si=exfbiQC-hCntu2lG"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </h3>
+                    <br>
+                    <br>
+                    <h2>Problem</h2>
+                    <p>Given a set of items, each with a weight and value, the goal is to maximize the total value by
+                        selecting items (or parts of them) that fit into a knapsack of a fixed capacity. The greedy
+                        approach is employed to achieve an optimal solution, which involves selecting the items with the
+                        highest value-to-weight ratio first.<br> The process of selecting items based on their ratios is
+                        known as <strong>greedy selection</strong>.</p><br>
+                    <h3>Input</h3>
+                    <p>Given a set of items, each with a weight and value, along with the capacity of the knapsack.</p>
+                    <br>
+                    <h3>Output</h3>
+                    <p>The <strong>maximum value</strong> that can be obtained by selecting fractions of items.</p><br>
+                    <h4>Example:</h4>
+                    <ul>
+                        <li><strong>Item 1:</strong> Weight = 10, Value = 60</li><br>
+                        <li><strong>Item 2:</strong> Weight = 20, Value = 100</li><br>
+                        <li><strong>Item 3:</strong> Weight = 30, Value = 120</li><br>
+                    </ul><br>
+                    <p>Capacity of the knapsack: 50</p><br>
+                    <h3>Types of Knapsack Problems</h3><br>
+                    <h3>1. Fractional Knapsack</h3><br>
+                    <p>In this version of the problem, we are allowed to take fractions of items, meaning that even if
+                        an item doesn't completely fit into the knapsack, we can take a fraction of it to maximize the
+                        total value.</p><br>
+                    <h3>2. 0/1 Knapsack</h3><br>
+                    <p>In contrast to the fractional knapsack, in this problem, we are restricted to either taking the
+                        whole item or leaving it. No fractions of items are allowed.</p><br>
+                    <h2>Greedy Approach for Fractional Knapsack</h2><br>
+                    <p>The solution is obtained using the following steps:</p><br>
+                    <ol>
+                        <li><strong>Calculate Value-to-Weight Ratio:</strong> For each item, compute the ratio of its
+                            value to its weight.</li><br>
+                        <li><strong>Sort Items:</strong> Sort the items based on their value-to-weight ratios in
+                            descending order.</li><br>
+                        <li><strong>Select Items:</strong> Starting from the highest ratio, take as much of each item as
+                            possible, adding fractions if necessary, until the knapsack is full.</li><br>
+                    </ol><br>
+                    <h4>Min Heap and Greedy Selection</h4><br>
+                    <p>In the greedy approach, items are sorted based on their value-to-weight ratio. A <strong>heap
+                            data structure</strong> or simply sorting techniques can be used to manage and select items
+                        efficiently. This ensures that at each step, we are making the most optimal selection for the
+                        current situation.</p><br>
+
+                </div>
+            </div>
+        </section>
+
+        <!--=============== Content ===============-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title data1"> Fractional Knapsack Algorithm (Greedy Approach)
+                        <br><br>
+                    </h2>
+
+                    <p class="about__description">
+                    <p><strong>FractionalKnapsack(W, items[0]..items[n-1])</strong></p><br>
+
+                    <p><strong>Input:</strong> A knapsack with capacity <code>W</code>, and an array <code>items</code>
+                        where each item has a weight and a value.</p><br>
+
+                    <p><strong>Output:</strong> The maximum total value that can be obtained by filling the knapsack,
+                        allowing fractional items.</p><br>
+
+                    <p><strong>Step 1:</strong> Start.</p><br>
+
+                    <p><strong>Step 2:</strong> For each item, calculate the value-to-weight ratio
+                        <code>(value/weight)</code>.
+                    </p><br>
+
+                    <p><strong>Step 3:</strong> Sort the items in decreasing order of their value-to-weight ratio.</p>
+                    <br>
+
+                    <p><strong>Step 4:</strong> Initialize <code>totalValue = 0</code> and
+                        <code>remainingCapacity = W</code>.
+                    </p><br>
+
+                    <p><strong>Step 5:</strong> For each item in the sorted array, do the following:</p><br>
+
+                    <p><strong>Step 6:</strong> If the item can fully fit into the remaining capacity, add its full
+                        value to <code>totalValue</code> and subtract its weight from <code>remainingCapacity</code>.
+                    </p><br>
+
+                    <p><strong>Step 7:</strong> If the item cannot fully fit, take a fraction of the item that fits, and
+                        add the corresponding fraction of its value to <code>totalValue</code>.</p><br>
+
+                    <p><strong>Step 8:</strong> Stop when the knapsack is full or all items have been considered.</p>
+                    <br>
+
+                    <p><strong>Step 9:</strong> Output the <code>totalValue</code>.</p><br>
+
+                    <p><strong>Step 10:</strong> Stop.</p><br>
+                    </p>
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                Fractional Knapsack Problem using Greedy Approach code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                        #include &lt;stdio.h&gt;
+                        
+                            // Structure to represent an item
+                            struct Item {
+                                int weight;
+                                int value;
+                            };
+                            
+                            // Function to swap two items
+                            void swap(struct Item* a, struct Item* b) {
+                                struct Item temp = *a;
+                                *a = *b;
+                                *b = temp;
+                            }
+                            
+                            // Function to sort items based on value/weight ratio in descending order
+                            void sortItemsByRatio(struct Item items[], int n) {
+                                for (int i = 0; i &lt; n - 1; i++) {
+                                    for (int j = 0; j &lt; n - i - 1; j++) {
+                                        double r1 = (double)items[j].value / items[j].weight;
+                                        double r2 = (double)items[j + 1].value / items[j + 1].weight;
+                                        if (r1 &lt; r2) {
+                                            swap(&items[j], &items[j + 1]);
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            // Function to calculate maximum value in Knapsack using greedy approach
+                            double knapsackGreedy(struct Item items[], int n, int capacity) {
+                                // Sort items by value/weight ratio
+                                sortItemsByRatio(items, n);
+                            
+                                double totalValue = 0.0;  // Total value of knapsack
+                                int currentWeight = 0;    // Current weight of knapsack
+                            
+                                for (int i = 0; i &lt; n; i++) {
+                                    if (currentWeight + items[i].weight &lt;= capacity) {
+                                        // Take the whole item
+                                        currentWeight += items[i].weight;
+                                        totalValue += items[i].value;
+                                    } else {
+                                        // Take the fraction of the remaining item
+                                        int remainingCapacity = capacity - currentWeight;
+                                        totalValue += (double)items[i].value * ((double)remainingCapacity / items[i].weight);
+                                        break;  // Knapsack is full
+                                    }
+                                }
+                            
+                                return totalValue;
+                            }
+                            
+                            int main() {
+                                int n, capacity;
+                            
+                                // Input number of items
+                                printf("Enter the number of items: ");
+                                scanf("%d", &n);
+                            
+                                struct Item items[n];
+                            
+                                // Input value and weight of each item
+                                for (int i = 0; i &lt; n; i++) {
+                                    printf("Enter value and weight for item %d: ", i + 1);
+                                    scanf("%d %d", &items[i].value, &items[i].weight);
+                                }
+                            
+                                // Input capacity of knapsack
+                                printf("Enter the capacity of the knapsack: ");
+                                scanf("%d", &capacity);
+                            
+                                // Calculate maximum value using Greedy algorithm
+                                double maxValue = knapsackGreedy(items, n, capacity);
+                            
+                                printf("Maximum value in Knapsack = %.2lf\n", maxValue);
+                            
+                                return 0;
+                            }
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        #include &lt;iostream>
+                            #include &lt;vector>
+                            #include &lt;algorithm>
+                            
+                            using namespace std;
+                            
+                            // Structure to represent an item
+                            struct Item {
+                                int weight;
+                                int value;
+                            };
+                            
+                            // Function to swap two items
+                            void swap(Item& a, Item& b) {
+                                Item temp = a;
+                                a = b;
+                                b = temp;
+                            }
+                            
+                            // Function to sort items based on value/weight ratio in descending order
+                            void sortItemsByRatio(vector&lt;Item>& items) {
+                                sort(items.begin(), items.end(), [](Item& a, Item& b) {
+                                    double r1 = (double)a.value / a.weight;
+                                    double r2 = (double)b.value / b.weight;
+                                    return r1 > r2;
+                                });
+                            }
+                            
+                            // Function to calculate maximum value in Knapsack using greedy approach
+                            double knapsackGreedy(vector&lt;Item>& items, int capacity) {
+                                // Sort items by value/weight ratio
+                                sortItemsByRatio(items);
+                            
+                                double totalValue = 0.0;
+                                int currentWeight = 0;
+                            
+                                for (Item& item : items) {
+                                    if (currentWeight + item.weight &lt;= capacity) {
+                                        currentWeight += item.weight;
+                                        totalValue += item.value;
+                                    } else {
+                                        int remainingCapacity = capacity - currentWeight;
+                                        totalValue += (double)item.value * ((double)remainingCapacity / item.weight);
+                                        break;  // Knapsack is full
+                                    }
+                                }
+                            
+                                return totalValue;
+                            }
+                            
+                            int main() {
+                                int n, capacity;
+                            
+                                cout &lt; "Enter the number of items: ";
+                                cin >> n;
+                            
+                                vector&lt;Item> items(n);
+                            
+                                // Input value and weight of each item
+                                for (int i = 0; i &lt; n; i++) {
+                                    cout &lt; "Enter value and weight for item " &lt; i + 1 &lt; ": ";
+                                    cin >> items[i].value >> items[i].weight;
+                                }
+                            
+                                // Input capacity of knapsack
+                                cout &lt; "Enter the capacity of the knapsack: ";
+                                cin >> capacity;
+                            
+                                // Calculate maximum value using Greedy algorithm
+                                double maxValue = knapsackGreedy(items, capacity);
+                            
+                                cout &lt; "Maximum value in Knapsack = " &lt; maxValue &lt; endl;
+                            
+                                return 0;
+                            }
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        import java.util.Scanner;
+                        import java.util.Arrays;
+                        
+                        class Item {
+                            int weight, value;
+                        
+                            Item(int weight, int value) {
+                                this.weight = weight;
+                                this.value = value;
+                            }
+                        }
+                        
+                        public class KnapsackGreedy {
+                            
+                            public static void swap(Item[] items, int i, int j) {
+                                Item temp = items[i];
+                                items[i] = items[j];
+                                items[j] = temp;
+                            }
+                        
+                            public static void sortItemsByRatio(Item[] items) {
+                                Arrays.sort(items, (Item a, Item b) -> {
+                                    double r1 = (double) a.value / a.weight;
+                                    double r2 = (double) b.value / b.weight;
+                                    return Double.compare(r2, r1); // Sort in descending order
+                                });
+                            }
+                        
+                            public static double knapsackGreedy(Item[] items, int capacity) {
+                                sortItemsByRatio(items);
+                        
+                                double totalValue = 0.0;
+                                int currentWeight = 0;
+                        
+                                for (Item item : items) {
+                                    if (currentWeight + item.weight &lt;= capacity) {
+                                        currentWeight += item.weight;
+                                        totalValue += item.value;
+                                    } else {
+                                        int remainingCapacity = capacity - currentWeight;
+                                        totalValue += (double) item.value * ((double) remainingCapacity / item.weight);
+                                        break;
+                                    }
+                                }
+                        
+                                return totalValue;
+                            }
+                        
+                            public static void main(String[] args) {
+                                Scanner scanner = new Scanner(System.in);
+                        
+                                System.out.print("Enter the number of items: ");
+                                int n = scanner.nextInt();
+                        
+                                Item[] items = new Item[n];
+                        
+                                for (int i = 0; i &lt; n; i++) {
+                                    System.out.printf("Enter value and weight for item %d: ", i + 1);
+                                    int value = scanner.nextInt();
+                                    int weight = scanner.nextInt();
+                                    items[i] = new Item(weight, value);
+                                }
+                        
+                                System.out.print("Enter the capacity of the knapsack: ");
+                                int capacity = scanner.nextInt();
+                        
+                                double maxValue = knapsackGreedy(items, capacity);
+                                System.out.printf("Maximum value in Knapsack = %.2f\n", maxValue);
+                        
+                                scanner.close();
+                            }
+                        }
+                        
+                         
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        class Item:
+                        def __init__(self, weight, value):
+                            self.weight = weight
+                            self.value = value
+                    
+                    def sort_items_by_ratio(items):
+                        # Sort items by value/weight ratio in descending order
+                        items.sort(key=lambda item: item.value / item.weight, reverse=True)
+                    
+                    def knapsack_greedy(items, capacity):
+                        # Sort items by value/weight ratio
+                        sort_items_by_ratio(items)
+                    
+                        total_value = 0.0
+                        current_weight = 0
+                    
+                        for item in items:
+                            if current_weight + item.weight &lt;= capacity:
+                                current_weight += item.weight
+                                total_value += item.value
+                            else:
+                                remaining_capacity = capacity - current_weight
+                                total_value += item.value * (remaining_capacity / item.weight)
+                                break
+                    
+                        return total_value
+                    
+                    def main():
+                        n = int(input("Enter the number of items: "))
+                        items = []
+                    
+                        for i in range(n):
+                            value, weight = map(int, input(f"Enter value and weight for item {i + 1}: ").split())
+                            items.append(Item(weight, value))
+                    
+                        capacity = int(input("Enter the capacity of the knapsack: "))
+                    
+                        max_value = knapsack_greedy(items, capacity)
+                        print(f"Maximum value in Knapsack = {max_value:.2f}")
+                    
+                    if __name__ == "__main__":
+                        main()
+                    
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+                <div class="about__data">
+                    <h2 class="section__title about__title"> Time Complexity of Fractional Knapsack Problem (Greedy
+                        Approach) <br><br> </h2>
+
+                    <p class="about__description">
+                        <strong>Time Complexity</strong>
+
+                        <strong>Basic Operation: Sorting and Selection</strong>
+
+                    <p>
+                        <strong>Analysis</strong>
+                    </p>
+
+                    <p>
+                        The time complexity of the Fractional Knapsack algorithm is <code>O(n \log n)</code>. The most
+                        time-consuming operation is sorting the items based on their value-to-weight ratio, which takes
+                        <code>O(n \log n)</code> time. After sorting, the algorithm iterates through the sorted items,
+                        performing constant-time operations for each item, which takes <code>O(n)</code> time.
+                        Therefore, the overall time complexity of the algorithm is:
+                    </p>
+
+                    <pre>
+                            <code>T(n) = O(n log n) + O(n) = O(n log n)</code>
+                         </pre>
+                    <br>
+                    <br>
+                    <br>
+
+                    </p>
+
+
+                </div>
+
+
+
+
+            </div>
+        </section>
+
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                    </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script
+            src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+        <script
+            src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+        <!-- and it's easy to individually load additional languages -->
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+        <script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>
