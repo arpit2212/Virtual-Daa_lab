@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.min.css">
+    <title>Virtual Design and Analysis of Algorithms Lab</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container nav ">
+
+
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+            </div>
+            <div
+                style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and technology </h1>
+
+                <h3> Department of Computational Intelligence</h3>
+
+                <h4> Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+            <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                </a>
+            </div>
+
+
+
+        </nav>
+        <nav class="nav container">
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+            <li style="list-style: none;" class="nav__item">
+                <a href="../../../index.html" class="nav__link">Home</a>
+            </li>
+            <li style="list-style: none;" class="nav__item">
+                <a href="#Contact" class="nav__link ">Contact Us</a>
+            </li>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item">
+                        <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target
+                            Audience</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Prim's Algorithm <br>
+                    </h1>
+
+                    <p class="about__description">
+                        The core of Prim's algorithm is its ability to find the <strong>Minimum Spanning Tree
+                            (MST)</strong> of a weighted graph, ensuring the smallest possible total edge weight.<br>
+                        This greedy algorithm is widely used in network design, including <strong>computer
+                            networks</strong> and <strong>roadway design</strong>, as it helps minimize the total cost
+                        of connecting all vertices with the least number of edges.</p><br>
+
+                    <h2>Problem</h2>
+                    <p>Given a connected, weighted graph, the goal is to find a subset of edges that connects all
+                        vertices with the minimum possible total edge weight, without forming any cycles.<br>
+                        The process of connecting the vertices using this subset of edges is known as finding the
+                        <strong>Minimum Spanning Tree (MST)</strong>.
+                    </p><br>
+
+                    <div class="video-container">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/4iMUPXUpLuc?si=lsh-kRgKaGRwgvlB"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+
+                    <h3>Input</h3>
+                    <p>A connected, weighted graph represented by its vertices and edges.</p><br>
+
+                    <h3>Output</h3>
+                    <p>The <strong>edges</strong> that form the Minimum Spanning Tree (MST) along with their total
+                        weight.</p><br>
+
+                    <h4>Example:</h4>
+                    <ul>
+                        <li><strong>Edge 1</strong> - (A, B) with weight 2</li><br>
+                        <li><strong>Edge 2</strong> - (B, C) with weight 3</li><br>
+                        <li><strong>Edge 3</strong> - (A, D) with weight 1</li><br>
+                    </ul><br>
+
+                    <h2>Types of Minimum Spanning Trees</h2><br>
+                    <h3>1. Unique MST</h3><br>
+                    <p>In this case, there is only one unique Minimum Spanning Tree for the given graph.</p><br>
+
+                    <h3>2. Multiple MSTs</h3><br>
+                    <p>In this case, there can be more than one Minimum Spanning Tree due to edges with equal weights.
+                    </p><br>
+
+                    <h2>Prim's Algorithm and Min Heap</h2><br>
+                    <p>The <strong>Prim's algorithm</strong> builds the Minimum Spanning Tree (MST) in a step-by-step
+                        manner, adding the smallest possible edge that connects a new vertex to the growing tree.<br>
+                        The algorithm follows these two main steps:</p><br>
+                    <ol>
+                        <li><strong>Start from any vertex:</strong> Initialize the MST by choosing any vertex as the
+                            starting point.</li><br>
+                        <li><strong>Add the smallest edge:</strong> At each step, add the smallest edge that connects a
+                            new vertex to the MST, ensuring no cycles are formed.</li><br>
+                    </ol><br>
+
+                    <p>To optimize the process of selecting the smallest edge at each step, a <strong>Min Heap</strong>
+                        data structure is often used.<br>
+                        The Min Heap acts as a priority queue, where the edge with the smallest weight is always at the
+                        top.<br>
+                        This allows Prim's algorithm to efficiently choose the minimum weight edge that expands the MST.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <!--=============== Content ===============-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title data1">Prim's Algorithm<br><br></h2>
+
+                    <p class="about__description">
+                    <p><strong>Prim(N, Graph)</strong></p><br>
+
+                    <p><strong>Input:</strong> An integer <code>N</code> representing the number of vertices, and a
+                        <code>Graph</code> represented by an adjacency matrix or edge list.
+                    </p><br>
+
+                    <p><strong>Output:</strong> The Minimum Spanning Tree (MST) of the graph and its total weight.</p>
+                    <br>
+
+                    <p><strong>Step 1:</strong> Start.</p><br>
+
+                    <p><strong>Step 2:</strong> Initialize an empty set <code>MST</code> to store the edges of the
+                        Minimum Spanning Tree.</p><br>
+
+                    <p><strong>Step 3:</strong> Initialize a <code>Min Heap</code> to prioritize the edges with the
+                        smallest weights.</p><br>
+
+                    <p><strong>Step 4:</strong> Select any vertex as the starting vertex and add its edges to the
+                        <code>Min Heap</code>.
+                    </p><br>
+
+                    <p><strong>Step 5:</strong> While the number of edges in <code>MST</code> is less than
+                        <code>N - 1</code>:
+                    </p><br>
+
+                    <p>&nbsp;&nbsp;<strong>Step 6:</strong> Extract the edge with the minimum weight from the
+                        <code>Min Heap</code>.
+                    </p><br>
+
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Step 7:</strong> If the edge connects a vertex not already in the
+                        MST, add the edge to <code>MST</code>.</p><br>
+
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Step 8:</strong> Add the new vertex's edges to the
+                        <code>Min Heap</code>.
+                    </p><br>
+
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Step 9:</strong> Continue this process until <code>N - 1</code>
+                        edges are added to the MST.</p><br>
+
+                    <p><strong>Step 10:</strong> Once the MST is complete, calculate the total weight by summing the
+                        weights of all edges in <code>MST</code>.</p><br>
+
+                    <p><strong>Step 11:</strong> Output the edges in the MST and their total weight.</p><br>
+
+                    <p><strong>Step 12:</strong> Stop.</p><br>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                Prim's Algorithm code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                            #include &lt;stdio.h&gt;
+                       
+                            #include &lt;limits.h>
+                            
+                            #define V 5  // Number of vertices in graph
+                            
+                            int minKey(int key[], int mstSet[]) {
+                                int min = INT_MAX, min_index;
+                                for (int v = 0; v &lt; V; v++)
+                                    if (mstSet[v] == 0 && key[v] &lt; min)
+                                        min = key[v], min_index = v;
+                                return min_index;
+                            }
+                            
+                            void printMST(int parent[], int graph[V][V]) {
+                                printf("Edge \tWeight\n");
+                                for (int i = 1; i &lt; V; i++)
+                                    printf("%d - %d \t%d \n", parent[i], i, graph[i][parent[i]]);
+                            }
+                            
+                            void primMST(int graph[V][V]) {
+                                int parent[V]; // Array to store constructed MST
+                                int key[V];    // Key values to pick minimum weight edge
+                                int mstSet[V]; // To represent set of vertices not yet included in MST
+                            
+                                for (int i = 0; i &lt; V; i++)
+                                    key[i] = INT_MAX, mstSet[i] = 0;
+                            
+                                key[0] = 0;
+                                parent[0] = -1;
+                            
+                                for (int count = 0; count &lt; V - 1; count++) {
+                                    int u = minKey(key, mstSet);
+                                    mstSet[u] = 1;
+                            
+                                    for (int v = 0; v &lt; V; v++)
+                                        if (graph[u][v] && mstSet[v] == 0 && graph[u][v] &lt; key[v])
+                                            parent[v] = u, key[v] = graph[u][v];
+                                }
+                                printMST(parent, graph);
+                            }
+                            
+                            int main() {
+                                int graph[V][V] = {{0, 2, 0, 6, 0},
+                                                   {2, 0, 3, 8, 5},
+                                                   {0, 3, 0, 0, 7},
+                                                   {6, 8, 0, 0, 9},
+                                                   {0, 5, 7, 9, 0}};
+                                primMST(graph);
+                                return 0;
+                            }
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                            #include &lt;iostream>
+                            #include &lt;climits>
+                            using namespace std;
+                            
+                            #define V 5
+                            
+                            int minKey(int key[], bool mstSet[]) {
+                                int min = INT_MAX, min_index;
+                                for (int v = 0; v &lt; V; v++)
+                                    if (mstSet[v] == false && key[v] &lt; min)
+                                        min = key[v], min_index = v;
+                                return min_index;
+                            }
+                            
+                            void printMST(int parent[], int graph[V][V]) {
+                                cout &lt;&lt; "Edge \tWeight\n";
+                                for (int i = 1; i &lt; V; i++)
+                                    cout &lt;&lt; parent[i] &lt;&lt; " - " &lt;&lt; i &lt;&lt; " \t" &lt;&lt; graph[i][parent[i]] &lt;&lt; " \n";
+                            }
+                            
+                            void primMST(int graph[V][V]) {
+                                int parent[V];
+                                int key[V];
+                                bool mstSet[V];
+                            
+                                for (int i = 0; i &lt; V; i++)
+                                    key[i] = INT_MAX, mstSet[i] = false;
+                            
+                                key[0] = 0;
+                                parent[0] = -1;
+                            
+                                for (int count = 0; count &lt; V - 1; count++) {
+                                    int u = minKey(key, mstSet);
+                                    mstSet[u] = true;
+                            
+                                    for (int v = 0; v &lt; V; v++)
+                                        if (graph[u][v] && mstSet[v] == false && graph[u][v] &lt; key[v])
+                                            parent[v] = u, key[v] = graph[u][v];
+                                }
+                            
+                                printMST(parent, graph);
+                            }
+                            
+                            int main() {
+                                int graph[V][V] = {{0, 2, 0, 6, 0},
+                                                   {2, 0, 3, 8, 5},
+                                                   {0, 3, 0, 0, 7},
+                                                   {6, 8, 0, 0, 9},
+                                                   {0, 5, 7, 9, 0}};
+                                primMST(graph);
+                                return 0;
+                            }
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        import java.util.*;
+
+                        public class Prim {
+                            private static final int V = 5;
+                        
+                            int minKey(int key[], boolean mstSet[]) {
+                                int min = Integer.MAX_VALUE, min_index = -1;
+                                for (int v = 0; v &lt; V; v++)
+                                    if (!mstSet[v] && key[v] &lt; min) {
+                                        min = key[v];
+                                        min_index = v;
+                                    }
+                                return min_index;
+                            }
+                        
+                            void printMST(int parent[], int graph[][]) {
+                                System.out.println("Edge \tWeight");
+                                for (int i = 1; i &lt; V; i++)
+                                    System.out.println(parent[i] + " - " + i + "\t" + graph[i][parent[i]]);
+                            }
+                        
+                            void primMST(int graph[][]) {
+                                int parent[] = new int[V];
+                                int key[] = new int[V];
+                                boolean mstSet[] = new boolean[V];
+                        
+                                for (int i = 0; i &lt; V; i++) {
+                                    key[i] = Integer.MAX_VALUE;
+                                    mstSet[i] = false;
+                                }
+                        
+                                key[0] = 0;
+                                parent[0] = -1;
+                        
+                                for (int count = 0; count &lt; V - 1; count++) {
+                                    int u = minKey(key, mstSet);
+                                    mstSet[u] = true;
+                        
+                                    for (int v = 0; v &lt; V; v++)
+                                        if (graph[u][v] != 0 && !mstSet[v] && graph[u][v] &lt; key[v]) {
+                                            parent[v] = u;
+                                            key[v] = graph[u][v];
+                                        }
+                                }
+                        
+                                printMST(parent, graph);
+                            }
+                        
+                            public static void main(String[] args) {
+                                Prim t = new Prim();
+                                int graph[][] = new int[][]{{0, 2, 0, 6, 0},
+                                                            {2, 0, 3, 8, 5},
+                                                            {0, 3, 0, 0, 7},
+                                                            {6, 8, 0, 0, 9},
+                                                            {0, 5, 7, 9, 0}};
+                                t.primMST(graph);
+                            }
+                        }
+                        
+                         
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        import sys
+
+                        V = 5
+                        
+                        def minKey(key, mstSet):
+                            min = sys.maxsize
+                            for v in range(V):
+                                if key[v] &lt; min and not mstSet[v]:
+                                    min = key[v]
+                                    min_index = v
+                            return min_index
+                        
+                        def printMST(parent, graph):
+                            print("Edge \tWeight")
+                            for i in range(1, V):
+                                print(f"{parent[i]} - {i} \t{graph[i][parent[i]]}")
+                        
+                        def primMST(graph):
+                            key = [sys.maxsize] * V
+                            parent = [None] * V
+                            key[0] = 0
+                            mstSet = [False] * V
+                            parent[0] = -1
+                        
+                            for _ in range(V):
+                                u = minKey(key, mstSet)
+                                mstSet[u] = True
+                        
+                                for v in range(V):
+                                    if graph[u][v] and not mstSet[v] and key[v] > graph[u][v]:
+                                        key[v] = graph[u][v]
+                                        parent[v] = u
+                        
+                            printMST(parent, graph)
+                        
+                        graph = [[0, 2, 0, 6, 0],
+                                 [2, 0, 3, 8, 5],
+                                 [0, 3, 0, 0, 7],
+                                 [6, 8, 0, 0, 9],
+                                 [0, 5, 7, 9, 0]]
+                        
+                        primMST(graph)
+                        
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title"> Time Complexity of Prim's Algorithm <br><br> </h2>
+
+                    <p class="about__description">
+                        <strong>Time Complexity</strong>
+
+                        <strong>Basic Operation: Edge Selection and Min Heap Operations</strong>
+
+                    <p>
+                        <strong>Analysis</strong>
+                    </p>
+
+                    <p>
+                        The time complexity of Prim's Algorithm varies based on the data structure used for the graph
+                        representation and the priority queue (Min Heap). Let's analyze both scenarios:
+                    </p>
+
+                    <p>
+                        1. <strong>Using an Adjacency Matrix:</strong> In this case, Prim's algorithm runs in
+                        <code>O(N^2)</code>, where <code>N</code> is the number of vertices. This is because for each
+                        vertex, we need to find the smallest edge connecting it to the MST, which takes
+                        <code>O(N)</code> time for each of the <code>N</code> vertices.
+                    </p>
+
+                    <p>
+                        2. <strong>Using an Adjacency List and Min Heap:</strong> If we use an adjacency list along with
+                        a Min Heap to extract the minimum weight edge efficiently, the time complexity becomes
+                        <code>O((N + E) log N)</code>, where <code>N</code> is the number of vertices and <code>E</code>
+                        is the number of edges. The breakdown is as follows:
+                    </p>
+
+                    <pre>
+                            <code>1. Inserting or updating an edge in the Min Heap takes O(log N) time.</code>
+                            <code>2. We perform this operation for each edge adjacent to every vertex, leading to O(E log N) for all edges.</code>
+                            <code>3. Extracting the minimum weight edge from the heap takes O(log N), and this is done N times.</code>
+                        </pre>
+
+                    <p>
+                        Hence, the total time complexity in this case is <code>O((N + E) log N)</code>, making the
+                        adjacency list representation with a Min Heap more efficient for sparse graphs.
+                    </p>
+                    <br>
+                    <br>
+                    </p>
+
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                    </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script
+            src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+        <script
+            src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+        <!-- and it's easy to individually load additional languages -->
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+        <script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>

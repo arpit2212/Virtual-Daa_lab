@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIX ICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/a11y-dark.min.css">
+    <title>Virtual Design and Analysis of Algorithms Lab</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container nav ">
+
+
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <img class="nav_icon" src="/assets/img/favicon.png" alt="">
+                <h3>Virtual Lab</h3>
+            </div>
+            <div
+                style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 30px;">
+                <h1>
+                    SRM Institute of Science and technology </h1>
+
+                <h3> Department of Computational Intelligence</h3>
+
+                <h4> Virtual Lab - Design and Analysis of Algorithms
+                </h4>
+            </div>
+            <div>
+                <a href="#" class="nav__logo">
+                    ​
+
+                </a>
+            </div>
+
+
+
+        </nav>
+        <nav class="nav container">
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+            <li style="list-style: none;" class="nav__item">
+                <a href="../../../index.html" class="nav__link">Home</a>
+            </li>
+            <li style="list-style: none;" class="nav__item">
+                <a href="#Contact" class="nav__link ">Contact Us</a>
+            </li>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+
+                    <li class="nav__item">
+                        <a href="/assets/html/introduction/index.html" class="nav__link">Introduction</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/objective/index.html" class="nav__link">Objective</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/Target Audience/index.html" class="nav__link target-audience">Target
+                            Audience</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/List of Experiments/" class="nav__link">List of Experiments</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="/assets/html/Demo/index.html" class="nav__link">Demo Code</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/assets/html/code/index.html" class="nav__link">Practice Code</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+        
+                <div class="about__data">
+                    <h1 class="section__title about__title">
+                        Kruskal's Algorithm <br>
+                    </h1>
+        
+                    <p class="about__description">
+                        The core of Kruskal's Algorithm is the <strong>Minimum Spanning Tree (MST)</strong>, which connects all vertices in a graph with the least possible total edge weight without forming a cycle.<br>
+                        This technique is widely used in network design problems, such as in designing <strong>LAN</strong> or <strong>optical networks</strong>, where efficiency is key to minimizing the cost of connections.</p><br>
+        
+                    <h2>Problem</h2>
+                    <p>Given a graph with a set of vertices and edges, the goal is to find a subset of edges that connects all vertices with the minimum total weight while avoiding any cycles.<br>
+                    Kruskal's Algorithm employs a greedy approach to achieve this.</p><br>
+        
+                    <h3 class="section__title about__title about section container">
+                        Video Lecture <br><br>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/mR3MvQ93kwY?si=m40yXR30CD9COUcl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        </div>
+                    </h3>
+
+                    <h3>Input</h3>
+                    <p>A graph consisting of vertices and weighted edges.</p><br>
+        
+                    <h3>Output</h3>
+                    <p>The <strong>minimum spanning tree</strong> of the graph, represented by the edges included in the MST.</p><br>
+        
+                    <h4>Example:</h4>
+                    <ul>
+                        <li><strong>Edge 1</strong> - (A, B), weight = 4</li><br>
+                        <li><strong>Edge 2</strong> - (B, C), weight = 2</li><br>
+                        <li><strong>Edge 3</strong> - (A, D), weight = 3</li><br>
+                    </ul><br>
+        
+                    <h2>Steps of Kruskal's Algorithm</h2><br>
+        
+                    <h3>1. Sorting Edges by Weight</h3><br>
+                    <p>All edges in the graph are sorted in increasing order of their weights.</p><br>
+        
+                    <h3>2. Adding Edges to the MST</h3><br>
+                    <p>Edges are added to the MST one by one in increasing order of weight. Only edges that don't form a cycle with already added edges are included.</p><br>
+        
+                    <h3>3. Stopping Condition</h3><br>
+                    <p>The process stops when the number of edges in the MST equals the number of vertices minus one (|V| - 1).</p><br>
+        
+                    <h2>Disjoint Set Data Structure</h2><br>
+                    <p>To keep track of which vertices are in the same connected component, a <strong>Disjoint Set</strong> (also known as Union-Find) data structure is used.<br>
+                    This data structure supports two main operations:</p><br>
+                    <ol>
+                        <li><strong>Find:</strong> Determines the set to which a particular element belongs.</li><br>
+                        <li><strong>Union:</strong> Merges two sets together.</li><br>
+                    </ol><br>
+        
+                    <p>By using Disjoint Set, Kruskal's Algorithm efficiently checks whether adding an edge would form a cycle.</p><br>
+        
+                    
+                </div>
+            </div>
+        </section>
+        
+
+        <!--=============== Content ===============-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+
+
+                <div class="about__data">
+                    <h2 class="section__title about__title data1"> Kruskal's Algorithm <br><br> </h2>
+                
+                    <p class="about__description">
+                    <p><strong>Kruskal(G, E)</strong></p><br>
+                
+                    <p><strong>Input:</strong> A graph <code>G</code> with vertices and edges <code>E</code>, where each edge has a weight.</p><br>
+                
+                    <p><strong>Output:</strong> A Minimum Spanning Tree (MST) of the graph, represented by a subset of edges.</p><br>
+                
+                    <p><strong>Step 1:</strong> Start.</p><br>
+                
+                    <p><strong>Step 2:</strong> Sort all edges in increasing order of their weight.</p><br>
+                
+                    <p><strong>Step 3:</strong> Initialize an empty set <code>MST</code> to store the edges of the Minimum Spanning Tree.</p><br>
+                
+                    <p><strong>Step 4:</strong> Initialize a Disjoint Set data structure to keep track of connected components of the vertices.</p><br>
+                
+                    <p><strong>Step 5:</strong> For each edge <code>(u, v)</code> in the sorted list of edges:</p><br>
+                
+                    <p>&nbsp;&nbsp;<strong>Step 6:</strong> Use the Disjoint Set to check if vertices <code>u</code> and <code>v</code> are in different sets (i.e., they are not already connected).</p><br>
+                
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Step 7:</strong> If they are in different sets, add the edge <code>(u, v)</code> to <code>MST</code> and perform the union operation to combine their sets.</p><br>
+                
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Step 8:</strong> If they are in the same set, skip the edge to avoid forming a cycle.</p><br>
+                
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Step 9:</strong> Continue checking the next edges in the sorted list.</p><br>
+                
+                    <p><strong>Step 10:</strong> Stop when the MST contains exactly <code>V-1</code> edges (where <code>V</code> is the number of vertices).</p><br>
+                
+                    <p><strong>Step 11:</strong> Output the <code>MST</code>, which contains the edges of the Minimum Spanning Tree.</p><br>
+                
+                    <p><strong>Step 12:</strong> Stop.</p><br>
+                    </p>
+                </div>
+                
+
+            </div>
+        </section>
+
+
+
+        <!--==================== CODE ====================-->
+        <div class="container">
+            <h2 class="section__title about__title">
+                N Queens Problem using Backtracking code <br>
+            </h2>
+
+            <div class="code-buttons">
+                <button class="code-btn active" data-lang="c">C</button>
+                <button class="code-btn" data-lang="cpp">C++</button>
+                <button class="code-btn" data-lang="java">Java</button>
+                <button class="code-btn" data-lang="python">Python</button>
+            </div>
+
+            <div class="code-container active" id="c">
+                <pre>
+                    <code class="language-c">
+                      
+                        #include &lt;stdio.h&gt;
+                            #include &lt;stdlib.h>
+                            
+                            #define MAX 100
+                            #define INF 999999
+                            
+                            typedef struct {
+                                int u, v, w;
+                            } Edge;
+                            
+                            int parent[MAX], rank[MAX];
+                            Edge edges[MAX];
+                            int edgeCount = 0, vertexCount;
+                            
+                            void initUnionFind() {
+                                for (int i = 0; i &lt; vertexCount; i++) {
+                                    parent[i] = i;
+                                    rank[i] = 0;
+                                }
+                            }
+                            
+                            int find(int i) {
+                                if (i != parent[i]) {
+                                    parent[i] = find(parent[i]);
+                                }
+                                return parent[i];
+                            }
+                            
+                            void unionSets(int x, int y) {
+                                int xRoot = find(x);
+                                int yRoot = find(y);
+                                if (xRoot != yRoot) {
+                                    if (rank[xRoot] &lt; rank[yRoot]) {
+                                        parent[xRoot] = yRoot;
+                                    } else if (rank[xRoot] > rank[yRoot]) {
+                                        parent[yRoot] = xRoot;
+                                    } else {
+                                        parent[yRoot] = xRoot;
+                                        rank[xRoot]++;
+                                    }
+                                }
+                            }
+                            
+                            int compare(const void *a, const void *b) {
+                                return ((Edge *)a)->w - ((Edge *)b)->w;
+                            }
+                            
+                            void kruskal() {
+                                qsort(edges, edgeCount, sizeof(edges[0]), compare);
+                                initUnionFind();
+                            
+                                int mstWeight = 0;
+                            
+                                printf("Edges in the Minimum Spanning Tree:\n");
+                                for (int i = 0; i &lt; edgeCount; i++) {
+                                    int u = edges[i].u;
+                                    int v = edges[i].v;
+                            
+                                    if (find(u) != find(v)) {
+                                        printf("%d -- %d (Weight: %d)\n", u, v, edges[i].w);
+                                        unionSets(u, v);
+                                        mstWeight += edges[i].w;
+                                    }
+                                }
+                                printf("Total Weight of MST: %d\n", mstWeight);
+                            }
+                            
+                            int main() {
+                                int e;
+                            
+                                printf("Enter number of vertices: ");
+                                scanf("%d", &vertexCount);
+                                printf("Enter number of edges: ");
+                                scanf("%d", &e);
+                            
+                                printf("Enter edges (u v w):\n");
+                                for (int i = 0; i &lt; e; i++) {
+                                    scanf("%d %d %d", &edges[i].u, &edges[i].v, &edges[i].w);
+                                    edgeCount++;
+                                }
+                            
+                                kruskal();
+                                return 0;
+                            }
+                            
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+            <div class="code-container" id="cpp">
+                <pre>
+                    <code class="language-c++">
+                        #include &lt;iostream>
+                            #include &lt;vector>
+                            #include &lt;algorithm>
+                            
+                            using namespace std;
+                            
+                            struct Edge {
+                                int u, v, w;
+                            };
+                            
+                            class DisjointSet {
+                            public:
+                                vector&lt;int> parent, rank;
+                            
+                                DisjointSet(int n) {
+                                    parent.resize(n);
+                                    rank.resize(n, 0);
+                                    for (int i = 0; i &lt; n; i++) parent[i] = i;
+                                }
+                            
+                                int find(int i) {
+                                    if (i != parent[i]) {
+                                        parent[i] = find(parent[i]);
+                                    }
+                                    return parent[i];
+                                }
+                            
+                                void unionSets(int x, int y) {
+                                    int xRoot = find(x);
+                                    int yRoot = find(y);
+                                    if (xRoot != yRoot) {
+                                        if (rank[xRoot] &lt; rank[yRoot]) {
+                                            parent[xRoot] = yRoot;
+                                        } else if (rank[xRoot] > rank[yRoot]) {
+                                            parent[yRoot] = xRoot;
+                                        } else {
+                                            parent[yRoot] = xRoot;
+                                            rank[xRoot]++;
+                                        }
+                                    }
+                                }
+                            };
+                            
+                            bool compareEdges(const Edge &a, const Edge &b) {
+                                return a.w &lt; b.w;
+                            }
+                            
+                            void kruskal(vector&lt;Edge> &edges, int vertexCount) {
+                                DisjointSet ds(vertexCount);
+                                sort(edges.begin(), edges.end(), compareEdges);
+                            
+                                int mstWeight = 0;
+                                cout &lt;&lt; "Edges in the Minimum Spanning Tree:\n";
+                                for (const auto &edge : edges) {
+                                    int u = edge.u;
+                                    int v = edge.v;
+                            
+                                    if (ds.find(u) != ds.find(v)) {
+                                        cout &lt;&lt; u &lt;&lt; " -- " &lt;&lt; v &lt;&lt; " (Weight: " &lt;&lt; edge.w &lt;&lt; ")\n";
+                                        ds.unionSets(u, v);
+                                        mstWeight += edge.w;
+                                    }
+                                }
+                                cout &lt;&lt; "Total Weight of MST: " &lt;&lt; mstWeight &lt;&lt; endl;
+                            }
+                            
+                            int main() {
+                                int vertexCount, e;
+                                cout &lt;&lt; "Enter number of vertices: ";
+                                cin >> vertexCount;
+                                cout &lt;&lt; "Enter number of edges: ";
+                                cin >> e;
+                            
+                                vector<Edge> edges(e);
+                                cout &lt;&lt; "Enter edges (u v w):\n";
+                                for (int i = 0; i &lt; e; i++) {
+                                    cin >> edges[i].u >> edges[i].v >> edges[i].w;
+                                }
+                            
+                                kruskal(edges, vertexCount);
+                                return 0;
+                            }
+                            
+                            
+                            
+                    </code>
+                </pre>
+            </div>
+            <div class="code-container" id="java">
+                <pre>
+                    <code class="language-java">
+                        import java.util.*;
+
+class Edge {
+    int u, v, w;
+    Edge(int u, int v, int w) {
+        this.u = u;
+        this.v = v;
+        this.w = w;
+    }
+}
+
+class DisjointSet {
+    int[] parent, rank;
+
+    DisjointSet(int n) {
+        parent = new int[n];
+        rank = new int[n];
+        for (int i = 0; i &lt; n; i++) parent[i] = i;
+    }
+
+    int find(int i) {
+        if (i != parent[i]) {
+            parent[i] = find(parent[i]);
+        }
+        return parent[i];
+    }
+
+    void unionSets(int x, int y) {
+        int xRoot = find(x);
+        int yRoot = find(y);
+        if (xRoot != yRoot) {
+            if (rank[xRoot] &lt; rank[yRoot]) {
+                parent[xRoot] = yRoot;
+            } else if (rank[xRoot] > rank[yRoot]) {
+                parent[yRoot] = xRoot;
+            } else {
+                parent[yRoot] = xRoot;
+                rank[xRoot]++;
+            }
+        }
+    }
+}
+
+public class Kruskal {
+    public static void kruskal(List&lt;Edge> edges, int vertexCount) {
+        Collections.sort(edges, Comparator.comparingInt(e -> e.w));
+        DisjointSet ds = new DisjointSet(vertexCount);
+        int mstWeight = 0;
+
+        System.out.println("Edges in the Minimum Spanning Tree:");
+        for (Edge edge : edges) {
+            int u = edge.u;
+            int v = edge.v;
+
+            if (ds.find(u) != ds.find(v)) {
+                System.out.println(u + " -- " + v + " (Weight: " + edge.w + ")");
+                ds.unionSets(u, v);
+                mstWeight += edge.w;
+            }
+        }
+        System.out.println("Total Weight of MST: " + mstWeight);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number of vertices: ");
+        int vertexCount = scanner.nextInt();
+        System.out.print("Enter number of edges: ");
+        int e = scanner.nextInt();
+
+        List&lt;Edge> edges = new ArrayList&lt;>();
+        System.out.println("Enter edges (u v w):");
+        for (int i = 0; i &lt; e; i++) {
+            int u = scanner.nextInt();
+            int v = scanner.nextInt();
+            int w = scanner.nextInt();
+            edges.add(new Edge(u, v, w));
+        }
+
+        kruskal(edges, vertexCount);
+        scanner.close();
+    }
+}
+
+                         
+                    </code>
+                </pre>
+            </div>
+
+            <div class="code-container" id="python">
+                <pre>
+                    <code class="language-python">
+                        class DisjointSet:
+                        def __init__(self, n):
+                            self.parent = list(range(n))
+                            self.rank = [0] * n
+                    
+                        def find(self, i):
+                            if i != self.parent[i]:
+                                self.parent[i] = self.find(self.parent[i])
+                            return self.parent[i]
+                    
+                        def union(self, x, y):
+                            x_root = self.find(x)
+                            y_root = self.find(y)
+                            if x_root != y_root:
+                                if self.rank[x_root] &lt; self.rank[y_root]:
+                                    self.parent[x_root] = y_root
+                                elif self.rank[x_root] > self.rank[y_root]:
+                                    self.parent[y_root] = x_root
+                                else:
+                                    self.parent[y_root] = x_root
+                                    self.rank[x_root] += 1
+                    
+                    def kruskal(vertex_count, edges):
+                        edges.sort(key=lambda edge: edge[2])  # Sort edges by weight
+                        ds = DisjointSet(vertex_count)
+                        mst_weight = 0
+                        mst_edges = []
+                    
+                        print("Edges in the Minimum Spanning Tree:")
+                        for u, v, w in edges:
+                            if ds.find(u) != ds.find(v):
+                                mst_edges.append((u, v, w))
+                                print(f"{u} -- {v} (Weight: {w})")
+                                ds.union(u, v)
+                                mst_weight += w
+                    
+                        print("Total Weight of MST:", mst_weight)
+                    
+                    if __name__ == "__main__":
+                        vertex_count = int(input("Enter number of vertices: "))
+                        e = int(input("Enter number of edges: "))
+                        edges = []
+                    
+                        print("Enter edges (u v w):")
+                        for _ in range(e):
+                            u, v, w = map(int, input().split())
+                            edges.append((u, v, w))
+                    
+                        kruskal(vertex_count, edges)
+                    
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--==================== Content 2 ====================-->
+
+        <section class="about section container" id="about">
+            <div class="about__container flex">
+        
+                <div class="about__data">
+                    <h2 class="section__title about__title"> Time Complexity of Kruskal's Algorithm <br><br> </h2>
+        
+                    <p class="about__description">
+                        <strong>Time Complexity</strong>
+        
+                        <strong>Basic Operations: Sorting Edges and Union-Find Operations</strong>
+        
+                    <p>
+                        <strong>Analysis</strong>
+                    </p>
+        
+                    <p>
+                        The time complexity of Kruskal's Algorithm is determined by two primary operations: 
+                        <strong>sorting the edges</strong> and <strong>performing the Union-Find operations</strong>.
+                    </p>
+        
+                    <p>
+                        <strong>1. Sorting the Edges:</strong> Sorting all the edges takes <code>O(E log E)</code> time, where <code>E</code> is the number of edges in the graph. This step is necessary to ensure that we can pick the smallest edges first.
+                    </p>
+        
+                    <p>
+                        <strong>2. Union-Find Operations:</strong> The Union-Find data structure is used to detect cycles while forming the Minimum Spanning Tree (MST). Each union or find operation can be performed in nearly constant time, <code>O(log V)</code>, where <code>V</code> is the number of vertices, using techniques like path compression and union by rank.
+                    </p>
+        
+                    <p>
+                        Since we perform a Union-Find operation for each edge, the total time spent on Union-Find operations is <code>O(E log V)</code>.
+                    </p>
+        
+                    <p>
+                        <strong>Overall Time Complexity:</strong> The overall time complexity of Kruskal's Algorithm is the sum of the time required for sorting the edges and the time for performing the Union-Find operations. Therefore, the total time complexity is:
+                    </p>
+        
+                    <pre>
+                        <code>T(E, V) = O(E log E) + O(E log V)</code>
+                    </pre>
+        
+                    <p>
+                        Since <code>E</code> can be at most <code>V^2</code> in a dense graph, the time complexity can also be represented as <code>O(E log V)</code> for practical purposes, since <code>log E</code> is similar to <code>log V</code>.
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </section>
+        
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section" id="Contact">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="index.html" class="nav__logo">
+                        <img class="nav_icon" src="/assets/img/favicon.png" alt=""> Virtual Lab
+                    </a>
+
+                    <h3 class="footer__title">
+                        Subscribe to our Youtube Chanel <br> to stay update
+                    </h3>
+
+                    <div class="footer__subscribe">
+
+
+                        <a href="https://www.youtube.com/@ulaganathansakthi2280" target="_blank">
+                            <button class="button button--flex footer__button">
+                                Subscribe
+                                <i class="ri-arrow-right-up-line button__icon"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Address</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">SRM University KTR</li>
+                        <li class="footer__information">Chennai</li>
+                        <li class="footer__information">Tamil Nadu</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact Us</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Dr. U.Sakthi<br>+91 9444851523</li>
+                        <li class="footer__information">Arpit Shrivastava <br>+91 9111456393</li>
+
+
+                    </ul>
+                </div>
+
+
+
+            </div>
+            </div>
+
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script
+            src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/prism.js"></script>
+        <script
+            src="./Heightlight-code-with-copy-button-html-css-js-main/Heightlight-code-with-copy-button-html-css-js-main/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+
+        <!-- and it's easy to individually load additional languages -->
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/languages/go.min.js"></script>
+
+        <script>hljs.highlightAll();</script>
+        <script>
+            // JavaScript to toggle between code views
+            const buttons = document.querySelectorAll('.code-btn');
+            const containers = document.querySelectorAll('.code-container');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    // Hide all code containers
+                    containers.forEach(container => container.classList.remove('active'));
+                    // Show the selected language container
+                    const lang = button.getAttribute('data-lang');
+                    document.getElementById(lang).classList.add('active');
+                });
+            });
+        </script>
+</body>
+
+</html>
