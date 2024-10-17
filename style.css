@@ -1,0 +1,415 @@
+/***
+font-family: 'Raleway',
+sans-serif;
+***/
+
+@import url(http://weloveiconfonts.com/api/?family=typicons);
+
+*,
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    color: #3e454c;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Raleway',
+        sans-serif;
+}
+
+q {
+    font-style: italic;
+}
+
+.container {
+    text-align: center;
+}
+
+.container>div {
+    padding: 65px;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    font-family: 'Playfair Display',
+        serif;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url("imgs/headerImg.png");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    /* transition-delay: 500ms; */
+
+}
+
+
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: #000000;
+    height: 80px;
+    width: 100%;
+    z-index: 999;
+  margin-top: -20px;
+
+}
+.header_img1
+{
+    width: 125px;
+   
+    
+}
+.header_img2
+{
+    width: 125px;
+    margin-left: 40px;
+    
+}
+.header_img3
+{
+    width: 100px;
+    margin-left: 10px;
+    
+}
+.header>h1 {
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    font-family: 'Playfair Display',
+        serif;
+    font-weight: 700;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.header>h1>span {
+    display: block;
+    color: #fff;
+    font-family: 'Raleway',
+        sans-serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+    line-height: 9px;
+    text-transform: lowercase;
+    font-weight: 400;
+}
+
+nav {
+    font-family: 'Playfair Display',
+        serif;
+    align-self: stretch;
+    flex-grow: 1;
+    text-align: right;
+    transition-duration: 300ms;
+    
+}
+
+.fullMenu ul li{
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    padding: 0px 25px;
+    list-style: none;
+    
+    
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: lowercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1.4px;
+}
+nav a:hover {
+   
+    color: #fbc02d;
+    
+}
+
+nav li {
+    list-style-type: none;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.nav_icon
+{
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.menu_button
+{
+    width: 20px;
+    margin-top: 20px;
+}
+
+#collMenu, label[for='toggleMenu']{
+    display: none;
+}
+/* 
+.scrolledHeader {
+    position: fixed;
+    background-color: #000;
+    height: 60px;
+    width: 100%;
+    z-index: 999;
+    transition-duration: 400ms;
+}
+
+.scrolledHeader nav {
+    position: relative;
+    top: -20px;
+}
+
+.scrolledHeader h1 {
+    padding: 10px 50px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.scrolledHeader>h1>span {
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    
+} */
+
+.header>h1,
+.header>h1>span {
+    transition: 230ms;
+}
+
+body {
+    overflow-x: hidden;
+}
+.banner {
+    position: relative;
+ 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .banner-text {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black overlay */
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 80%;
+  }
+
+  .banner-text h1, .banner-text h2, .banner-text h3, .banner-text h4 {
+    margin: 10px 0;
+    color: white;
+  }
+
+  .admission-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fdd835;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .admission-btn:hover {
+    background-color: #fbc02d;
+  }
+
+
+  /* Responsive Styles */
+  @media (max-width: 1200px) { /* For laptops */
+    .banner {
+      height: 70vh;
+    }
+
+    .banner-text h1 {
+      font-size: 2rem;
+    }
+
+    .banner-text h2, .banner-text h3, .banner-text h4 {
+      font-size: 1.5rem;
+    }
+
+    .banner-text {
+      padding: 15px 30px;
+    }
+  }
+
+  @media (max-width: 768px) { /* For tablets */
+    .banner {
+      height: 80vh;
+    }
+
+    .banner-text h1 {
+      font-size: 1.8rem;
+    }
+
+    .banner-text h2, .banner-text h3, .banner-text h4 {
+      font-size: 1.3rem;
+    }
+
+    .banner-text {
+      padding: 10px 20px;
+    }
+   
+  }
+
+  @media (max-width: 480px) { /* For mobile phones */
+    .banner {
+      height: 100vh;
+    }
+
+    .banner-text h1 {
+      font-size: 1.5rem;
+    }
+
+    .banner-text h2, .banner-text h3, .banner-text h4 {
+      font-size: 1.1rem;
+    }
+
+    .banner-text {
+      max-width: 90%;
+      padding: 10px 15px;
+    }
+   
+  }
+
+ 
+
+
+
+
+
+/************************************
+            RESPONSIVE
+************************************/
+
+@media only screen and (max-width: 1690px) {
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+
+}
+
+@media only screen and (max-width: 980px) {
+
+    .header_img1
+{
+    margin-top: 10px;
+    width: 80px;
+   
+    
+}
+.header_img2
+{
+    width: 80px;
+    margin-left: 40px;
+    
+}
+.header_img3
+{
+    width: 60px;
+    margin-left: 10px;
+    
+}
+
+
+
+    .header h1 {
+        text-align: center;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .fullMenu {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .scrolledHeader nav {
+        top: 0px;
+        background-color: #000;
+    }
+
+    #toggleMenu {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #000000;
+    }
+
+    /* hide after you style */
+
+    #collMenu {
+        display: none;
+        position: relative;
+        top: 0px;
+        width: 100%;
+        background-color: #000;
+        background-color: inherit;
+    }
+
+    label[for='toggleMenu'] {
+        position: absolute;
+        display: block;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+    }
+
+   
+
+}
+
+@media only screen and (max-width: 480px) {
+
+}
+

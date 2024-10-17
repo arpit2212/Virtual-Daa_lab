@@ -276,15 +276,21 @@
                     const canvasLinearSearch = document.getElementById('searchCanvas');
                     const ctxLinearSearch = canvasLinearSearch.getContext('2d');
             
-                    function drawLinearSearchArray(arr, colorArray) {
+                    function drawLinearSearchArray(arr, colorArray, target) {
                         ctxLinearSearch.clearRect(0, 0, canvasLinearSearch.width, canvasLinearSearch.height);
             
                         const barWidth = canvasLinearSearch.width / arr.length;
+            
+                        // Display target value at the top
+                        ctxLinearSearch.fillStyle = 'black';
+                        ctxLinearSearch.fillText(`Target: ${target}`, canvasLinearSearch.width / 2, 30);
+            
                         for (let i = 0; i < arr.length; i++) {
                             const height = arr[i] * 3; // Scale height for better visibility
                             ctxLinearSearch.fillStyle = colorArray[i];
                             ctxLinearSearch.fillRect(i * barWidth, canvasLinearSearch.height - height, barWidth, height);
             
+                            // Display the array values on the bars
                             ctxLinearSearch.fillStyle = 'black';
                             ctxLinearSearch.fillText(arr[i], i * barWidth + barWidth / 2, canvasLinearSearch.height - height - 10);
                         }
@@ -297,12 +303,12 @@
                             const colorArray = Array(n).fill('blue');
                             colorArray[i] = 'red'; // Highlight the current element
             
-                            drawLinearSearchArray(arr, colorArray);
+                            drawLinearSearchArray(arr, colorArray, target);
                             await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
             
                             if (arr[i] === target) {
                                 colorArray[i] = 'green'; // Highlight the found element
-                                drawLinearSearchArray(arr, colorArray);
+                                drawLinearSearchArray(arr, colorArray, target);
                                 break;
                             }
                         }
@@ -326,42 +332,48 @@
                 </script>
             </div>
             
+            
             <div class="code-container" id="binary-search">
                 <button id="runBinarySearchButton">Run Binary Search</button>
                 <canvas id="binarySearchCanvas" width="800" height="400"></canvas>
                 <script>
                     const canvasBinarySearch = document.getElementById('binarySearchCanvas');
                     const ctxBinarySearch = canvasBinarySearch.getContext('2d');
-
-                    function drawBinarySearchArray(arr, colorArray) {
+            
+                    function drawBinarySearchArray(arr, colorArray, target) {
                         ctxBinarySearch.clearRect(0, 0, canvasBinarySearch.width, canvasBinarySearch.height);
-
+            
                         const barWidth = canvasBinarySearch.width / arr.length;
+            
+                        // Display target value at the top
+                        ctxBinarySearch.fillStyle = 'black';
+                        ctxBinarySearch.fillText(`Target: ${target}`, canvasBinarySearch.width / 2, 30);
+            
                         for (let i = 0; i < arr.length; i++) {
                             const height = arr[i] * 3; // Scale height for better visibility
                             ctxBinarySearch.fillStyle = colorArray[i];
                             ctxBinarySearch.fillRect(i * barWidth, canvasBinarySearch.height - height, barWidth, height);
-
+            
                             ctxBinarySearch.fillStyle = 'black';
                             ctxBinarySearch.fillText(arr[i], i * barWidth + barWidth / 2, canvasBinarySearch.height - height - 10);
                         }
                     }
-
+            
                     async function binarySearchVisual(arr, target) {
                         let left = 0;
                         let right = arr.length - 1;
                         const colorArray = Array(arr.length).fill('blue');
-
+            
                         while (left <= right) {
                             const mid = Math.floor((left + right) / 2);
                             colorArray.fill('blue');
                             colorArray[mid] = 'red'; // Highlight the middle element
-                            drawBinarySearchArray(arr, colorArray);
+                            drawBinarySearchArray(arr, colorArray, target);
                             await new Promise(resolve => setTimeout(resolve, 600)); // Pause for 600ms
-
+            
                             if (arr[mid] === target) {
                                 colorArray[mid] = 'green'; // Highlight the found element
-                                drawBinarySearchArray(arr, colorArray);
+                                drawBinarySearchArray(arr, colorArray, target);
                                 return;
                             } else if (arr[mid] < target) {
                                 left = mid + 1;
@@ -370,25 +382,25 @@
                             }
                         }
                     }
-
+            
                     function randomBinarySearchArray(length, max) {
                         return Array.from({ length }, () => Math.floor(Math.random() * max) + 1).sort((a, b) => a - b);
                     }
-
+            
                     const binarySearchArr = randomBinarySearchArray(20, 100);
                     const binarySearchTarget = binarySearchArr[Math.floor(Math.random() * binarySearchArr.length)]; // Random target from array
                     console.log("Sorted Array:", binarySearchArr, "Target:", binarySearchTarget);
-
+            
                     ctxBinarySearch.font = '16px Arial';
                     ctxBinarySearch.textAlign = 'center';
-
+            
                     // Run the binary search visualization when the button is clicked
                     document.getElementById('runBinarySearchButton').addEventListener('click', () => {
                         binarySearchVisual([...binarySearchArr], binarySearchTarget);
                     });
                 </script>
             </div>
-
+            
 
             <div class="code-container" id="merge-sort">
                 <button id="runMergeSortButton">Run Merge Sort</button>
